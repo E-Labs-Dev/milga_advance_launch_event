@@ -13,3 +13,7 @@ npm-debug.log
 yarn-error.log
 /bootstrap/cache
 .idea
+.editorconfig
+.env.example
+.gitattributes
+.styleci.yml

@@ -21,6 +21,11 @@ class Registration extends Model
         return $this->hasOne(Venue::class);
     }
 
+    public function getFullPathAttribute()
+    {
+        return env('APP_URL').'/'.$this->qrcode;
+    }
+
     /******************************database*/
     public  function store($request){
 
@@ -36,6 +41,6 @@ class Registration extends Model
         $registraion->qrcode       = 'images/'.$request['phone'].'.png';
         $registraion->save();
 
-        return  $registraion->qrcode;
+        return  $registraion->full_path;
     }
 }
