@@ -28,9 +28,9 @@ class RegistrationMail extends Mailable
      */
     public function build()
     {
-        $address = 'janeexampexample@example.com';
-        $subject = 'This is a demo!';
-        $name = 'Jane Doe';
+        $address = 'milga@support.com';
+        $subject = 'Registration Send Qrcode!';
+        $name = 'Milga';
 
         return $this->view('emails.registration')
             ->from($address, $name)

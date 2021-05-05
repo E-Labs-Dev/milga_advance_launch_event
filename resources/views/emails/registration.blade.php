@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
   </head>
   <body>
-    <h2>Test Email</h2>
+    <h2>Qrcode Image</h2>
     <p>{{ $qrcode }}</p>
 </body>
 </html>
