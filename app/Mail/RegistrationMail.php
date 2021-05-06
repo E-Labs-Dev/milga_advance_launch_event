@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Http\Enums\MailConfig;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -28,13 +29,9 @@ class RegistrationMail extends Mailable
      */
     public function build()
     {
-        $address = 'milga@support.com';
-        $subject = 'Registration Send Qrcode!';
-        $name = 'Milga';
-
         return $this->view('emails.registration')
-            ->from($address, $name)
-            ->subject($subject)
+            ->from(MailConfig::FROM, MailConfig::NAME)
+            ->subject(MailConfig::SUBJECT)
             ->with([ 'qrcode' => $this->data['qrcode'] ]);
     }
 }

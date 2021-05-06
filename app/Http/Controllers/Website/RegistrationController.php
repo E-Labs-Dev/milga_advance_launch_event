@@ -50,9 +50,9 @@ class RegistrationController extends Controller
         try {
             DB::beginTransaction();
 
-           $qrcode =  $this->registration->store($request->all());
+            $qrcode =  $this->registration->store($request->all());
 
-            $data = ['qrcode' => $qrcode,];
+            $data = ['qrcode' => $qrcode];
 
             Mail::to($request->email)->send(new RegistrationMail($data));
 
