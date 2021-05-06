@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Website\RegistrationController;
+use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,8 +14,9 @@ use App\Http\Controllers\Website\RegistrationController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::post('registration',['as'=>'registration','uses'=>[RegistrationController::class,'store']]);
+
+Auth::routes(['register' => false]);
+
+Route::get('/admin/home', [HomeController::class, 'index'])->name('home');
