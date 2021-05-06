@@ -11,8 +11,9 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
-        "simplesoftwareio/simple-qrcode": "^4.2",
-        "sendgrid/sendgrid": "~7"
+        "laravel/ui": "^3.2",
+        "sendgrid/sendgrid": "~7",
+        "simplesoftwareio/simple-qrcode": "^4.2"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
