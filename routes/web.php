@@ -19,4 +19,5 @@ Route::post('registration',['as'=>'registration','uses'=>[RegistrationController
 
 Auth::routes(['register' => false]);
 
-Route::get('/admin/home', [HomeController::class, 'index'])->name('home');
+Route::get('admin/home', [HomeController::class, 'index'])->name('home');
+Route::get('admin/registrations',[RegistrationController::class,'index'])->name('registrations.index');
