@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Registration extends Model
 {
@@ -26,10 +27,12 @@ class Registration extends Model
         return env('APP_URL').'/'.$this->qrcode;
     }
 
-    /******************************database*/
+    /******************************database***************/
     public  function store($request){
 
-        \QrCode::size(500)->format('png')->generate($request['email'], public_path('images/'.$request['phone'].'.png'));
+
+
+        \QrCode::size(500)->format('png')->generate($request['email'], public_path('images/'.Str::random(10).'.png'));
 
         $registraion               = new self();
         $registraion->first_name   = $request['first_name'];
@@ -38,8 +41,12 @@ class Registration extends Model
         $registraion->email        = $request['email'];
         $registraion->specialty_id = $request['specialty_id'];
         $registraion->venue_id     = $request['venue_id'];
-        $registraion->qrcode       = 'images/'.$request['phone'].'.png';
-        $registraion->save();
+        $registraion->qrcode       = 'images/'.Str::random(10).'.png';
+
+        if($registraion->save()){
+            $qrcode = \QrCode::format('png')->size(200)->errorCorrection('H')->generate($registraion->id);
+            $qrcode ->store('/images', 'public');
+        }
 
         return  $registraion->full_path;
     }

@@ -26,7 +26,7 @@ class RegistrationRequest extends FormRequest
         return [
             'first_name'   =>'required|string|max:100',
             'last_name'    =>'required|string|max:100',
-            'email'        =>'required|email|unique:	registrations,email|max:100',
+            'email'        =>'required|email|unique:registrations,email|max:100',
             'phone'        =>'required|string|max:15',
             'specialty_id' =>'required|exists:specialties,id',
             'venue_id'     =>'required|exists:venues,id',
