@@ -27,8 +27,8 @@ class RegistrationController extends Controller
     public function index()
     {
          $registrations = Registration::leftJoin('specialties','registrations.specialty_id','=','specialties.id')
-            ->leftJoin('venues','registrations.venue_id','=','venues.id')->
-            select('registrations.id','registrations.first_name','registrations.last_name','registrations.email','registrations.phone','specialties.name as specialty','venues.name as venue')->get();
+            ->leftJoin('venues','registrations.venue_id','=','venues.id')->select('registrations.id','registrations.first_name',
+                 'registrations.last_name','registrations.email','registrations.phone','specialties.name as specialty','venues.name as venue','registrations.created_at')->get();
 
        return  view('dashboard.registrations',['registrations'=>$registrations]);
     }

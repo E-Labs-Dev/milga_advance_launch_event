@@ -24,6 +24,7 @@
                     <th>Phone</th>
                     <th>Specialty</th>
                     <th>Venue</th>
+                    <th>created_at</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
@@ -36,7 +37,10 @@
                     <td>{{$registration->phone}}</td>
                     <td>{{$registration->specialty}}</td>
                     <td>{{$registration->venue}}</td>
-                    <td></td>
+                    <td>{{$registration->created_at}}</td>
+                    <td>
+                        <a href=""><i class="fas fa-trash-alt"></i></a>
+                    </td>
                 </tr>
                 @endforeach
                 </tbody>
@@ -47,6 +51,7 @@
                     <th>Phone</th>
                     <th>Specialty</th>
                     <th>Venue</th>
+                    <th>created_at</th>
                     <th>Actions</th>
                 </tr>
                 </tfoot>
