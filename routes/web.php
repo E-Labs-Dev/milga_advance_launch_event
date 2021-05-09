@@ -15,8 +15,11 @@ use App\Http\Controllers\HomeController;
 */
 
 
-Route::post('registration',['as'=>'registration','uses'=>[RegistrationController::class,'store']]);
+
 
 Auth::routes(['register' => false]);
 
-Route::get('/admin/home', [HomeController::class, 'index'])->name('home');
+Route::get('admin/home', [HomeController::class, 'index'])->name('home');
+Route::post('registrations/store',[RegistrationController::class,'store'])->name('registrations.store');
+Route::get('admin/registrations/index',[RegistrationController::class,'index'])->name('registrations.index');
+

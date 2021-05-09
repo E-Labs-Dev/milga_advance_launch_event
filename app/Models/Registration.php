@@ -14,11 +14,11 @@ class Registration extends Model
     protected $fillable = ['first_name', 'last_name','email','phone','specialty_id','venue_id','qrcode'];
 
     public function specialty(){
-        return $this->hasOne(Specialty::class);
+        return $this->belongsTo(Specialty::class);
     }
 
     public function venue(){
-        return $this->hasOne(Venue::class);
+        return $this->belongsTo(Venue::class);
     }
 
     public function getFullPathAttribute()
