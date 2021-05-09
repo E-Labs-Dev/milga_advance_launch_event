@@ -24,9 +24,9 @@ class RegistrationRequest extends FormRequest
     public function rules()
     {
         return [
-            'first_name'   =>'required|string|max:100',
-            'last_name'    =>'required|string|max:100',
-            'email'        =>'required|email|unique:registrations,email|max:100',
+            'first_name'   =>'required|string|max:190',
+            'last_name'    =>'required|string|max:190',
+            'email'        =>'required|email|unique:registrations,email|max:190',
             'phone'        =>'required|string|max:15',
             'specialty_id' =>'required|exists:specialties,id',
             'venue_id'     =>'required|exists:venues,id',

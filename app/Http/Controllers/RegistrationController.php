@@ -32,7 +32,7 @@ class RegistrationController extends Controller
             ->leftJoin('venues','registrations.venue_id','=','venues.id')->select('registrations.id','registrations.first_name',
                  'registrations.last_name','registrations.email','registrations.phone','specialties.name as specialty','venues.name as venue','registrations.created_at')->get();
 
-       return  view('dashboard.registrations.index',['registrations'=>$registrations]);
+       return  view('dashboard.registrations.index',compact('registrations'));
     }
 
     /**
@@ -44,7 +44,7 @@ class RegistrationController extends Controller
     {
         $venues = Venue::select('id','name')->get();
         $specialties = Specialty::select('id','name')->get();
-        return  view('dashboard.registrations.create',['venues'=>$venues,'specialties'=>$specialties]);
+        return  view('dashboard.registrations.create',compact(['venues','specialties']));
     }
 
     /**
@@ -65,7 +65,7 @@ class RegistrationController extends Controller
             Mail::to($request->email)->send(new RegistrationMail($data));
 
             DB::commit();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
 
             DB::rollBack();
 
