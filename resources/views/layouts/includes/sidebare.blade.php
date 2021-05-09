@@ -54,7 +54,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="{{route('registrations.create')}}" class="nav-link">
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
                             Registration Form

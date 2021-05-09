@@ -22,4 +22,4 @@ Auth::routes(['register' => false]);
 Route::get('admin/home', [HomeController::class, 'index'])->name('home');
 Route::post('registrations/store',[RegistrationController::class,'store'])->name('registrations.store');
 Route::get('admin/registrations/index',[RegistrationController::class,'index'])->name('registrations.index');
-
+Route::get('admin/registrations/create',[RegistrationController::class,'create'])->name('registrations.create');
