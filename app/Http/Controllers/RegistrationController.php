@@ -48,7 +48,7 @@ class RegistrationController extends Controller
 
         $specialties = Specialty::select('id','name')->get();
 
-        return  view('dashboard.registrations.create',compact(['venues','specialties']));
+        return  view('dashboard.registrations.create',compact('venues','specialties'));
 
     }
 
@@ -60,6 +60,7 @@ class RegistrationController extends Controller
      */
     public function store(RegistrationRequest $request)
     {
+        /*todo call here qr code service class*/
         try {
             DB::beginTransaction();
 
@@ -77,15 +78,15 @@ class RegistrationController extends Controller
             Mail::to($request->email)->send(new RegistrationMail($data));
 
             DB::commit();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
 
             DB::rollBack();
 
             Log::error($e->getMessage());
 
-            return back()->with('failure','Error Please Try Again');
+            return redirect()->route('home')->with('error','Data Deleted');
         }
-        return back()->with('success','thanks for registration ');
+        return redirect()->route('home')->with('message','Thank you for registration.');
     }
 
     /**

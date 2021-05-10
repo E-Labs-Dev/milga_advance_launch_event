@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\WebsiteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,9 +20,11 @@ use App\Http\Controllers\HomeController;
 
 Auth::routes(['register' => false]);
 
+Route::get('/',[WebsiteController::class,'index'])->name('home');
+
 Route::post('registrations/store',[RegistrationController::class,'store'])->name('registrations.store');
 
 /*todo put this rout in admin group */
-Route::get('admin/home', [HomeController::class, 'index'])->name('home');
+Route::get('admin/home', [HomeController::class, 'index'])->name('dashboard.home');
 Route::get('admin/registrations/index',[RegistrationController::class,'index'])->name('registrations.index');
 Route::get('admin/registrations/create',[RegistrationController::class,'create'])->name('registrations.create');
