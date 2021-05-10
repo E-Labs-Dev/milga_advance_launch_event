@@ -12,6 +12,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class RegistrationController extends Controller
 {
@@ -28,11 +30,11 @@ class RegistrationController extends Controller
      */
     public function index()
     {
-         $registrations = Registration::leftJoin('specialties','registrations.specialty_id','=','specialties.id')
+        $registrations = Registration::leftJoin('specialties','registrations.specialty_id','=','specialties.id')
             ->leftJoin('venues','registrations.venue_id','=','venues.id')->select('registrations.id','registrations.first_name',
-                 'registrations.last_name','registrations.email','registrations.phone','specialties.name as specialty','venues.name as venue','registrations.created_at')->get();
+                'registrations.last_name','registrations.email','registrations.phone','specialties.name as specialty','venues.name as venue','registrations.created_at')->get();
 
-       return  view('dashboard.registrations.index',compact('registrations'));
+        return  view('dashboard.registrations.index',compact('registrations'));
     }
 
     /**
@@ -43,8 +45,11 @@ class RegistrationController extends Controller
     public function create()
     {
         $venues = Venue::select('id','name')->get();
+
         $specialties = Specialty::select('id','name')->get();
+
         return  view('dashboard.registrations.create',compact(['venues','specialties']));
+
     }
 
     /**
@@ -57,9 +62,18 @@ class RegistrationController extends Controller
     {
         try {
             DB::beginTransaction();
-            /*todo call here qr code service class*/
-            $qrcode =  $this->registration->store($request->all());
-            $data = ['qrcode' => $qrcode];
+
+            $qrcode = Str::random(10).'.png';
+
+            QrCode::size(500)->format('png')->generate($request->email, public_path('qrcodes/'.$qrcode));
+
+            $request_data           = $request->all();
+            $request_data ['qrcode']= $qrcode;
+
+            $registraion =  $this->registration->create($request_data);
+
+            $data = ['qrcode' => $registraion->full_path];
+
             Mail::to($request->email)->send(new RegistrationMail($data));
 
             DB::commit();
