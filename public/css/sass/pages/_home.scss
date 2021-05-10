@@ -26,18 +26,26 @@ header {
         padding: 10px 0;
     }
     img {
+        @media #{$mdScreen} {
+            width: 90px;
+        }
         @media #{$mobileScreen} {
            width: 80px;
         } 
     }
     .web {
-        @media #{$mobileScreen} {
+        @media #{$smallScreen} {
             display: none;
          } 
+         img {
+            @media #{$mdScreen} {
+                width: 140px;
+            }
+         }
     }
     .mobile {
         display: none;
-        @media #{$mobileScreen} {
+        @media #{$smallScreen} {
             display: block;
             text-align: $right;
             img {
@@ -48,6 +56,7 @@ header {
     .counter {
         display: flex;
         align-items: center;
+        height: 100%;
         li {
             margin:  0 10px;
             color: #fff;
@@ -68,6 +77,9 @@ header {
                    
                     font-size: 15px;
                 }
+                @media #{$mdScreen} {
+                    font-size: 13px;
+                }
                 @media #{$mobileScreen} {
                     font-size: 15px;
                  }
@@ -85,6 +97,13 @@ header {
             justify-content: center;
             align-items: center;
             text-align: center;
+            @media #{$mdScreen} {
+                background: url(../images/circle-md.png) no-repeat;
+                width: 60px;
+                height: 59px;
+                font-size: 8px;
+
+            }
             @media #{$mobileScreen} {
                 background: url(../images/circle-small.png) no-repeat;
                 width: 50px;
@@ -114,7 +133,7 @@ header {
             font-size: 45px;
             text-transform: capitalize;
             @media #{$largScreen} {
-                font-size: 60px;
+                font-size: 45px;
             }
             @media #{$mobileScreen} {
                 font-size: 30px;
@@ -134,7 +153,7 @@ header {
             line-height: 1.2;
             margin-bottom: 30px;
             @media #{$largScreen} {
-                font-size: 24px;
+                font-size: 20px;
             }
             @media #{$extrasmallScreen} {
                 font-size: 12px;
@@ -143,6 +162,7 @@ header {
         .main-div {
             display: flex;
             align-items: center;
+            margin-bottom: 15px;
             @media #{$mobileScreen} {
                margin-bottom: 10px;
             }
@@ -154,7 +174,7 @@ header {
                 flex: .7;
                 font-size: 18px;
                 @media #{$largScreen} {
-                    font-size: 24px;
+                    font-size: 20px;
                 }
                 @media #{$mobileScreen} {
                     font-size: 13px;
@@ -179,7 +199,7 @@ header {
                 font-size: 18px;
                 height: 90px;
                 @media #{$largScreen} {
-                    font-size: 24px;
+                    font-size: 20px;
                 }
                 @media #{$mobileScreen} {
                     font-size: 13px;
@@ -501,6 +521,9 @@ footer {
             span {
                 margin-left: 15px;
                 font-size: 12px;
+                @media #{$extrasmallScreen} {
+                    font-size: 11px;
+                }
             }
         }
     }

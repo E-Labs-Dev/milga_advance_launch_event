@@ -36,6 +36,10 @@ body {
   direction: ltr;
   font-family: 'Poppins-Regular'; }
 
+@media (min-width: 1700px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1300px; } }
+
 @media (min-width: 992px) {
   button {
     color: #f00; } }
@@ -56,15 +60,21 @@ header {
       position: static;
       height: unset;
       padding: 10px 0; } }
+  @media (max-width: 990px) {
+    header img {
+      width: 90px; } }
   @media (max-width: 823px) {
     header img {
       width: 80px; } }
-  @media (max-width: 823px) {
+  @media (max-width: 766px) {
     header .web {
       display: none; } }
+  @media (max-width: 990px) {
+    header .web img {
+      width: 140px; } }
   header .mobile {
     display: none; }
-    @media (max-width: 823px) {
+    @media (max-width: 766px) {
       header .mobile {
         display: block;
         text-align: right; }
@@ -72,7 +82,8 @@ header {
           width: 140px; } }
   header .counter {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    height: 100%; }
     header .counter li {
       margin: 0 10px;
       color: #fff;
@@ -92,6 +103,9 @@ header {
         @media (max-width: 1024px) {
           header .counter li h3 {
             font-size: 15px; } }
+        @media (max-width: 990px) {
+          header .counter li h3 {
+            font-size: 13px; } }
         @media (max-width: 823px) {
           header .counter li h3 {
             font-size: 15px; } }
@@ -106,6 +120,12 @@ header {
       justify-content: center;
       align-items: center;
       text-align: center; }
+      @media (max-width: 990px) {
+        header .counter .bg {
+          background: url(../images/circle-md.png) no-repeat;
+          width: 60px;
+          height: 59px;
+          font-size: 8px; } }
       @media (max-width: 823px) {
         header .counter .bg {
           background: url(../images/circle-small.png) no-repeat;
@@ -137,7 +157,7 @@ header {
       text-transform: capitalize; }
       @media (min-width: 1700px) {
         .banner .overlay h3 {
-          font-size: 60px; } }
+          font-size: 45px; } }
       @media (max-width: 823px) {
         .banner .overlay h3 {
           font-size: 30px; } }
@@ -153,13 +173,14 @@ header {
       margin-bottom: 30px; }
       @media (min-width: 1700px) {
         .banner .overlay p {
-          font-size: 24px; } }
+          font-size: 20px; } }
       @media (max-width: 400px) {
         .banner .overlay p {
           font-size: 12px; } }
     .banner .overlay .main-div {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      margin-bottom: 15px; }
       @media (max-width: 823px) {
         .banner .overlay .main-div {
           margin-bottom: 10px; } }
@@ -172,7 +193,7 @@ header {
         font-size: 18px; }
         @media (min-width: 1700px) {
           .banner .overlay .main-div div {
-            font-size: 24px; } }
+            font-size: 20px; } }
         @media (max-width: 823px) {
           .banner .overlay .main-div div {
             font-size: 13px;
@@ -195,7 +216,7 @@ header {
         height: 90px; }
         @media (min-width: 1700px) {
           .banner .overlay .main-div button {
-            font-size: 24px; } }
+            font-size: 20px; } }
         @media (max-width: 823px) {
           .banner .overlay .main-div button {
             font-size: 13px;
@@ -460,6 +481,9 @@ footer {
     footer .top-footer .text span {
       margin-left: 15px;
       font-size: 12px; }
+      @media (max-width: 400px) {
+        footer .top-footer .text span {
+          font-size: 11px; } }
   footer .copy-right {
     float: left;
     width: 100%;

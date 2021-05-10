@@ -20,24 +20,24 @@
 <header>
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-6">
+            <div class="col-lg-3 col-md-3 col-6">
                 <img src="{{asset('images/logo.png')}}">
             </div><!--col-lg-3-->
             <div class="col-lg-3 col-6 mobile">
                 <img src="{{asset('images/logo2.png')}}">
             </div><!--col-lg-3-->
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6">
                 <ul class="counter">
                     <li> <h3>Launching Soon</h3></li>
                     <li id="days" class="bg"><span>days</span></li>
                     <li id="hours" class="bg"></li>
                     <li id="mins" class="bg"></li>
-                    <h2 id="end" ></h2>
+                    <li> <h2 id="end" ></h2></li>
                 </ul>
 
             </div><!--col-lg-6-->
-            <div class="col-lg-3 web">
+            <div class="col-lg-3 col-md-3 web">
                 <img src="{{asset('images/logo2.png')}}">
             </div><!--col-lg-3-->
 
@@ -108,11 +108,11 @@
                         <div class="row reserve" >
                             <div class="col-lg-6 col-12">
                                 <label>First Name <span>*</span></label>
-                                <input type="text" class="form-control" placeholder="Enter first Name" required name="first_name">
+                                <input type="text" class="form-control" placeholder="Enter first name" required name="first_name">
                             </div><!--col-12-->
                             <div class="col-lg-6 col-12">
                                 <label>Last Name <span>*</span> </label>
-                                <input type="text" class="form-control" placeholder="Last Name" required name="last_name">
+                                <input type="text" class="form-control" placeholder="Enter last name" required name="last_name">
                             </div><!--col-12-->
 
                             <div class="col-lg-6 col-12">

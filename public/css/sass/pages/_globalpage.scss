@@ -58,3 +58,8 @@ font-family: 'Poppins-Regular';
 }
 
 
+.container, .container-sm, .container-md, .container-lg, .container-xl {
+    @media #{$largScreen}{
+        max-width: 1300px;
+    }
+}
