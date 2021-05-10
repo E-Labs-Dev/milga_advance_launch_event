@@ -53,15 +53,6 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{route('registrations.create')}}" class="nav-link">
-                        <i class="nav-icon fas fa-edit"></i>
-                        <p>
-                            Registration Form
-
-                        </p>
-                    </a>
-                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
