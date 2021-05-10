@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Website;
 
+use App\Http\Controllers\Controller;
 use App\Models\Specialty;
 use App\Models\Venue;
 use Illuminate\Http\Request;
 
-class WebsiteController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +18,7 @@ class WebsiteController extends Controller
     {
         $venues = Venue::select('id','name')->get();
         $specialties = Specialty::select('id','name')->get();
-        return  view('welcome',compact(['venues','specialties']));
+        return  view('home',compact('venues','specialties'));
     }
 
     /**
@@ -85,4 +86,5 @@ class WebsiteController extends Controller
     {
         //
     }
+
 }
