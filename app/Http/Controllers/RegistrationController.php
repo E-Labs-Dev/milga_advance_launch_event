@@ -44,12 +44,7 @@ class RegistrationController extends Controller
      */
     public function create()
     {
-        $venues = Venue::select('id','name')->get();
-
-        $specialties = Specialty::select('id','name')->get();
-
-        return  view('dashboard.registrations.create',compact('venues','specialties'));
-
+        //
     }
 
     /**
@@ -60,33 +55,7 @@ class RegistrationController extends Controller
      */
     public function store(RegistrationRequest $request)
     {
-        /*todo call here qr code service class*/
-        try {
-            DB::beginTransaction();
-
-            $qrcode = Str::random(10).'.png';
-
-            QrCode::size(500)->format('png')->generate($request->email, public_path('qrcodes/'.$qrcode));
-
-            $request_data           = $request->all();
-            $request_data ['qrcode']= $qrcode;
-
-            $registraion =  $this->registration->create($request_data);
-
-            $data = ['qrcode' => $registraion->full_path];
-
-            Mail::to($request->email)->send(new RegistrationMail($data));
-
-            DB::commit();
-        } catch (\Exception $e) {
-
-            DB::rollBack();
-
-            Log::error($e->getMessage());
-
-            return redirect()->route('home')->with('error','Data Deleted');
-        }
-        return redirect()->route('home')->with('message','Thank you for registration.');
+        //
     }
 
     /**
