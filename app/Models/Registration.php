@@ -32,9 +32,9 @@ class Registration extends Model
 
 
 
-        \QrCode::size(500)->format('png')->generate($request['email'], public_path('images/'.Str::random(10).'.png'));
+        \QrCode::size(500)->format('png')->generate($request['email'], public_path('images/'.Str::random(10).'.png')); /*todo remove this line */
 
-        $registraion               = new self();
+        $registraion               = new self(); /*todo store request validated from controller and make qr code login in service class */
         $registraion->first_name   = $request['first_name'];
         $registraion->last_name    = $request['last_name'];
         $registraion->phone        = $request['phone'];

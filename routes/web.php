@@ -19,7 +19,9 @@ use App\Http\Controllers\HomeController;
 
 Auth::routes(['register' => false]);
 
-Route::get('admin/home', [HomeController::class, 'index'])->name('home');
 Route::post('registrations/store',[RegistrationController::class,'store'])->name('registrations.store');
+
+/*todo put this rout in admin group */
+Route::get('admin/home', [HomeController::class, 'index'])->name('home');
 Route::get('admin/registrations/index',[RegistrationController::class,'index'])->name('registrations.index');
 Route::get('admin/registrations/create',[RegistrationController::class,'create'])->name('registrations.create');

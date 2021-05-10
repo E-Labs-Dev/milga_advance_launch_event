@@ -57,15 +57,13 @@ class RegistrationController extends Controller
     {
         try {
             DB::beginTransaction();
-
+            /*todo call here qr code service class*/
             $qrcode =  $this->registration->store($request->all());
-
             $data = ['qrcode' => $qrcode];
-
             Mail::to($request->email)->send(new RegistrationMail($data));
 
             DB::commit();
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
 
             DB::rollBack();
 
