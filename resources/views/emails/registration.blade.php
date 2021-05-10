@@ -5,6 +5,7 @@
   </head>
   <body>
     <h2>Qrcode Image</h2>
-    <p>{{ $qrcode }}</p>
+    <h2>{{$qrcode}}</h2>
+    <p><img src="{{$qrcode}}" width="100" height="100"></p>
 </body>
 </html>
