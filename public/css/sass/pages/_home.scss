@@ -189,7 +189,7 @@ header {
                     margin-right: 5px;
                 }
             }
-            button {
+            a {
                 background-image: linear-gradient(to right, #CA1D27 ,#ef131e);
                 padding: 30px 10px;
                 border:none;
@@ -336,9 +336,12 @@ header {
     .registration-div {
         background-color: #F9F9F9;
         width: 100%;
-        padding: 50px 0;
+        padding: 130px 0;
         position: relative;
         overflow: hidden;
+        @media #{$smallScreen}{
+            padding: 70px 0;
+        }
         .image-regist {
             position: absolute;
             left: 0;
@@ -495,6 +498,9 @@ footer {
     background-color: $mainColor;
     padding: 50px 0 20px;
     margin-top: 200px;
+     @media #{$smallScreen}{
+         margin-top: 100px;
+     }
     .img-footer {
         position: absolute;
         top: -152px;
@@ -524,6 +530,10 @@ footer {
                 @media #{$extrasmallScreen} {
                     font-size: 11px;
                 }
+                @media #{$sScreen} {
+                    font-size: 9px;
+                }
+
             }
         }
     }

@@ -21,12 +21,22 @@ Route::group(['namespace'=>'Website'],function () {
 
     Route::post('registrations/store','RegistrationController@store')->name('registrations.store');
 
-    Route::post('{userCode}/show','RegistrationController@show')->name('registrations.show');
-
 });
 
-Route::group(['prefix' => 'admin','namespace'=>'Dashboard'],function () {
-    Route::get('home', 'HomeController@index')->name('dashboard.home');
-    Route::get('registrations/index','RegistrationController@index')->name('registrations.index');
-    Route::get('registrations/destroy/{id}','RegistrationController@destroy')->name('registrations.destroy');
+Route::group(['namespace'=>'Dashboard'],function () {
+
+    Route::group(['prefix' => 'admin'],function () {
+
+        Route::get('home', 'HomeController@index')->name('dashboard.home');
+
+        Route::get('registrations/index','RegistrationController@index')->name('registrations.index');
+
+        Route::get('registrations/destroy/{id}','RegistrationController@destroy')->name('registrations.destroy');
+
+    });
+
+    Route::get('{userCode}/show','RegistrationController@show')->name('registrations.show');
+
+    Route::post('registrations/attend','RegistrationController@attend')->name('registrations.attend');
+
 });

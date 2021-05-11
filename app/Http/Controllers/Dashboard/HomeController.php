@@ -26,7 +26,8 @@ class HomeController extends Controller
     public function index()
     {
         $registrations  = Registration::count();
+        $registrationsAttend  = Registration::where('is_attend',1)->count();
 
-        return view('dashboard.home',compact('registrations'));
+        return view('dashboard.home',compact('registrations','registrationsAttend'));
     }
 }

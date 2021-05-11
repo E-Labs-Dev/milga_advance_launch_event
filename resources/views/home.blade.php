@@ -56,8 +56,8 @@
                 </div><!--col-lg-6-->
                 <div class="col-lg-6">
                     <div class="main-div">
-                        <div><span><img src="{{asset('images/cal.png')}}"></span>15 April 2:00 pm</div>
-                        <button>Reserve Your Spot <span><img src="{{asset('images/arrow.png')}}"></span></button>
+                        <div   ><span><img src="images/cal.png"></span>30 July 6:10 pm</div>
+                        <a href="#reserve">Reserve Your Spot <span><img src="images/arrow.png"></span></a>
                     </div><!--main-div-->
                 </div><!--col-lg-6-->
 
@@ -96,7 +96,7 @@
     </div><!--div-video-->
 
 
-    <div class="registration-div">
+    <div class="registration-div"  id="reserve" >
         <img class="image-regist" src="{{asset('images/image-regist.png')}}">
         <div class="container">
             <div class="row" style="justify-content: center;">
@@ -121,12 +121,12 @@
                             </div><!--col-12-->
                             <div class="col-lg-6 col-12">
                                 <label>Mobile Number  <span>*</span> </label>
-                                <input  class="form-control" placeholder="Enter mobile number" type="tel"  id="phone" name="phone"  value="{{old('phone')}}">
+                                <input  class="form-control" placeholder="Enter mobile number" type="tel" required  id="phone" name="phone"  value="{{old('phone')}}">
                             </div><!--col-12-->
                             <div class="col-lg-6 col-12">
                                 <label>Speciality <span>*</span> </label>
-                                <select name="specialty_id">
-                                    <option>Select Speciality</option>
+                                <select name="specialty_id" required>
+                                    <option>Cairo Launch event 30.7.2021</option>
                                     @foreach($specialties as  $specialty)
                                         <option value="{{$specialty->id}}" @if (old('specialty_id') == $specialty->id)
                                             selected
@@ -136,7 +136,7 @@
                             </div><!--col-12-->
                             <div class="col-lg-6 col-12">
                                 <label>Choose the venue <span>*</span> </label>
-                                <select name="venue_id">
+                                <select name="venue_id" required>
                                     <option>Cairo Launch event 30.7.2021</option>
                                     @foreach($venues as  $venue)
                                         <option value="{{$venue->id}}" @if (old('venue_id') == $venue->id)

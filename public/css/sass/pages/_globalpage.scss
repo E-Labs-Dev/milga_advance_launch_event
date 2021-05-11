@@ -57,9 +57,15 @@ direction: ltr;
 font-family: 'Poppins-Regular';
 }
 
-
+html {
+    scroll-behavior: smooth;
+  }
+  
 .container, .container-sm, .container-md, .container-lg, .container-xl {
     @media #{$largScreen}{
         max-width: 1300px;
     }
+}
+.iti {
+    width: 100% !important;
 }

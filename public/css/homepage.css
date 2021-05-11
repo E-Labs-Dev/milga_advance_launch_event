@@ -36,9 +36,15 @@ body {
   direction: ltr;
   font-family: 'Poppins-Regular'; }
 
+html {
+  scroll-behavior: smooth; }
+
 @media (min-width: 1700px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
     max-width: 1300px; } }
+
+.iti {
+  width: 100% !important; }
 
 @media (min-width: 992px) {
   button {
@@ -205,7 +211,7 @@ header {
         .banner .overlay .main-div div img {
           width: 20px;
           margin-right: 5px; }
-      .banner .overlay .main-div button {
+      .banner .overlay .main-div a {
         background-image: linear-gradient(to right, #CA1D27, #ef131e);
         padding: 30px 10px;
         border: none;
@@ -215,25 +221,25 @@ header {
         font-size: 18px;
         height: 90px; }
         @media (min-width: 1700px) {
-          .banner .overlay .main-div button {
+          .banner .overlay .main-div a {
             font-size: 20px; } }
         @media (max-width: 823px) {
-          .banner .overlay .main-div button {
+          .banner .overlay .main-div a {
             font-size: 13px;
             padding: 32px 5px;
             height: unset; } }
         @media (max-width: 400px) {
-          .banner .overlay .main-div button {
+          .banner .overlay .main-div a {
             font-size: 11px; } }
-        .banner .overlay .main-div button span {
+        .banner .overlay .main-div a span {
           margin-left: 25px; }
           @media (max-width: 823px) {
-            .banner .overlay .main-div button span {
+            .banner .overlay .main-div a span {
               margin-left: 5px; } }
-          .banner .overlay .main-div button span img {
+          .banner .overlay .main-div a span img {
             width: 70px; }
             @media (max-width: 823px) {
-              .banner .overlay .main-div button span img {
+              .banner .overlay .main-div a span img {
                 width: 35px; } }
 
 .content {
@@ -325,9 +331,12 @@ header {
   .content .registration-div {
     background-color: #F9F9F9;
     width: 100%;
-    padding: 50px 0;
+    padding: 130px 0;
     position: relative;
     overflow: hidden; }
+    @media (max-width: 766px) {
+      .content .registration-div {
+        padding: 70px 0; } }
     .content .registration-div .image-regist {
       position: absolute;
       left: 0;
@@ -461,6 +470,9 @@ footer {
   background-color: #DF0E19;
   padding: 50px 0 20px;
   margin-top: 200px; }
+  @media (max-width: 766px) {
+    footer {
+      margin-top: 100px; } }
   footer .img-footer {
     position: absolute;
     top: -152px;
@@ -484,6 +496,9 @@ footer {
       @media (max-width: 400px) {
         footer .top-footer .text span {
           font-size: 11px; } }
+      @media (max-width: 320px) {
+        footer .top-footer .text span {
+          font-size: 9px; } }
   footer .copy-right {
     float: left;
     width: 100%;
