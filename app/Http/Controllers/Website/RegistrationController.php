@@ -5,14 +5,24 @@ namespace App\Http\Controllers\Website;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegistrationRequest;
 use App\Mail\RegistrationMail;
+use App\Services\qrCodeGenerated;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Registration;
 use Illuminate\Support\Str;
-use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class RegistrationController extends Controller
 {
+    public  $qrCode ;
+    public  $registration ;
+
+    public function __construct()
+    {
+        $this->qrCode = new qrCodeGenerated();
+        $this->registration = new Registration();
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -21,33 +31,37 @@ class RegistrationController extends Controller
      */
     public function store(RegistrationRequest $request)
     {
-
         /*todo call here qr code service class*/
         try {
             DB::beginTransaction();
 
-            $qrcode = Str::random(10).'.png';
+            $userCode     = 'mlg_'.Str::random(3);
 
-            QrCode::size(500)->format('png')->generate($request->email, public_path('qrcodes/'.$qrcode));
+            $qrcode       = $this->qrCode->created($userCode);
 
-            $request_data           = $request->validated();
-            $request_data ['qrcode']= $qrcode;
+            $requestData  = $request->validated();
 
-            $registraion =  $this->registration->create($request_data);
+            $requestData ['qrcode']=$qrcode;
 
-            $data = ['qrcode' => $registraion->full_path];
+            $requestData ['user_code']=$userCode;
+
+            $registraion =  $this->registration->create($requestData);
+
+            $data = ['qrcode' => $registraion->original_path];
 
             Mail::to($request->email)->send(new RegistrationMail($data));
 
             DB::commit();
-        } catch (\Exception $e) {
+
+        } catch (Exception $e) {
 
             DB::rollBack();
 
             Log::error($e->getMessage());
 
-            return redirect()->route('home')->with('error','Data Deleted');
+            return redirect()->route('home')->with('error','Data Not Save')->withInput();
         }
-        return redirect()->route('home')->with('message','Thank you for registration.');
+
+        return redirect()->route('home')->with('message','Thank you for registration,Please Check your email.');
     }
 }

@@ -14,6 +14,8 @@ class Registration extends Model
 
     protected $fillable = ['first_name', 'last_name','email','phone','specialty_id','venue_id','qrcode'];
 
+    protected $appends = ['original_path'];
+
     public function specialty(){
         return $this->belongsTo(Specialty::class);
     }
@@ -22,8 +24,8 @@ class Registration extends Model
         return $this->belongsTo(Venue::class);
     }
 
-    public function getFullPathAttribute()
+    public function getOriginalPathAttribute()
     {
-        return env('APP_URL').'/'.$this->qrcode;
+        return env('APP_URL').$this->qrcode;
     }
 }
