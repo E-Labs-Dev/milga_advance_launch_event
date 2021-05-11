@@ -28,4 +28,5 @@ Route::group(['namespace'=>'Website'],function () {
 Route::group(['prefix' => 'admin','namespace'=>'Dashboard'],function () {
     Route::get('home', 'HomeController@index')->name('dashboard.home');
     Route::get('registrations/index','RegistrationController@index')->name('registrations.index');
+    Route::get('registrations/destroy/{id}','RegistrationController@destroy')->name('registrations.destroy');
 });

@@ -39,7 +39,7 @@
                     <td>{{$registration->venue}}</td>
                     <td>{{$registration->created_at}}</td>
                     <td>
-                        <a href=""><i class="fas fa-trash-alt"></i></a>
+                        <a href="{{route('registrations.destroy',$registration->id)}}"><i class="fas fa-trash-alt"></i></a>
                     </td>
                 </tr>
                 @endforeach
