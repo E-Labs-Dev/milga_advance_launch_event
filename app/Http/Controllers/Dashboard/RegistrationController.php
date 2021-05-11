@@ -92,6 +92,10 @@ class RegistrationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $registration =  $this->registration->findOrFail($id);
+
+        $registration->delete();
+
+        return redirect()->route('registrations.index')->with('message','Done data deleted.');
     }
 }
