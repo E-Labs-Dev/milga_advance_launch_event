@@ -16,8 +16,13 @@ use Illuminate\Support\Facades\Route;
 Auth::routes(['register' => false]);
 
 Route::group(['namespace'=>'Website'],function () {
+
     Route::get('/','HomeController@index')->name('home');
+
     Route::post('registrations/store','RegistrationController@store')->name('registrations.store');
+
+    Route::post('{userCode}/show','RegistrationController@show')->name('registrations.show');
+
 });
 
 Route::group(['prefix' => 'admin','namespace'=>'Dashboard'],function () {
