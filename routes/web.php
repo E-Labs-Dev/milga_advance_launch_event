@@ -26,6 +26,6 @@ Route::group(['namespace'=>'Website'],function () {
 });
 
 Route::group(['prefix' => 'admin','namespace'=>'Dashboard'],function () {
-    Route::get('admin/home', 'HomeController@index')->name('dashboard.home');
-    Route::get('admin/registrations/index','RegistrationController@store')->name('registrations.index');
+    Route::get('home', 'HomeController@index')->name('dashboard.home');
+    Route::get('registrations/index','RegistrationController@index')->name('registrations.index');
 });
