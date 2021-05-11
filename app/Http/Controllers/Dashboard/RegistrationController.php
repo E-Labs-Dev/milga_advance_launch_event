@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\RegistrationAttendRequest;
 use App\Http\Requests\RegistrationRequest;
 use App\Models\Registration;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class RegistrationController extends Controller
 {
@@ -29,59 +32,42 @@ class RegistrationController extends Controller
         return  view('dashboard.registrations.index',compact('registrations'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(RegistrationRequest $request)
-    {
-        //
-    }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  string  $userCode
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($userCode)
     {
-        //
+        $registration = $this->registration
+            ->leftJoin('specialties','registrations.specialty_id','=','specialties.id')
+            ->leftJoin('venues','registrations.venue_id','=','venues.id')
+            ->select('registrations.user_code','registrations.first_name','registrations.last_name','registrations.is_attend',
+                'registrations.email','registrations.phone','specialties.name as specialty','venues.name as venue')
+            ->where('user_code',$userCode)->first();
+
+        if (!$registration) {
+            return  view('errors.404');
+        }
+
+        return  view('dashboard.registrations.show',compact('registration'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function attend(RegistrationAttendRequest $request)
     {
-        //
+
+       $this->registration->where('user_code',$request->userCode)->update(['is_attend'=>true]);
+
+        return redirect()->route('registrations.show',$request->userCode)->with('message','Done this user attend .');
     }
 
     /**

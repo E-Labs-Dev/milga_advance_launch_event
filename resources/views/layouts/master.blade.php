@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image" href="{{asset('images/fav-icon.png')}}">
+
     <title>Milga Advance | Dashboard</title>
 
     @include('layouts.includes.style')
