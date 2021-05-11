@@ -37,7 +37,7 @@ class RegistrationController extends Controller
 
             $userCode     = 'mlg_'.Str::random(3);
 
-            $qrcode       = $this->qrCode->created($userCode);
+            $qrcode       = $this->qrCode->create($userCode);
 
             $requestData  = $request->validated();
 
