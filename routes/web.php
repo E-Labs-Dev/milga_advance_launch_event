@@ -1,9 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RegistrationController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\WebsiteController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,16 +13,19 @@ use App\Http\Controllers\WebsiteController;
 |
 */
 
-
-
-
 Auth::routes(['register' => false]);
 
-Route::get('/',[WebsiteController::class,'index'])->name('home');
+Route::group(['namespace'=>'Website'],function () {
 
-Route::post('registrations/store',[RegistrationController::class,'store'])->name('registrations.store');
+    Route::get('/','HomeController@index')->name('home');
 
-/*todo put this rout in admin group */
-Route::get('admin/home', [HomeController::class, 'index'])->name('dashboard.home');
-Route::get('admin/registrations/index',[RegistrationController::class,'index'])->name('registrations.index');
-Route::get('admin/registrations/create',[RegistrationController::class,'create'])->name('registrations.create');
+    Route::post('registrations/store','RegistrationController@store')->name('registrations.store');
+
+    Route::post('{userCode}/show','RegistrationController@show')->name('registrations.show');
+
+});
+
+Route::group(['prefix' => 'admin','namespace'=>'Dashboard'],function () {
+    Route::get('admin/home', 'HomeController@index')->name('dashboard.home');
+    Route::get('admin/registrations/index','RegistrationController@store')->name('registrations.index');
+});

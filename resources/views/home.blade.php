@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}" />
     <link rel="stylesheet" href="{{asset('css/homepage.css')}}" />
-
+    <link rel="stylesheet" href="{{asset('css/intlTelInput.css')}}">
     @include('layouts.includes.messages.style')
 </head>
 
@@ -108,27 +108,29 @@
                         <div class="row reserve" >
                             <div class="col-lg-6 col-12">
                                 <label>First Name <span>*</span></label>
-                                <input type="text" class="form-control" placeholder="Enter first name" required name="first_name">
+                                <input type="text" class="form-control" placeholder="Enter first name" required name="first_name" value="{{old('first_name')}}">
                             </div><!--col-12-->
                             <div class="col-lg-6 col-12">
                                 <label>Last Name <span>*</span> </label>
-                                <input type="text" class="form-control" placeholder="Enter last name" required name="last_name">
+                                <input type="text" class="form-control" placeholder="Enter last name" required name="last_name" value="{{old('last_name')}}">
                             </div><!--col-12-->
 
                             <div class="col-lg-6 col-12">
                                 <label>Email <span>*</span> </label>
-                                <input type="text" class="form-control" placeholder="Enter email address" required name="email">
+                                <input type="email" class="form-control" placeholder="Enter email address" required name="email" value="{{old('email')}}">
                             </div><!--col-12-->
                             <div class="col-lg-6 col-12">
                                 <label>Mobile Number  <span>*</span> </label>
-                                <input type="text" class="form-control" placeholder="Enter mobile number" name="phone">
+                                <input  class="form-control" placeholder="Enter mobile number" type="tel"  id="phone" name="phone"  value="{{old('phone')}}">
                             </div><!--col-12-->
                             <div class="col-lg-6 col-12">
                                 <label>Speciality <span>*</span> </label>
                                 <select name="specialty_id">
                                     <option>Select Speciality</option>
                                     @foreach($specialties as  $specialty)
-                                        <option value="{{$specialty->id}}">{{$specialty->name}}</option>
+                                        <option value="{{$specialty->id}}" @if (old('specialty_id') == $specialty->id)
+                                            selected
+                                        @endif>{{$specialty->name}}</option>
                                     @endforeach
                                 </select>
                             </div><!--col-12-->
@@ -137,7 +139,9 @@
                                 <select name="venue_id">
                                     <option>Cairo Launch event 30.7.2021</option>
                                     @foreach($venues as  $venue)
-                                        <option value="{{$venue->id}}">{{$venue->name}}</option>
+                                        <option value="{{$venue->id}}" @if (old('venue_id') == $venue->id)
+                                            selected
+                                            @endif>{{$venue->name}}</option>
                                     @endforeach
                                 </select>
                             </div><!--col-12-->
@@ -186,6 +190,13 @@
 <script src="{{asset('js/jquery.js')}}"></script>
 <script src="{{asset('js/bootstrap.js')}}"></script>
 <script src="{{asset('js/script.js')}}"></script>
+<script src="{{asset('js/intlTelInput.js')}}"></script>
+<script>
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+        utilsScript: "build/js/utils.js",
+    });
+</script>
 @include('layouts.includes.messages.scripts')
 </body>
 </html>
