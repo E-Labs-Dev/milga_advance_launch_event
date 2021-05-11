@@ -6,7 +6,7 @@
     <title>Milga Advance | Dashboard</title>
 
     @include('layouts.includes.style')
-
+    @include('layouts.includes.messages.style')
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -40,6 +40,6 @@
 <!-- ./wrapper -->
 
 @include('layouts.includes.scripts')
-
+@include('layouts.includes.messages.scripts')
 </body>
 </html>
