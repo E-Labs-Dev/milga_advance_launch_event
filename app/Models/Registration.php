@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Registration extends Model
 {
@@ -13,34 +14,18 @@ class Registration extends Model
 
     protected $fillable = ['first_name', 'last_name','email','phone','specialty_id','venue_id','qrcode'];
 
+    protected $appends = ['original_path'];
+
     public function specialty(){
-        return $this->hasOne(Specialty::class);
+        return $this->belongsTo(Specialty::class);
     }
 
     public function venue(){
-        return $this->hasOne(Venue::class);
+        return $this->belongsTo(Venue::class);
     }
 
-    public function getFullPathAttribute()
+    public function getOriginalPathAttribute()
     {
-        return env('APP_URL').'/'.$this->qrcode;
-    }
-
-    /******************************database*/
-    public  function store($request){
-
-        \QrCode::size(500)->format('png')->generate($request['email'], public_path('images/'.$request['phone'].'.png'));
-
-        $registraion               = new self();
-        $registraion->first_name   = $request['first_name'];
-        $registraion->last_name    = $request['last_name'];
-        $registraion->phone        = $request['phone'];
-        $registraion->email        = $request['email'];
-        $registraion->specialty_id = $request['specialty_id'];
-        $registraion->venue_id     = $request['venue_id'];
-        $registraion->qrcode       = 'images/'.$request['phone'].'.png';
-        $registraion->save();
-
-        return  $registraion->full_path;
+        return env('APP_URL').$this->qrcode;
     }
 }

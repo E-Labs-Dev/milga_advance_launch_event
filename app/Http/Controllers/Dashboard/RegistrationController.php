@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dashboard;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\RegistrationRequest;
-use App\Mail\RegistrationMail;
 use App\Models\Registration;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Mail;
 
 class RegistrationController extends Controller
 {
@@ -25,7 +22,11 @@ class RegistrationController extends Controller
      */
     public function index()
     {
-        //
+        $registrations = Registration::leftJoin('specialties','registrations.specialty_id','=','specialties.id')
+            ->leftJoin('venues','registrations.venue_id','=','venues.id')->select('registrations.id','registrations.first_name',
+                'registrations.last_name','registrations.email','registrations.phone','specialties.name as specialty','venues.name as venue','registrations.created_at')->get();
+
+        return  view('dashboard.registrations.index',compact('registrations'));
     }
 
     /**
@@ -46,25 +47,7 @@ class RegistrationController extends Controller
      */
     public function store(RegistrationRequest $request)
     {
-        try {
-            DB::beginTransaction();
-
-            $qrcode =  $this->registration->store($request->all());
-
-            $data = ['qrcode' => $qrcode];
-
-            Mail::to($request->email)->send(new RegistrationMail($data));
-
-            DB::commit();
-        } catch (\Exception $e) {
-
-            DB::rollBack();
-
-            Log::error($e->getMessage());
-
-            return redirect()->route('website.home')->with('status','Error Please Try Again');
-        }
-        return redirect()->route('website.home')->with('status','thanks for registration ');
+        //
     }
 
     /**
