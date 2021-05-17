@@ -31,7 +31,6 @@ class RegistrationController extends Controller
      */
     public function store(RegistrationRequest $request)
     {
-        /*todo call here qr code service class*/
         try {
             DB::beginTransaction();
 
@@ -55,13 +54,13 @@ class RegistrationController extends Controller
 
             DB::commit();
 
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
 
             DB::rollBack();
 
             Log::error($e->getMessage());
 
-            return redirect()->route('home')->with('error','Data Not Save')->withInput();
+            return redirect()->route('home')->with('info','Data Not Save')->withInput();
         }
 
         return redirect()->route('home')->with('message','Thank you for registration,Please Check your email.');

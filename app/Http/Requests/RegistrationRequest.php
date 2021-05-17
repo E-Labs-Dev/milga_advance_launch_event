@@ -32,6 +32,7 @@ class RegistrationRequest extends FormRequest
             'phone'        =>'required|unique:registrations,phone|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'specialty_id' =>'required|exists:specialties,id',
             'venue_id'     =>'required|exists:venues,id',
+            'governorate'  =>'required',
         ];
     }
 

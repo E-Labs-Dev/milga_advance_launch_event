@@ -12,7 +12,7 @@ class Registration extends Model
 
     protected $table = 'registrations';
 
-    protected $fillable = ['first_name', 'last_name','email','phone','specialty_id','venue_id','qrcode','user_code'];
+    protected $fillable = ['first_name', 'last_name','email','phone','specialty_id','venue_id','qrcode','user_code','governorate'];
 
     protected $appends = ['original_path'];
 
