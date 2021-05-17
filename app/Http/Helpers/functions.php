@@ -1,19 +1,22 @@
 <?php
 use Socketlabs\SocketLabsClient;
-use Socketlabs\Message\BasicMessage;
+use Socketlabs\Message\BulkMessage;
+use Socketlabs\Message\BulkRecipient;
 use Socketlabs\Message\EmailAddress;
 use App\Http\Enums\MailConfig;
 
 function sendMail($qrcode, $email)
 {
-    $serverId          = 32931;
-    $injectionApiKey   = "Bi4m3K9Srw7Q2HbFz6e5";
-    $client_email      = new SocketLabsClient($serverId, $injectionApiKey);
-    $message           = new BasicMessage();
-    $message->subject  = MailConfig::SUBJECT;
-    $message->htmlBody = file_get_contents('./emails.registration.blade.php');
-    $message->from     = new EmailAddress(MailConfig::FROM);
-    $message->addToAddress($email);
-    $message->addMergeData("qrcode", $qrcode);
-    $response          = $client_email->send($message);
+
+    $serverId = 35045;
+    $injectionApiKey = "x5Q8Rdz9ZWq76LfKj43Y";
+    $client = new SocketLabsClient($serverId, $injectionApiKey);
+    $message = new BulkMessage();
+    $message->subject = MailConfig::SUBJECT;
+    $message->htmlBody = file_get_contents('./resources/views/emails/registration.blade.php');
+    $message->from = new EmailAddress(MailConfig::FROM);
+    $recipient1 = $message->addToAddress($email, "Recipient #1");
+    $recipient1->addMergeData("qrcode", $qrcode);
+    $response = $client->send($message);
+
 }
