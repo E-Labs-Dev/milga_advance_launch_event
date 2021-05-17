@@ -26,6 +26,6 @@ class Registration extends Model
 
     public function getOriginalPathAttribute()
     {
-        return env('APP_URL').$this->qrcode;
+        return url('/').'/public/qrcodes/'.$this->qrcode;
     }
 }
