@@ -13,7 +13,8 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
         "sendgrid/sendgrid": "~7",
-        "simplesoftwareio/simple-qrcode": "^2.0"
+        "simplesoftwareio/simple-qrcode": "^2.0",
+        "socketlabs/email-delivery": "^1.2"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",

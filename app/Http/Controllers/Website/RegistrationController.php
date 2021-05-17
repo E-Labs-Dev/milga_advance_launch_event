@@ -47,9 +47,11 @@ class RegistrationController extends Controller
 
             $registraion =  $this->registration->create($requestData);
 
-            $data = ['qrcode' => $registraion->original_path];
+            sendMail($registraion->original_path,$request->email);
 
-            Mail::to($request->email)->send(new RegistrationMail($data));
+            // $data = ['qrcode' => $registraion->original_path];
+
+            // Mail::to($request->email)->send(new RegistrationMail($data));
 
             DB::commit();
 
