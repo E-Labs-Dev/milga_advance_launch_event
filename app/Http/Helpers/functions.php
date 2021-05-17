@@ -11,7 +11,7 @@ function sendMail($qrcode, $email)
     $client_email      = new SocketLabsClient($serverId, $injectionApiKey);
     $message           = new BasicMessage();
     $message->subject  = MailConfig::SUBJECT;
-    $message->htmlBody = file_get_contents(resource_path('emails.registration.blade.php'));
+    $message->htmlBody = file_get_contents('./emails.registration.blade.php');
     $message->from     = new EmailAddress(MailConfig::FROM);
     $message->addToAddress($email);
     $message->addMergeData("qrcode", $qrcode);
