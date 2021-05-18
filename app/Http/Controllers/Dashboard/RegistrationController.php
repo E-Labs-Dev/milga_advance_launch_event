@@ -25,8 +25,7 @@ class RegistrationController extends Controller
      */
     public function index()
     {
-        $registrations = $this->registration->leftJoin('venues','registrations.venue_id','=','venues.id')->select('registrations.id','registrations.first_name',
-                'registrations.last_name','registrations.email','registrations.phone','venues.name as venue','registrations.created_at')->get();
+        $registrations = $this->registration->select('id','first_name','user_code','last_name','email','phone','governorate','venue','created_at')->get();
 
         return  view('dashboard.registrations.index',compact('registrations'));
     }
@@ -40,10 +39,7 @@ class RegistrationController extends Controller
      */
     public function show($userCode)
     {
-        $registration = $this->registration
-            ->leftJoin('venues','registrations.venue_id','=','venues.id')
-            ->select('registrations.user_code','registrations.first_name','registrations.last_name','registrations.is_attend',
-                'registrations.email','registrations.governorate','registrations.phone','venues.name as venue')
+        $registration = $this->registration->select('user_code','first_name','last_name','is_attend','email','governorate','phone','venue')
             ->where('user_code',$userCode)->first();
 
         if (!$registration) {
