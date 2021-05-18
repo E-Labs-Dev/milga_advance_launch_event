@@ -54,7 +54,7 @@ class GameController extends Controller
 
             Log::error($e->getMessage());
 
-            return response()->json(['error' => 'data not save'], 422);
+            return response()->json(['error' => 'data not save'], 409);
         }
 
         return response()->json(['message','data saved.']);
