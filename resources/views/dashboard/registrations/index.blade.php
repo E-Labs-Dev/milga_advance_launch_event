@@ -16,9 +16,11 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body">
+            @csrf
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
+                    <th>#</th>
                     <th>User Code</th>
                     <th>Full Name</th>
                     <th>Email</th>
@@ -31,8 +33,9 @@
                 </thead>
                 <tbody>
 
-                @foreach($registrations as $registration)
+                @foreach($registrations as $key=> $registration)
                 <tr>
+                    <td>{{$key +1}}</td>
                     <td>{{$registration->user_code}}</td>
                     <td>{{$registration->first_name}} {{$registration->last_name}}</td>
                     <td>{{$registration->email}}</td>
@@ -41,13 +44,15 @@
                     <td>{{$registration->governorate}}</td>
                     <td>{{$registration->created_at}}</td>
                     <td>
-                        <a href="{{route('registrations.destroy',$registration->id)}}"><i class="fas fa-trash-alt"></i></a>
+
+                        <a class="deleteThisBtnFinle" data-id="{{ $registration->id }}" ><i class="fas fa-trash-alt"></i></a>
                     </td>
                 </tr>
                 @endforeach
                 </tbody>
                 <tfoot>
                 <tr>
+                    <th>#</th>
                     <th>User Code</th>
                     <th>Full Name</th>
                     <th>Email</th>
@@ -66,6 +71,51 @@
 
 @section('scripts')
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#example1").on("click", ".deleteThisBtnFinle", function() {
+                const itemid = $(this).attr('data-id');
+                swal({
+                    title: "Are you sure ?",
+                    text: "This will be deleted finely!",
+                    icon: "warning",
+                    buttons: ["Cancel!", "OK"],
+                    dangerMode: true,
+
+                })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            const url = "{{ route('registrations.destroy') }}";
+                            const _token = $('input[name="_token"]').val();
+                            const id = itemid;
+                            $.ajax({
+                                headers: {
+                                    "X-CSRF-TOKEN": _token
+                                },
+                                type: 'POST',
+                                url: url,
+                                data: {
+                                    id: id
+                                },
+                                success: function(data) {
+                                    console.log(data);
+                                    swal("Item deleted successfully !", {
+                                        icon: "success",
+                                        buttons: false,
+                                    });
+                                    setTimeout(function() {
+                                        location.reload();
+                                    }, 1000);
+                                }
+                            });
+                        } else {
+                            swal("Item not  deleted!");
+                        }
+                    });
+            });
+        });
+    </script>
 
     <!-- DataTables  & Plugins -->
     <script src="{{asset('plugins/datatables/jquery.dataTables.min.js')}}"></script>
