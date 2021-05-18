@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class DropSpecialtyIdToRegistrationsTable extends Migration
+class DropVenueIdToRegistrationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,9 +14,9 @@ class DropSpecialtyIdToRegistrationsTable extends Migration
     public function up()
     {
         Schema::table('registrations', function (Blueprint $table) {
-            $table->dropForeign('registrations_specialty_id_foreign');
-            $table->dropIndex('registrations_specialty_id_foreign');
-            $table->dropColumn('specialty_id');
+            $table->dropForeign('registrations_venue_id_foreign');
+            $table->dropIndex('registrations_venue_id_foreign');
+            $table->dropColumn('venue_id');
         });
     }
 
