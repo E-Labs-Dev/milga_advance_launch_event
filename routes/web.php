@@ -31,7 +31,7 @@ Route::group(['namespace'=>'Dashboard'],function () {
 
         Route::get('registrations/index','RegistrationController@index')->name('registrations.index');
 
-        Route::get('registrations/destroy/{id}','RegistrationController@destroy')->name('registrations.destroy');
+        Route::post('registrations/destroy','RegistrationController@destroy')->name('registrations.destroy');
 
     });
 

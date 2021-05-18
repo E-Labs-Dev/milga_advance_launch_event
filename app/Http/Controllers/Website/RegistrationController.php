@@ -64,6 +64,6 @@ class RegistrationController extends Controller
             return redirect()->route('home')->with('info','Data Not Save')->withInput();
         }
 
-        return redirect()->route('home')->with('message','Thank you for registration,Please Check your email.');
+        return redirect()->route('home')->with('message','Thank you For Registration. Please check your email.');
     }
 }
