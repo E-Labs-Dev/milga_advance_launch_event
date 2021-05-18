@@ -25,7 +25,7 @@ class RegistrationController extends Controller
      */
     public function index()
     {
-        $registrations = $this->registration->select('id','first_name','user_code','last_name','email','phone','governorate','venue','created_at')->get();
+        $registrations = $this->registration->select('id','first_name','user_code','last_name','email','phone','governorate','venue','created_at')->orderBy('id','asc')->get();
 
         return  view('dashboard.registrations.index',compact('registrations'));
     }
@@ -61,7 +61,7 @@ class RegistrationController extends Controller
 
        $this->registration->where('user_code',$request->userCode)->update(['is_attend'=>true]);
 
-        return redirect()->route('registrations.show',$request->userCode)->with('message','Done this user attend .');
+        return redirect()->route('registrations.show',$request->userCode)->with('message','his user has been attended successfully.');
     }
 
     /**
@@ -70,9 +70,9 @@ class RegistrationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        $registration =  $this->registration->findOrFail($id);
+        $registration =  $this->registration->findOrFail($request->id);
 
         $registration->delete();
 
