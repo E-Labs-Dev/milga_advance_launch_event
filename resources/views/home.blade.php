@@ -123,18 +123,6 @@
                                 <label>Mobile Number  <span>*</span> </label>
                                 <input  class="form-control" placeholder="Enter mobile number" type="tel" required  id="phone" name="phone"  value="{{old('phone')}}">
                             </div><!--col-12-->
-{{--                            <div class="col-lg-6 col-12">--}}
-{{--                                <label>Speciality <span>*</span> </label>--}}
-{{--                                <select name="specialty_id" required>--}}
-{{--                                    <option value=""></option>--}}
-{{--                                    <option>Cairo Launch event 30.7.2021</option>--}}
-{{--                                    @foreach($specialties as  $specialty)--}}
-{{--                                        <option value="{{$specialty->id}}" @if (old('specialty_id') == $specialty->id)--}}
-{{--                                            selected--}}
-{{--                                        @endif>{{$specialty->name}}</option>--}}
-{{--                                    @endforeach--}}
-{{--                                </select>--}}
-{{--                            </div><!--col-12-->--}}
                             <div class="col-lg-6 col-12">
                                 <label>Choose the venue <span>*</span> </label>
                                 <select name="venue_id" required>
@@ -152,7 +140,6 @@
                                 <select name="governorate" required>
                                     <option value=""></option>
                                     <option value="Matruh" @if (old('governorate') == 'Matruh') selected @endif>Matruh</option>
-                                    <option value="Alexandria" @if (old('governorate') == 'Alexandria') selected @endif>Alexandria</option>
                                     <option value="Alexandria" @if (old('governorate') == 'Alexandria') selected @endif>Alexandria</option>
                                     <option value="Beheira" @if (old('governorate') == 'Beheira') selected @endif>Beheira</option>
                                     <option value="Kafr El Sheikh" @if (old('governorate') == 'Kafr El Sheikh') selected @endif>Kafr El Sheikh</option>
