@@ -22,7 +22,6 @@
                     <th>Full Name</th>
                     <th>Email</th>
                     <th>Phone</th>
-                    <th>Specialty</th>
                     <th>Venue</th>
                     <th>Governorate</th>
                     <th>created_at</th>
@@ -36,7 +35,6 @@
                     <td>{{$registration->first_name}} {{$registration->last_name}}</td>
                     <td>{{$registration->email}}</td>
                     <td>{{$registration->phone}}</td>
-                    <td>{{$registration->specialty}}</td>
                     <td>{{$registration->venue}}</td>
                     <td>{{$registration->governorate}}</td>
                     <td>{{$registration->created_at}}</td>
@@ -51,7 +49,6 @@
                     <th>Full Name</th>
                     <th>Email</th>
                     <th>Phone</th>
-                    <th>Specialty</th>
                     <th>Venue</th>
                     <th>Governorate</th>
                     <th>created_at</th>

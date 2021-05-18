@@ -25,9 +25,8 @@ class RegistrationController extends Controller
      */
     public function index()
     {
-        $registrations = Registration::leftJoin('specialties','registrations.specialty_id','=','specialties.id')
-            ->leftJoin('venues','registrations.venue_id','=','venues.id')->select('registrations.id','registrations.first_name',
-                'registrations.last_name','registrations.email','registrations.phone','specialties.name as specialty','venues.name as venue','registrations.created_at')->get();
+        $registrations = $this->registration->leftJoin('venues','registrations.venue_id','=','venues.id')->select('registrations.id','registrations.first_name',
+                'registrations.last_name','registrations.email','registrations.phone','venues.name as venue','registrations.created_at')->get();
 
         return  view('dashboard.registrations.index',compact('registrations'));
     }
@@ -42,10 +41,9 @@ class RegistrationController extends Controller
     public function show($userCode)
     {
         $registration = $this->registration
-            ->leftJoin('specialties','registrations.specialty_id','=','specialties.id')
             ->leftJoin('venues','registrations.venue_id','=','venues.id')
             ->select('registrations.user_code','registrations.first_name','registrations.last_name','registrations.is_attend',
-                'registrations.email','registrations.governorate','registrations.phone','specialties.name as specialty','venues.name as venue')
+                'registrations.email','registrations.governorate','registrations.phone','venues.name as venue')
             ->where('user_code',$userCode)->first();
 
         if (!$registration) {
