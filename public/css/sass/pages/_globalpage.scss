@@ -69,3 +69,8 @@ html {
 .iti {
     width: 100% !important;
 }
+.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag,
+.iti--allow-dropdown .iti__flag-container:active .iti__selected-flag,
+.iti--allow-dropdown .iti__flag-container:focus .iti__selected-flag {
+    border: none !important;
+}
