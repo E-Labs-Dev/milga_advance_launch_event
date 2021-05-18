@@ -19,10 +19,10 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
+                    <th>User Code</th>
                     <th>Full Name</th>
                     <th>Email</th>
                     <th>Phone</th>
-                    <th>Specialty</th>
                     <th>Venue</th>
                     <th>Governorate</th>
                     <th>created_at</th>
@@ -33,10 +33,10 @@
 
                 @foreach($registrations as $registration)
                 <tr>
+                    <td>{{$registration->user_code}}</td>
                     <td>{{$registration->first_name}} {{$registration->last_name}}</td>
                     <td>{{$registration->email}}</td>
                     <td>{{$registration->phone}}</td>
-                    <td>{{$registration->specialty}}</td>
                     <td>{{$registration->venue}}</td>
                     <td>{{$registration->governorate}}</td>
                     <td>{{$registration->created_at}}</td>
@@ -48,10 +48,10 @@
                 </tbody>
                 <tfoot>
                 <tr>
+                    <th>User Code</th>
                     <th>Full Name</th>
                     <th>Email</th>
                     <th>Phone</th>
-                    <th>Specialty</th>
                     <th>Venue</th>
                     <th>Governorate</th>
                     <th>created_at</th>

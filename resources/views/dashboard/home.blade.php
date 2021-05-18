@@ -42,7 +42,7 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>{{$registrationsAttend}}<sup style="font-size: 20px">%</sup></h3>
+                            <h3>{{$registrationsAttend}}</h3>
 
                             <p>Total user scan qr code</p>
                         </div>

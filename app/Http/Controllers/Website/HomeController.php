@@ -16,9 +16,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $venues = Venue::select('id','name')->get();
-        $specialties = Specialty::select('id','name')->get();
-        return  view('home',compact('venues','specialties'));
+        return  view('home');
     }
 
     /**

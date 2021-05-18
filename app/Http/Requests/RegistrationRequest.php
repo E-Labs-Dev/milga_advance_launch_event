@@ -30,8 +30,7 @@ class RegistrationRequest extends FormRequest
             'last_name'    =>'required|string|max:190',
             'email'        =>'required|email|unique:registrations,email|max:190',
             'phone'        =>'required|unique:registrations,phone|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
-            'specialty_id' =>'required|exists:specialties,id',
-            'venue_id'     =>'required|exists:venues,id',
+            'venue'        =>'required',
             'governorate'  =>'required',
         ];
     }

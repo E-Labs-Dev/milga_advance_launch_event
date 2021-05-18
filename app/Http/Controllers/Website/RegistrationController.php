@@ -31,6 +31,7 @@ class RegistrationController extends Controller
      */
     public function store(RegistrationRequest $request)
     {
+
         try {
             DB::beginTransaction();
 
