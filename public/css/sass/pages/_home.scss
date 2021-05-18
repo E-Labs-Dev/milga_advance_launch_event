@@ -120,7 +120,7 @@ header {
     .image-banner {
         width: 100%;
         @media #{$mobileScreen} {
-            height: 400px;
+            height: auto;
         }
     }
     .overlay {

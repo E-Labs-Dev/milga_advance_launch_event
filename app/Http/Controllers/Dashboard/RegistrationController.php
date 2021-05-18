@@ -45,7 +45,7 @@ class RegistrationController extends Controller
             ->leftJoin('specialties','registrations.specialty_id','=','specialties.id')
             ->leftJoin('venues','registrations.venue_id','=','venues.id')
             ->select('registrations.user_code','registrations.first_name','registrations.last_name','registrations.is_attend',
-                'registrations.email','registrations.phone','specialties.name as specialty','venues.name as venue')
+                'registrations.email','registrations.governorate','registrations.phone','specialties.name as specialty','venues.name as venue')
             ->where('user_code',$userCode)->first();
 
         if (!$registration) {

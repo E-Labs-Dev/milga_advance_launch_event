@@ -1,9 +1,15 @@
 
-     function showVideo() {
+
+     
+     var x = document.getElementById("myVideo");
+
+     function showVideo() { 
         document.getElementById('layer1').style.display = "none";
         document.getElementById('layer2').style.display = "block";
-     }
-
+        x.autoplay = true;
+        x.load();
+     } 
+     
 
      // The data/time we want to countdown to
      var countDownDate = new Date("july 30, 2021 18:10").getTime();

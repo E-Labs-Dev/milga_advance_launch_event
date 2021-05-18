@@ -46,6 +46,11 @@ html {
 .iti {
   width: 100% !important; }
 
+.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag,
+.iti--allow-dropdown .iti__flag-container:active .iti__selected-flag,
+.iti--allow-dropdown .iti__flag-container:focus .iti__selected-flag {
+  border: none !important; }
+
 @media (min-width: 992px) {
   button {
     color: #f00; } }
@@ -147,7 +152,7 @@ header {
     width: 100%; }
     @media (max-width: 823px) {
       .banner .image-banner {
-        height: 400px; } }
+        height: auto; } }
   .banner .overlay {
     position: absolute;
     top: 0;

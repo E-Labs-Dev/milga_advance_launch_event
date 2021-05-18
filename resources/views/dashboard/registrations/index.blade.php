@@ -24,6 +24,7 @@
                     <th>Phone</th>
                     <th>Specialty</th>
                     <th>Venue</th>
+                    <th>Governorate</th>
                     <th>created_at</th>
                     <th>Actions</th>
                 </tr>
@@ -37,6 +38,7 @@
                     <td>{{$registration->phone}}</td>
                     <td>{{$registration->specialty}}</td>
                     <td>{{$registration->venue}}</td>
+                    <td>{{$registration->governorate}}</td>
                     <td>{{$registration->created_at}}</td>
                     <td>
                         <a href="{{route('registrations.destroy',$registration->id)}}"><i class="fas fa-trash-alt"></i></a>
@@ -51,6 +53,7 @@
                     <th>Phone</th>
                     <th>Specialty</th>
                     <th>Venue</th>
+                    <th>Governorate</th>
                     <th>created_at</th>
                     <th>Actions</th>
                 </tr>
