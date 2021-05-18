@@ -83,7 +83,7 @@
                             <div class="overlay"><img src="{{asset('images/play.png')}}" onclick="showVideo()"></div><!--overlay-->
                         </div><!--first-layer-->
                         <div class="second-layer" style="display: none;" id="layer2">
-                            <video   controls autoplay muted>
+                            <video   controls id="myVideo">
                                 <source src="{{asset('VID-20210308-WA0042.mp4')}}" type="video/mp4">
                                 ]                  </video>
 
