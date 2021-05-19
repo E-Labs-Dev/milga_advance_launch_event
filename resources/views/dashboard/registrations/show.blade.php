@@ -40,31 +40,31 @@
                         @csrf
                         <input type="hidden" name="userCode" value="{{$registration->user_code}}">
                         <div class="card-body">
-                            <div class="form-group col-6" style="float: left;">
+                            <div class="form-group col-12" style="float: left;">
                                 <label for="first_name">First Name</label>
                                 <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter first name" value="{{ $registration->first_name }}" disabled>
 
                             </div>
-                            <div class="form-group col-6" style="float: left;">
+                            <div class="form-group col-12" style="float: left;">
                                 <label for="last_name">Last Name</label>
                                 <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter last name" value="{{$registration->last_name}}" disabled>
 
                             </div>
-                            <div class="form-group col-6" style="float: left;">
+                            <div class="form-group col-12" style="float: left;">
                                 <label for="email">Email</label>
                                 <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" value="{{$registration->email}}" disabled>
 
                             </div>
-                            <div class="form-group col-6" style="float: left;">
+                            <div class="form-group col-12" style="float: left;">
                                 <label for="phone" class="col-12">Phone</label>
                                 <input type="tel" class="form-control col-12"  name="phone"  value="{{$registration->phone}}" disabled>
                             </div>
 
-                            <div class="form-group col-6" style="float: left;">
+                            <div class="form-group col-12" style="float: left;">
                                 <label for="governorate" class="col-12">Governorate</label>
                                 <input type="text" class="form-control col-12" name="governorate" id="governorate" value="{{$registration->governorate}}" disabled>
                             </div>
-                            <div class="form-group col-6" style="float: left;">
+                            <div class="form-group col-12" style="float: left;">
                                 <label for="venue" class="col-12">Venue</label>
                                 <input type="text" class="form-control col-12" name="venue" id="venue" value="{{$registration->venue}}" disabled>
                             </div>
