@@ -57,7 +57,7 @@
                     <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <h3>56</h3>
+                            <h3>{{$games}}</h3>
 
                             <p>Total user play game</p>
                         </div>
