@@ -61,8 +61,8 @@
                             </div>
 
                             <div class="form-group col-6" style="float: left;">
-                                <label for="specialty" class="col-12">specialty</label>
-                                <input type="text" class="form-control col-12" name="specialty" id="specialty" value="{{$registration->specialty}}" disabled>
+                                <label for="governorate" class="col-12">Governorate</label>
+                                <input type="text" class="form-control col-12" name="governorate" id="governorate" value="{{$registration->governorate}}" disabled>
                             </div>
                             <div class="form-group col-6" style="float: left;">
                                 <label for="venue" class="col-12">Venue</label>
