@@ -7,20 +7,16 @@
 
     <title>Milga Advance | Dashboard</title>
 
+    @include('layouts.includes.style')
+    @include('layouts.includes.messages.style')
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
-    <!-- Preloader -->
-    <div class="preloader flex-column justify-content-center align-items-center">
-        <img class="animation__shake" src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTELogo" height="60" width="60">
-    </div>
-
-
-<!-- Content Wrapper. Contains page content -->
+    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-    HI
+            <h1>Welcome Back</h1>
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">
@@ -32,5 +28,8 @@
     </footer>
 </div>
 <!-- ./wrapper -->
+
+@include('layouts.includes.scripts')
+@include('layouts.includes.messages.scripts')
 </body>
 </html>
