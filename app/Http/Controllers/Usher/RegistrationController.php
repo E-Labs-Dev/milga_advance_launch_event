@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Dashboard;
+namespace App\Http\Controllers\Usher;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegistrationAttendRequest;
-use App\Http\Requests\RegistrationRequest;
 use App\Models\Registration;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Log;
 
 class RegistrationController extends Controller
 {
@@ -16,21 +14,8 @@ class RegistrationController extends Controller
     public function __construct()
     {
         $this->registration = new Registration();
-        $this->middleware('auth');
+        $this->middleware('auth:usher');
     }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $registrations = $this->registration->select('id','first_name','user_code','last_name','email','phone','governorate','venue','created_at')->orderBy('id','asc')->get();
-
-        return  view('dashboard.registrations.index',compact('registrations'));
-    }
-
 
     /**
      * Display the specified resource.
@@ -60,23 +45,9 @@ class RegistrationController extends Controller
     public function attend(RegistrationAttendRequest $request)
     {
 
-       $this->registration->where('user_code',$request->userCode)->update(['is_attend'=>true]);
+        $this->registration->where('user_code',$request->userCode)->update(['is_attend'=>true]);
 
         return redirect()->route('registrations.show',$request->userCode)->with('message','his user has been attended successfully.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Request $request)
-    {
-        $registration =  $this->registration->findOrFail($request->id);
-
-        $registration->delete();
-
-        return redirect()->route('registrations.index')->with('message','Done data deleted.');
-    }
 }

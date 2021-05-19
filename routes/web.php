@@ -13,30 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes(['register' => false]);
-
 Route::group(['namespace'=>'Website'],function () {
 
     Route::get('/','HomeController@index')->name('home');
 
     Route::post('registrations/store','RegistrationController@store')->name('registrations.store');
-
-});
-
-Route::group(['namespace'=>'Dashboard'],function () {
-
-    Route::group(['prefix' => 'admin'],function () {
-
-        Route::get('home', 'HomeController@index')->name('dashboard.home');
-
-        Route::get('registrations/index','RegistrationController@index')->name('registrations.index');
-
-        Route::post('registrations/destroy','RegistrationController@destroy')->name('registrations.destroy');
-
-    });
-
-    Route::get('{userCode}/show','RegistrationController@show')->name('registrations.show');
-
-    Route::post('registrations/attend','RegistrationController@attend')->name('registrations.attend');
 
 });
