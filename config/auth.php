@@ -46,6 +46,10 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'usher' => [
+            'driver' => 'session',
+            'provider' => 'ushers',
+        ],
     ],
 
     /*
@@ -69,6 +73,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'ushers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Usher::class,
         ],
 
         // 'users' => [
@@ -99,6 +107,13 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+        'ushers' => [
+            'provider' => 'ushers',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
     ],
 
     /*

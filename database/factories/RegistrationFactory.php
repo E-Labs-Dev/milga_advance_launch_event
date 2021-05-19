@@ -23,15 +23,12 @@ class RegistrationFactory extends Factory
      */
     public function definition()
     {
-        $venueIds = Venue::pluck('id')->toArray();
-        $specialtyIds = Specialty::pluck('id')->toArray();
         return [
             'first_name'=>$this->faker->name,
             'last_name' => $this->faker->name,
             'email' => $this->faker->unique()->safeEmail(),
             'phone' =>$this->faker->phoneNumber,
-            'specialty_id'=> $specialtyIds[rand(0,count($specialtyIds) - 1)],
-            'venue_id'=> $venueIds[rand(0,count($venueIds) - 1)],
+            'venue'=> $this->faker->name,
         ];
     }
 }
