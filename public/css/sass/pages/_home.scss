@@ -173,6 +173,7 @@ header {
                 padding: 30px 10px 30px 20px;
                 flex: .7;
                 font-size: 18px;
+                text-align: center;
                 @media #{$largScreen} {
                     font-size: 20px;
                 }
@@ -198,6 +199,7 @@ header {
                 flex: 1;
                 font-size: 18px;
                 height: 90px;
+                text-align: center;
                 @media #{$largScreen} {
                     font-size: 20px;
                 }
@@ -218,6 +220,11 @@ header {
                     }
                     img {
                         width:70px;
+                        @media #{$ipadScreen} {
+                            width: 40px;
+         
+                         }
+ 
                         @media #{$mobileScreen} {
                            width: 35px;
         

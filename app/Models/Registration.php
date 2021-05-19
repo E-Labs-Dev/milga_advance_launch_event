@@ -16,8 +16,8 @@ class Registration extends Model
 
     protected $appends = ['original_path'];
 
-    public function specialty(){
-        return $this->belongsTo(Specialty::class);
+    public function games(){
+        return $this->hasMany(Game::class,'user_code','user_code');
     }
 
     public function venue(){
@@ -27,5 +27,13 @@ class Registration extends Model
     public function getOriginalPathAttribute()
     {
         return url('/').'/public/qrcodes/'.$this->qrcode;
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+        static::deleting(function($model){
+            $model->games()->delete();
+        });
     }
 }
