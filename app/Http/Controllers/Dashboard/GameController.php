@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\GameRequest;
 use App\Models\Game;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -12,6 +13,12 @@ use Illuminate\Support\Str;
 
 class GameController extends Controller
 {
+    public  $game ;
+    public function __construct()
+    {
+        $this->game = new Game();
+        $this->middleware('auth')->except('store');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +26,9 @@ class GameController extends Controller
      */
     public function index()
     {
-        //
+        $games =$this->game->leftJoin('registrations','games.user_code','=','registrations.user_code')
+            ->select('games.id','games.user_code','score','code','registrations.first_name','registrations.last_name')->orderBy('games.id','asc')->get();
+        return  view('dashboard.games.index',compact('games'));
     }
 
     /**
@@ -44,7 +53,7 @@ class GameController extends Controller
         try {
             DB::beginTransaction();
 
-            Game::create(['code'=>$request->gameCode,'user_code'=>$request->userCode,'score'=>$request->gameScore]);
+            $this->game->create(['code'=>$request->gameCode,'user_code'=>$request->userCode,'score'=>$request->gameScore]);
 
             DB::commit();
 
