@@ -29,7 +29,7 @@
 
             <div class="col-lg-6 col-md-6">
                 <ul class="counter">
-                    <li> <h3>Launching Soon</h3></li>
+                    <li id="done"> <h3>Launching Soon</h3></li>
                     <li id="days" class="bg"><span>days</span></li>
                     <li id="hours" class="bg"></li>
                     <li id="mins" class="bg"></li>
