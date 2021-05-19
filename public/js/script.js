@@ -12,14 +12,14 @@
      
 
      // The data/time we want to countdown to
-     var countDownDate = new Date("july 30, 2021 18:10").getTime();
- 
+    var countDownDate = new Date("july 30, 2021 18:10").getTime();
+
      // Run myfunc every second
      var myfunc = setInterval(function() {
  
      var now = new Date().getTime();
      var timeleft = countDownDate - now;
-         
+
      // Calculating the days, hours, minutes and seconds left
      var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
      var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -39,7 +39,9 @@
          document.getElementById("days").style.display = "none";
          document.getElementById("hours").style.display = "none";
          document.getElementById("mins").style.display = "none";
-         document.getElementById("end").innerHTML = "TIME UP!!";
+         document.getElementById("done").style.display = "none";
+         document.getElementById("end").innerHTML = "";
      }
      }, 1000);
  
+
