@@ -27,7 +27,7 @@
                     <a href="{{route('dashboard.home')}}" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Dashboard
+                            Home
                         </p>
                     </a>
                 </li>
@@ -36,7 +36,7 @@
                     <a href="{{route('registrations.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
-                            Users
+                            users registrations
                         </p>
                     </a>
                 </li>
@@ -45,7 +45,7 @@
                     <a href="{{route('games.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
-                            Games
+                            games scores
                         </p>
                     </a>
                 </li>
