@@ -47,7 +47,7 @@ class RegistrationController extends Controller
 
         $this->registration->where('user_code',$request->userCode)->update(['is_attend'=>true]);
 
-        return redirect()->route('registrations.show',$request->userCode)->with('message','his user has been attended successfully.');
+        return redirect()->route('registrations.show',$request->userCode)->with('message','This user has been attended successfully.');
     }
 
 }
