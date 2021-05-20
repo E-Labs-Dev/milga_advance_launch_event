@@ -27,7 +27,7 @@
                     <a href="{{route('dashboard.home')}}" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Dashboard
+                            Home
                         </p>
                     </a>
                 </li>

@@ -26,7 +26,7 @@ class RegistrationController extends Controller
      */
     public function index()
     {
-        $registrations = $this->registration->select('id','first_name','user_code','last_name','email','phone','governorate','venue','created_at')->orderBy('id','asc')->get();
+        $registrations = $this->registration->select('id','first_name','user_code','last_name','email','phone','governorate','venue','is_attend','created_at')->orderBy('id','asc')->get();
 
         return  view('dashboard.registrations.index',compact('registrations'));
     }
