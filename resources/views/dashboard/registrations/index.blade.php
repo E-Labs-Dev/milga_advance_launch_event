@@ -12,7 +12,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">DataTable Users</h3>
+            <h3 class="card-title">users registrations</h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -27,6 +27,7 @@
                     <th>Phone</th>
                     <th>Venue</th>
                     <th>Governorate</th>
+                    <th>Attend</th>
                     <th>created_at</th>
                     <th>Actions</th>
                 </tr>
@@ -42,6 +43,13 @@
                     <td>{{$registration->phone}}</td>
                     <td>{{$registration->venue}}</td>
                     <td>{{$registration->governorate}}</td>
+                    <td>
+                        @if ($registration->is_attend == \App\Http\Enums\AttendStatus::ATTEND)
+                            attend
+                        @else
+                            not attend
+                        @endif
+                    </td>
                     <td>{{$registration->created_at}}</td>
                     <td>
 
@@ -59,6 +67,7 @@
                     <th>Phone</th>
                     <th>Venue</th>
                     <th>Governorate</th>
+                    <th>Attend</th>
                     <th>created_at</th>
                     <th>Actions</th>
                 </tr>
