@@ -4,7 +4,7 @@ use Socketlabs\Message\BulkMessage;
 use Socketlabs\Message\EmailAddress;
 use App\Http\Enums\MailConfig;
 
-function sendMail($qrcode, $email)
+function sendMail($qrcode, $email,$userCode)
 {
 
     $serverId = 35045;
@@ -16,6 +16,7 @@ function sendMail($qrcode, $email)
     $message->from = new EmailAddress(MailConfig::FROM);
     $recipient1 = $message->addToAddress($email, "Recipient #1");
     $recipient1->addMergeData("qrcode", $qrcode);
+    $recipient1->addMergeData("userCode", $userCode);
     $response = $client->send($message);
 
 }

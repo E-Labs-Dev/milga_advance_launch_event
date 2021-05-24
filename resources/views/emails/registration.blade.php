@@ -6,6 +6,8 @@
   <body>
     <h2>thank you for registration and below QR code will use it to attend event</h2>
 
+    <p>Your ID : %%userCode%%</p>
+
     <p><img src="%%qrcode%%" width="100" height="100"></p>
 
 </body>
