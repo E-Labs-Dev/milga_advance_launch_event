@@ -4,11 +4,9 @@ namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegistrationRequest;
-use App\Mail\RegistrationMail;
 use App\Services\qrCodeGenerated;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Mail;
 use App\Models\Registration;
 use Illuminate\Support\Str;
 
@@ -61,9 +59,8 @@ class RegistrationController extends Controller
 
             Log::error($e->getMessage());
 
-            return redirect()->route('home')->with('info','Data Not Save')->withInput();
+            return response()->json(['error' => 'Data Not Save .'],409);
         }
-
-        return redirect()->route('home')->with('message','Thank you For Registration. Please check your email.');
+        return response()->json(['success' => 'Thank you For Registration. Please check your email.']);
     }
 }
