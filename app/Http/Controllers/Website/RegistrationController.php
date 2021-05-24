@@ -33,7 +33,7 @@ class RegistrationController extends Controller
         try {
             DB::beginTransaction();
 
-            $userCode     = 'mlg_'.Str::random(3);
+            $userCode     = 'mlg_'.rand(1000,9999);
 
             $qrcode       = $this->qrCode->create($userCode);
 
@@ -45,7 +45,7 @@ class RegistrationController extends Controller
 
             $registraion =  $this->registration->create($requestData);
 
-            sendMail($registraion->original_path,$request->email);
+            sendMail($registraion->original_path,$request->email,$userCode);
 
             // $data = ['qrcode' => $registraion->original_path];
 
