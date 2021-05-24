@@ -133,7 +133,7 @@
                                 </select>
                             </div><!--col-12-->
                             <div class="col-lg-6 col-12">
-                                <label>Choose the Governorates <span>*</span> </label>
+                                <label>Choose the Governorate <span>*</span> </label>
                                 <select name="governorate" required>
                                     <option value=""></option>
                                     <option value="Matruh" @if (old('governorate') == 'Matruh') selected @endif>Matruh</option>
