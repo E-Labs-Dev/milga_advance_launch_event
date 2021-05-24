@@ -29,16 +29,9 @@ class RegistrationRequest extends FormRequest
             'first_name'   =>'required|string|max:190',
             'last_name'    =>'required|string|max:190',
             'email'        =>'required|email|unique:registrations,email|max:190',
-            'phone'        =>'required|unique:registrations,phone|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+            'phone'        =>'required|unique:registrations,phone|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|phone:AUTO',
             'venue'        =>'required',
             'governorate'  =>'required',
         ];
-    }
-
-    protected function failedValidation(Validator $validator)
-    {
-        if( $validator->fails() ) {
-            return redirect()->route('home')->with('info',$validator->errors()->first())->withInput();
-        }
     }
 }
