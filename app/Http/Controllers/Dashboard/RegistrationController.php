@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Enums\AttendStatus;
 use App\Http\Requests\RegistrationAttendRequest;
 use App\Http\Requests\RegistrationRequest;
 use App\Models\Registration;
@@ -26,10 +27,23 @@ class RegistrationController extends Controller
      */
     public function index()
     {
-        $registrations = $this->registration->select('id','first_name','user_code','last_name','email','phone','governorate','venue','is_attend','created_at')->orderBy('id','asc')->get();
+        $registrations = $this->registration->select('id','first_name','user_code','last_name','email','phone','governorate','venue','created_at')->orderBy('id','asc')->get();
 
         return  view('dashboard.registrations.index',compact('registrations'));
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function attendees()
+    {
+        $registrations = $this->registration->select('id','first_name','user_code','last_name','email','phone','governorate','venue','is_attend','created_at')->where('is_attend',AttendStatus::ATTEND)->orderBy('id','asc')->get();
+
+        return  view('dashboard.registrations.index',compact('registrations'));
+    }
+
 
     /**
      * Remove the specified resource from storage.

@@ -32,7 +32,7 @@ class RegistrationController extends Controller
             return  view('errors.404');
         }
 
-        return  view('dashboard.registrations.show',compact('registration'));
+        return  view('usher.registrations.show',compact('registration'));
     }
 
 

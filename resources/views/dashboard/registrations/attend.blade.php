@@ -34,19 +34,20 @@
                 <tbody>
 
                 @foreach($registrations as $key=> $registration)
-                <tr>
-                    <td>{{$key +1}}</td>
-                    <td>{{$registration->user_code}}</td>
-                    <td>{{$registration->first_name}} {{$registration->last_name}}</td>
-                    <td>{{$registration->email}}</td>
-                    <td>{{$registration->phone}}</td>
-                    <td>{{$registration->venue}}</td>
-                    <td>{{$registration->governorate}}</td>
-                    <td>{{$registration->created_at}}</td>
-                    <td>
-                        <a class="deleteThisBtnFinle" data-id="{{ $registration->id }}" ><i class="fas fa-trash-alt"></i></a>
-                    </td>
-                </tr>
+                    <tr>
+                        <td>{{$key +1}}</td>
+                        <td>{{$registration->user_code}}</td>
+                        <td>{{$registration->first_name}} {{$registration->last_name}}</td>
+                        <td>{{$registration->email}}</td>
+                        <td>{{$registration->phone}}</td>
+                        <td>{{$registration->venue}}</td>
+                        <td>{{$registration->governorate}}</td>
+                        <td>{{$registration->created_at}}</td>
+                        <td>
+
+                            <a class="deleteThisBtnFinle" data-id="{{ $registration->id }}" ><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
                 @endforeach
                 </tbody>
                 <tfoot>
