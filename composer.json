@@ -12,6 +12,7 @@
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
+        "propaganistas/laravel-phone": "^4.3",
         "sendgrid/sendgrid": "~7",
         "simplesoftwareio/simple-qrcode": "^2.0",
         "socketlabs/email-delivery": "^1.2"

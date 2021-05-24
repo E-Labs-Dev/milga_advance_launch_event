@@ -14,7 +14,6 @@ $(function() {
                 email :true,
             },
             phone: {
-                numberVal: "[0-9]+",
                 required: true,
             },
             venue: {
@@ -25,7 +24,36 @@ $(function() {
             },
         },
         submitHandler: function(form) {
-            form.submit();
+
+            $.ajax({
+                url:form.action,
+                type: form.method,
+                data: $(form).serialize(),
+                success: function(data){
+                    toastr.success(data.success);
+                    location.reload(true);
+                },
+                error:function(data){
+                    if (data.responseJSON.errors.first_name){
+                        toastr.info(data.responseJSON.errors.first_name);
+                    }
+                    if (data.responseJSON.errors.last_name){
+                        toastr.info(data.responseJSON.errors.last_name);
+                    }
+                    if (data.responseJSON.errors.email){
+                        toastr.info(data.responseJSON.errors.email);
+                    }
+                    if (data.responseJSON.errors.phone){
+                        toastr.info(data.responseJSON.errors.phone);
+                    }
+                    if (data.responseJSON.errors.venue){
+                        toastr.info(data.responseJSON.errors.venue);
+                    }
+                    if (data.responseJSON.errors.governorate){
+                        toastr.info(data.responseJSON.errors.governorate);
+                    }
+                }
+            });
         }
     });
 });

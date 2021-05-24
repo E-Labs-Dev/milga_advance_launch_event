@@ -1,7 +1,6 @@
 <?php
 use Socketlabs\SocketLabsClient;
 use Socketlabs\Message\BulkMessage;
-use Socketlabs\Message\BulkRecipient;
 use Socketlabs\Message\EmailAddress;
 use App\Http\Enums\MailConfig;
 
