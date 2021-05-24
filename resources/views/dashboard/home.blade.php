@@ -29,7 +29,7 @@
                         <div class="inner">
                             <h3>{{$registrations}}</h3>
 
-                            <p>Total user registration</p>
+                            <p>Total submitter users</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-bag"></i>
@@ -44,7 +44,7 @@
                         <div class="inner">
                             <h3>{{$registrationsAttend}}</h3>
 
-                            <p>Total user scan qr code</p>
+                            <p>Total registered users</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-stats-bars"></i>
@@ -59,7 +59,7 @@
                         <div class="inner">
                             <h3>{{$games}}</h3>
 
-                            <p>Total user play game</p>
+                            <p>Total game users</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-person-add"></i>

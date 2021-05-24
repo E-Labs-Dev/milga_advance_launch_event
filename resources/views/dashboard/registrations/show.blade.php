@@ -36,7 +36,7 @@
 
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form method="POST" action="{{route('registrations.attend')}}">
+                    <form method="POST" action="{{route('registrations.attend')}}" style="    background-color: #f8f9fa;">
                         @csrf
                         <input type="hidden" name="userCode" value="{{$registration->user_code}}">
                         <div class="card-body">
