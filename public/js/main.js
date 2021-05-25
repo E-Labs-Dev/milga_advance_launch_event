@@ -31,7 +31,11 @@ $(function() {
                 data: $(form).serialize(),
                 success: function(data){
                     toastr.success(data.success);
-                    location.reload(true);
+
+                    setTimeout(function(){
+                        window.location.reload(1);
+                    }, 5000);
+
                 },
                 error:function(data){
                     if (data.responseJSON.errors.first_name){
