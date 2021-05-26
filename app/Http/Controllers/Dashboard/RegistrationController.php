@@ -27,7 +27,7 @@ class RegistrationController extends Controller
      */
     public function index()
     {
-        $registrations = $this->registration->select('id','first_name','user_code','last_name','email','phone','governorate','venue','created_at')->orderBy('id','asc')->get();
+        $registrations = $this->registration->getAll();
 
         return  view('dashboard.registrations.index',compact('registrations'));
     }
@@ -39,7 +39,7 @@ class RegistrationController extends Controller
      */
     public function attendees()
     {
-        $registrations = $this->registration->select('id','first_name','user_code','last_name','email','phone','governorate','venue','is_attend','updated_at')->where('is_attend',AttendStatus::ATTEND)->orderBy('id','asc')->get();
+        $registrations = $this->registration->getAll( AttendStatus::ATTEND);
 
         return  view('dashboard.registrations.attendees',compact('registrations'));
     }
@@ -53,9 +53,8 @@ class RegistrationController extends Controller
      */
     public function destroy(Request $request)
     {
-        $registration =  $this->registration->findOrFail($request->id);
 
-        $registration->delete();
+        $this->registration->destroyById($request->id);
 
         return redirect()->route('registrations.index')->with('message','Done data deleted.');
     }

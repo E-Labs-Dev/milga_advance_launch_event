@@ -7,7 +7,7 @@
 
     <title>Milga Advance | Dashboard</title>
 
-    @include('layouts.includes.style')
+    @include('layouts.includes.dashboard.style')
     @include('layouts.includes.messages.style')
 </head>
 
@@ -20,11 +20,11 @@
     </div>
 
     <!-- Navbar -->
-    @include('layouts.includes.navbare')
+    @include('layouts.includes.dashboard.navbare')
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-   @include('layouts.includes.sidebare')
+   @include('layouts.includes.dashboard.sidebare')
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -41,7 +41,7 @@
 </div>
 <!-- ./wrapper -->
 
-@include('layouts.includes.scripts')
+@include('layouts.includes.dashboard.scripts')
 @include('layouts.includes.messages.scripts')
 </body>
 </html>
