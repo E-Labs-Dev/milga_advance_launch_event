@@ -39,9 +39,9 @@ class RegistrationController extends Controller
      */
     public function attendees()
     {
-        $registrations = $this->registration->select('id','first_name','user_code','last_name','email','phone','governorate','venue','is_attend','created_at')->where('is_attend',AttendStatus::ATTEND)->orderBy('id','asc')->get();
+        $registrations = $this->registration->select('id','first_name','user_code','last_name','email','phone','governorate','venue','is_attend','updated_at')->where('is_attend',AttendStatus::ATTEND)->orderBy('id','asc')->get();
 
-        return  view('dashboard.registrations.index',compact('registrations'));
+        return  view('dashboard.registrations.attendees',compact('registrations'));
     }
 
 
