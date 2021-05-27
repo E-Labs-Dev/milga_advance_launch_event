@@ -1,12 +1,7 @@
 @extends('layouts.master')
 
 @section('style')
-
-    <!-- DataTables -->
-    <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
-    <link rel="stylesheet" href="{{asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
-    <link rel="stylesheet" href="{{asset('plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
-
+    @include('layouts.includes.dashboard.datatables.style')
 @endsection
 
 @section('content')
@@ -27,26 +22,27 @@
                     <th>Phone</th>
                     <th>Venue</th>
                     <th>Governorate</th>
-                    <th>created_at</th>
+                    <th>Attendee_at</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
 
                 @foreach($registrations as $key=> $registration)
-                <tr>
-                    <td>{{$key +1}}</td>
-                    <td>{{$registration->user_code}}</td>
-                    <td>{{$registration->first_name}} {{$registration->last_name}}</td>
-                    <td>{{$registration->email}}</td>
-                    <td>{{$registration->phone}}</td>
-                    <td>{{$registration->venue}}</td>
-                    <td>{{$registration->governorate}}</td>
-                    <td>{{$registration->created_at}}</td>
-                    <td>
-                        <a class="deleteThisBtnFinle" data-id="{{ $registration->id }}" ><i class="fas fa-trash-alt"></i></a>
-                    </td>
-                </tr>
+                    <tr>
+                        <td>{{$key +1}}</td>
+                        <td>{{$registration->user_code}}</td>
+                        <td>{{$registration->first_name}} {{$registration->last_name}}</td>
+                        <td>{{$registration->email}}</td>
+                        <td>{{$registration->phone}}</td>
+                        <td>{{$registration->venue}}</td>
+                        <td>{{$registration->governorate}}</td>
+                        <td>{{$registration->updated_at}}</td>
+                        <td>
+
+                            <a class="deleteThisBtnFinle" data-id="{{ $registration->id }}" ><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
                 @endforeach
                 </tbody>
                 <tfoot>
@@ -58,7 +54,7 @@
                     <th>Phone</th>
                     <th>Venue</th>
                     <th>Governorate</th>
-                    <th>created_at</th>
+                    <th>Attendee_at</th>
                     <th>Actions</th>
                 </tr>
                 </tfoot>
