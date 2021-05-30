@@ -44,6 +44,12 @@ class Registration extends Model
 
      }
 
+     public function changeStatusById($id){
+         $registration =  $this->findOrFail($id);
+         $registration->is_attend=0;
+         $registration->save();
+     }
+
     public static function boot()
     {
         parent::boot();

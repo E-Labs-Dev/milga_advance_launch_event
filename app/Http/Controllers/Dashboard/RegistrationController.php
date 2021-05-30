@@ -7,6 +7,7 @@ use App\Http\Enums\AttendStatus;
 use App\Http\Requests\RegistrationAttendRequest;
 use App\Http\Requests\RegistrationRequest;
 use App\Models\Registration;
+use http\Env\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -56,6 +57,13 @@ class RegistrationController extends Controller
 
         $this->registration->destroyById($request->id);
 
-        return redirect()->route('registrations.index')->with('message','Done data deleted.');
+        return response()->json('done');
+    }
+
+    public function changeStatus (Request $request)
+    {
+        $this->registration->changeStatusById($request->id);
+
+        return response()->json('done');
     }
 }
