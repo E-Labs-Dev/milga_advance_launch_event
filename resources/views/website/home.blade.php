@@ -122,7 +122,7 @@
                             </div><!--col-12-->
                             <div class="col-lg-6 col-12">
                                 <label>Mobile Number  <span>*</span> </label>
-                                <input  class="form-control" placeholder="Enter mobile number"  id="phone"  type="tel" required   name="phone"  value="{{old('phone')}}">
+                                <input  class="form-control" placeholder="Enter mobile number"  id="phone"  type="tel" required   value="{{old('phone')}}">
                                 <span id="valid-msg" class="hide"></span>
                                 <span id="error-msg" class="hide"></span>
                             </div><!--col-12-->

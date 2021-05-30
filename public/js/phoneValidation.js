@@ -9,7 +9,7 @@ $(function (){
 
 // initialise plugin
     var iti = window.intlTelInput(input, {
-        // hiddenInput: "phone",
+        hiddenInput: "phone",
         separateDialCode:true,
         utilsScript: origin+"plugins/intlTel/js/utils.js"
     });
