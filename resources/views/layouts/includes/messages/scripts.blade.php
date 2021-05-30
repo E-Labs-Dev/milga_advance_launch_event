@@ -1,3 +1,4 @@
+
 <script>
     @if(Session::has('message'))
         toastr.options =

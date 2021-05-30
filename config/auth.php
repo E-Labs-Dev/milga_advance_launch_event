@@ -50,6 +50,10 @@ return [
             'driver' => 'session',
             'provider' => 'ushers',
         ],
+        'registration' => [
+            'driver' => 'session',
+            'provider' => 'registrations',
+        ],
     ],
 
     /*
@@ -79,6 +83,10 @@ return [
             'model' => App\Models\Usher::class,
         ],
 
+        'registrations' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Registration::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
@@ -113,7 +121,12 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
-
+        'registrations' => [
+            'provider' => 'registrations',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
     ],
 
     /*
