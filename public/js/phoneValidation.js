@@ -9,12 +9,10 @@ $(function (){
 
 // initialise plugin
     var iti = window.intlTelInput(input, {
-        hiddenInput: "phone",
+        // hiddenInput: "full_phone",
         separateDialCode:true,
         utilsScript: origin+"plugins/intlTel/js/utils.js"
     });
-
-
     var reset = function() {
         input.classList.remove("error");
         errorMsg.innerHTML = "";
@@ -29,6 +27,7 @@ $(function (){
         if (input.value.trim()) {
             if (iti.isValidNumber()) {
                 validMsg.innerHTML = "✓ Valid";
+                $('input[name="full_phone"]').val(iti.getNumber())
             } else {
                 input.classList.add("error");
                 var errorCode = iti.getValidationError();
