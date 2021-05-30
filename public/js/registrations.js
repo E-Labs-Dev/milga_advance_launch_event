@@ -39,7 +39,7 @@ $(document).ready(function() {
                 }
             });
     });
-    $("#example1").on("click", ".deleteThisBtnFinle", function() {
+    $("#example2").on("click", ".deleteThisBtnFinle", function() {
         const itemid = $(this).attr('data-id');
         swal({
             title: "Are you sure ?",
