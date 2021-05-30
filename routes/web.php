@@ -17,6 +17,8 @@ Route::group(['namespace'=>'Website'],function () {
 
     Route::get('/','HomeController@index')->name('home');
 
+    Route::post('/login','LoginController@store')->name('login');
+
     Route::post('registrations/store','RegistrationController@store')->name('registrations.store');
 
 });
