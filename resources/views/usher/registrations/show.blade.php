@@ -17,7 +17,9 @@
     <link rel="stylesheet" href="{{asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
-    @include('layouts.includes.messages.style')
+    <link rel="icon" type="image" href="{{asset('images/fav-icon.png')}}">
+
+@include('layouts.includes.messages.style')
     <!-- overlayScrollbars -->
     <title>Milga</title>
 </head>

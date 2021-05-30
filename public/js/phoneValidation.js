@@ -1,4 +1,5 @@
 $(function (){
+    var origin = window.location.href;
     var input = document.querySelector("#phone"),
         errorMsg = document.querySelector("#error-msg"),
         validMsg = document.querySelector("#valid-msg");
@@ -10,7 +11,7 @@ $(function (){
     var iti = window.intlTelInput(input, {
         // hiddenInput: "phone",
         separateDialCode:true,
-        utilsScript: "/plugins/intlTel/js/utils.js"
+        utilsScript: origin+"plugins/intlTel/js/utils.js"
     });
 
 
