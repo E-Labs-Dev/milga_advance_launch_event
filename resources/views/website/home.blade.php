@@ -84,7 +84,7 @@
                         <div class="second-layer" style="display: none;" id="layer2">
                             <video   controls id="myVideo">
                                 <source src="{{asset('VID-20210308-WA0042.mp4')}}" type="video/mp4">
-                                ]                  </video>
+                                ] </video>
 
                         </div><!--second-layer-->
                     </div><!--video-->
@@ -122,7 +122,8 @@
                             </div><!--col-12-->
                             <div class="col-lg-6 col-12">
                                 <label>Mobile Number  <span>*</span> </label>
-                                <input  class="form-control" placeholder="Enter mobile number"  id="phone"  type="tel" required   value="{{old('phone')}}">
+                                <input  class="form-control" placeholder="Enter mobile number"  id="phone"  type="tel" required  value="{{old('phone')}}">
+                                <input type="hidden" name="full_phone" id="full_phone">
                                 <span id="valid-msg" class="hide"></span>
                                 <span id="error-msg" class="hide"></span>
                             </div><!--col-12-->
