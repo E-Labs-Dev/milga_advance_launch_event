@@ -11,7 +11,7 @@ $(function() {
             headers: {
                 "X-CSRF-TOKEN": _token
             },
-            url: main_url+'/registrations/store',
+            url: main_url+'registrations/store',
             type: 'POST',
             data: {
                 first_name: $('input[name="first_name"]').val(),
@@ -59,7 +59,7 @@ $(function() {
             headers: {
                 "X-CSRF-TOKEN": _token
             },
-            url: main_url+'/login',
+            url: main_url+'login',
             type: 'POST',
             data: {
                 phone: $('input[name="full_phone_login"]').val(),
