@@ -1,5 +1,9 @@
 $(function() {
     var origin = window.location.href;
+
+    const main_url = (origin.split('/#')[0]);
+
+
     $('#registration_form').on('click',function () {
 
         const _token = $('input[name="_token"]').val();
@@ -7,7 +11,7 @@ $(function() {
             headers: {
                 "X-CSRF-TOKEN": _token
             },
-            url: origin+'registrations/store',
+            url: main_url+'/registrations/store',
             type: 'POST',
             data: {
                 first_name: $('input[name="first_name"]').val(),
@@ -19,7 +23,7 @@ $(function() {
             },
             success: function(data){
 
-                window.location.href = origin+'profile'
+                window.location.href = main_url+'/profile'
 
             },
             error:function(data){
@@ -55,14 +59,14 @@ $(function() {
             headers: {
                 "X-CSRF-TOKEN": _token
             },
-            url: origin+'login',
+            url: main_url+'/login',
             type: 'POST',
             data: {
                 phone: $('input[name="full_phone_login"]').val(),
             },
             success: function(data){
 
-                    window.location.href = origin+'profile'
+                    window.location.href = main_url+'/profile'
 
             },
             error:function(data){

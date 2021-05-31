@@ -1,5 +1,8 @@
 $(function (){
     var origin = window.location.href;
+
+    const main_url = (origin.split('/#')[0]);
+
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         var target = $(e.target).attr("href")
         if (target == '#login'){
@@ -10,7 +13,7 @@ $(function (){
 
             var iti = window.intlTelInput(inputLogin, {
                 separateDialCode: true,
-                utilsScript: origin + "plugins/intlTel/js/utils.js"
+                utilsScript: main_url + "/plugins/intlTel/js/utils.js"
             });
             var reset = function () {
                 inputLogin.classList.remove("error");
@@ -43,7 +46,7 @@ $(function (){
 
             var iti = window.intlTelInput(input, {
                 separateDialCode: true,
-                utilsScript: origin + "plugins/intlTel/js/utils.js"
+                utilsScript: main_url + "/plugins/intlTel/js/utils.js"
             });
             var reset = function () {
                 input.classList.remove("error");
@@ -81,7 +84,7 @@ $(function (){
 
         var iti = window.intlTelInput(input, {
             separateDialCode: true,
-            utilsScript: origin + "plugins/intlTel/js/utils.js"
+            utilsScript: main_url + "/plugins/intlTel/js/utils.js"
         });
         var reset = function () {
             input.classList.remove("error");
