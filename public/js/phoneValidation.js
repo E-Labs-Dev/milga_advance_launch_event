@@ -13,7 +13,7 @@ $(function (){
 
             var iti = window.intlTelInput(inputLogin, {
                 separateDialCode: true,
-                utilsScript: main_url + "/plugins/intlTel/js/utils.js"
+                utilsScript: main_url + "plugins/intlTel/js/utils.js"
             });
             var reset = function () {
                 inputLogin.classList.remove("error");
@@ -46,7 +46,7 @@ $(function (){
 
             var iti = window.intlTelInput(input, {
                 separateDialCode: true,
-                utilsScript: main_url + "/plugins/intlTel/js/utils.js"
+                utilsScript: main_url + "plugins/intlTel/js/utils.js"
             });
             var reset = function () {
                 input.classList.remove("error");
@@ -84,7 +84,7 @@ $(function (){
 
         var iti = window.intlTelInput(input, {
             separateDialCode: true,
-            utilsScript: main_url + "/plugins/intlTel/js/utils.js"
+            utilsScript: main_url + "plugins/intlTel/js/utils.js"
         });
         var reset = function () {
             input.classList.remove("error");
