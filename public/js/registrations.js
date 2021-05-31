@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    var origin = window.location.href;
+    const main_url = (origin.split('/index')[0]);
+
     $("#example1").on("click", ".deleteThisBtnFinle", function() {
         const itemid = $(this).attr('data-id');
         swal({
@@ -11,7 +14,7 @@ $(document).ready(function() {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    const url = "/admin/registrations/destroy";
+                    const url = main_url+"/destroy";
                     const _token = $('input[name="_token"]').val();
                     const id = itemid;
                     $.ajax({
@@ -51,7 +54,7 @@ $(document).ready(function() {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    const url = "/admin/registrations/change-status";
+                    const url = main_url+"/change-status";
                     const _token = $('input[name="_token"]').val();
                     const id = itemid;
                     $.ajax({

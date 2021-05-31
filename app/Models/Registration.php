@@ -3,11 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Registration extends Model
+class Registration extends Authenticatable
 {
     use HasFactory;
+
+    protected $guard = 'registration';
 
     protected $table = 'registrations';
 
@@ -48,6 +50,10 @@ class Registration extends Model
          $registration =  $this->findOrFail($id);
          $registration->is_attend=0;
          $registration->save();
+     }
+
+     public function findById($phone){
+        return $this->where('phone',$phone)->first();
      }
 
     public static function boot()

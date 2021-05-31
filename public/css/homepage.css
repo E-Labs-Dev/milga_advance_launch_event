@@ -100,7 +100,8 @@ header {
   header .counter {
     display: flex;
     align-items: center;
-    height: 100%; }
+    height: 100%;
+    justify-content: center; }
     header .counter li {
       margin: 0 10px;
       color: #fff;
@@ -183,88 +184,185 @@ header {
           font-size: 20px; } }
       .banner .overlay h3 span {
         font-family: 'Poppins-ExtraBold'; }
-    .banner .overlay p {
+    .banner .overlay .text-p {
       color: #fff;
       font-size: 16px;
       line-height: 1.2;
       margin-bottom: 30px; }
       @media (min-width: 1700px) {
-        .banner .overlay p {
+        .banner .overlay .text-p {
           font-size: 20px; } }
       @media (max-width: 400px) {
-        .banner .overlay p {
+        .banner .overlay .text-p {
           font-size: 12px; } }
-    .banner .overlay .main-div {
-      display: flex;
-      align-items: center;
-      margin-bottom: 15px; }
+
+.main-div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; }
+  @media (max-width: 823px) {
+    .main-div {
+      margin-bottom: 10px; } }
+  .main-div div {
+    height: 90px;
+    background-color: #fff;
+    color: #000;
+    padding: 30px 10px 30px 20px;
+    flex: 1 1 15%;
+    min-width: 15%;
+    font-size: 18px;
+    text-align: center;
+    font-size: 14px; }
+    @media (min-width: 1700px) {
+      .main-div div {
+        font-size: 20px; } }
+    @media (max-width: 823px) {
+      .main-div div {
+        font-size: 13px;
+        padding: 30px 5px;
+        height: unset; } }
+    @media (max-width: 400px) {
+      .main-div div {
+        font-size: 11px; } }
+    .main-div div .img-cal {
+      width: 20px;
+      margin-right: 5px;
+      float: left;
+      margin-top: 7px; }
+    .main-div div p {
+      font-size: 13px;
+      float: left; }
+      @media (max-width: 1024px) {
+        .main-div div p {
+          float: unset;
+          font-size: 12px; } }
+    .main-div div .red-color {
+      color: #DF0E19;
+      text-transform: capitalize;
+      display: inline-block;
+      width: 80px; }
+      @media (max-width: 1024px) {
+        .main-div div .red-color {
+          width: 65px; } }
+    .main-div div .block-span {
+      display: block;
+      margin-left: 5px; }
+  .main-div a {
+    background-image: linear-gradient(to right, #CA1D27, #ef131e);
+    padding: 30px 10px;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+    flex: 1;
+    font-size: 14px;
+    height: 90px;
+    text-align: center; }
+    @media (min-width: 1700px) {
+      .main-div a {
+        font-size: 20px; } }
+    @media (max-width: 823px) {
+      .main-div a {
+        font-size: 13px;
+        padding: 32px 5px;
+        height: unset; } }
+    @media (max-width: 400px) {
+      .main-div a {
+        font-size: 11px; } }
+    .main-div a span {
+      margin-left: 20px; }
       @media (max-width: 823px) {
-        .banner .overlay .main-div {
-          margin-bottom: 10px; } }
-      .banner .overlay .main-div div {
-        height: 90px;
-        background-color: #fff;
-        color: #000;
-        padding: 30px 10px 30px 20px;
-        flex: .7;
-        font-size: 18px;
-        text-align: center; }
-        @media (min-width: 1700px) {
-          .banner .overlay .main-div div {
-            font-size: 20px; } }
+        .main-div a span {
+          margin-left: 5px; } }
+      .main-div a span img {
+        width: 40px; }
+        @media (max-width: 1024px) {
+          .main-div a span img {
+            width: 40px; } }
         @media (max-width: 823px) {
-          .banner .overlay .main-div div {
-            font-size: 13px;
-            padding: 30px 5px;
-            height: unset; } }
-        @media (max-width: 400px) {
-          .banner .overlay .main-div div {
-            font-size: 11px; } }
-        .banner .overlay .main-div div img {
-          width: 20px;
-          margin-right: 5px; }
-      .banner .overlay .main-div a {
-        background-image: linear-gradient(to right, #CA1D27, #ef131e);
-        padding: 30px 10px;
-        border: none;
-        box-shadow: none;
-        color: #fff;
-        flex: 1;
-        font-size: 18px;
-        height: 90px;
-        text-align: center; }
-        @media (min-width: 1700px) {
-          .banner .overlay .main-div a {
-            font-size: 20px; } }
+          .main-div a span img {
+            width: 35px; } }
+
+@media (max-width: 823px) {
+  .web-reserve {
+    display: none; } }
+
+.mobile-reserve {
+  float: left;
+  width: 100%;
+  display: none; }
+  @media (max-width: 823px) {
+    .mobile-reserve {
+      display: block; } }
+  .mobile-reserve .main-div {
+    margin: 20px auto;
+    border: 1px solid #DF0E19;
+    width: 100%; }
+    .mobile-reserve .main-div div {
+      float: left;
+      width: 60%;
+      padding: 0 5px; }
+      .mobile-reserve .main-div div .img-cal {
+        margin-top: 5px;
+        margin-right: 0; }
         @media (max-width: 823px) {
-          .banner .overlay .main-div a {
-            font-size: 13px;
-            padding: 32px 5px;
-            height: unset; } }
-        @media (max-width: 400px) {
-          .banner .overlay .main-div a {
+          .mobile-reserve .main-div div .img-cal {
+            margin-top: 0; } }
+        @media (max-width: 766px) {
+          .mobile-reserve .main-div div .img-cal {
+            margin-top: 5px; } }
+        @media (max-width: 375px) {
+          .mobile-reserve .main-div div .img-cal {
+            margin-top: 0; } }
+      .mobile-reserve .main-div div p {
+        font-size: 11px;
+        float: unset; }
+        @media (max-width: 823px) {
+          .mobile-reserve .main-div div p {
+            font-size: 9px; } }
+        @media (max-width: 766px) {
+          .mobile-reserve .main-div div p {
             font-size: 11px; } }
-        .banner .overlay .main-div a span {
-          margin-left: 25px; }
-          @media (max-width: 823px) {
-            .banner .overlay .main-div a span {
-              margin-left: 5px; } }
-          .banner .overlay .main-div a span img {
-            width: 70px; }
-            @media (max-width: 1024px) {
-              .banner .overlay .main-div a span img {
-                width: 40px; } }
-            @media (max-width: 823px) {
-              .banner .overlay .main-div a span img {
-                width: 35px; } }
+        @media (max-width: 375px) {
+          .mobile-reserve .main-div div p {
+            font-size: 9px; } }
+        @media (max-width: 320px) {
+          .mobile-reserve .main-div div p {
+            font-size: 8px; } }
+      .mobile-reserve .main-div div .red-color {
+        width: 65px; }
+        @media (max-width: 823px) {
+          .mobile-reserve .main-div div .red-color {
+            width: 60px; } }
+        @media (max-width: 766px) {
+          .mobile-reserve .main-div div .red-color {
+            width: 60px; } }
+        @media (max-width: 375px) {
+          .mobile-reserve .main-div div .red-color {
+            width: 60px; } }
+        @media (max-width: 320px) {
+          .mobile-reserve .main-div div .red-color {
+            width: 45px; } }
+    .mobile-reserve .main-div a {
+      float: right;
+      width: 40%;
+      font-size: 8px;
+      padding: 21px 5px; }
 
 .content {
   float: left;
   width: 100%;
+  position: relative;
+  overflow: hidden;
   /******registration-div*******/ }
+  @media (max-width: 766px) {
+    .content .container {
+      padding: 0; } }
   .content .div-video {
     position: relative;
     padding: 70px 0; }
+    @media (max-width: 823px) {
+      .content .div-video {
+        padding: 10px 0; } }
     .content .div-video .abs-image {
       position: absolute;
       right: 0;
@@ -279,6 +377,10 @@ header {
       @media (max-width: 823px) {
         .content .div-video .abs-image {
           width: 240px; } }
+      @media (max-width: 766px) {
+        .content .div-video .abs-image {
+          right: -140px;
+          top: 15px; } }
     .content .div-video h2 {
       font-size: 35px;
       color: #DF0E19;
@@ -292,6 +394,10 @@ header {
         display: table;
         margin-bottom: 40px;
         margin-left: -60px; }
+        @media (max-width: 823px) {
+          .content .div-video h2:before {
+            margin-bottom: 0;
+            margin-left: -85px; } }
       @media (min-width: 1700px) {
         .content .div-video h2 {
           font-size: 25px; } }
@@ -301,6 +407,9 @@ header {
     .content .div-video .video {
       position: relative;
       margin-top: 35px; }
+      @media (max-width: 823px) {
+        .content .div-video .video {
+          margin-top: 10px; } }
       .content .div-video .video .first-layer {
         width: 100%; }
         .content .div-video .video .first-layer .main-layer {
@@ -311,7 +420,7 @@ header {
               height: 770px; } }
           @media (max-width: 823px) {
             .content .div-video .video .first-layer .main-layer {
-              height: 250px; } }
+              height: unset; } }
         .content .div-video .video .first-layer .overlay {
           position: absolute;
           top: 0;
@@ -328,7 +437,7 @@ header {
               height: 770px; } }
           @media (max-width: 823px) {
             .content .div-video .video .first-layer .overlay {
-              height: 250px; } }
+              height: 100%; } }
           @media (max-width: 823px) {
             .content .div-video .video .first-layer .overlay img {
               width: 100px;
@@ -350,9 +459,9 @@ header {
     padding: 130px 0;
     position: relative;
     overflow: hidden; }
-    @media (max-width: 766px) {
+    @media (max-width: 823px) {
       .content .registration-div {
-        padding: 70px 0; } }
+        padding: 50px 0; } }
     .content .registration-div .image-regist {
       position: absolute;
       left: 0;
@@ -391,28 +500,49 @@ header {
     border: 5px solid #DF0E19;
     border-radius: 4px;
     margin-top: 30px; }
-    .content form h3 {
+    .content form .nav-tabs {
       width: 100%;
       height: 80px;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-image: linear-gradient(to right, #CA1D27, #ef131e);
-      font-size: 30px;
-      font-weight: 400;
-      color: #fff;
-      text-transform: capitalize; }
+      text-align: center;
+      border-bottom: 5px solid #DF0E19; }
       @media (min-width: 1700px) {
-        .content form h3 {
+        .content form .nav-tabs {
           height: 112px; } }
       @media (max-width: 1024px) {
-        .content form h3 {
+        .content form .nav-tabs {
           font-size: 20px; } }
+      .content form .nav-tabs li {
+        width: 50%;
+        height: 100%;
+        margin-bottom: 0; }
+        .content form .nav-tabs li .nav-link {
+          height: 100%;
+          font-size: 20px;
+          text-transform: uppercase;
+          color: #DF0E19;
+          font-family: 'Poppins-Bold';
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          @media (max-width: 766px) {
+            .content form .nav-tabs li .nav-link {
+              font-size: 15px; } }
+    .content form .nav-tabs .nav-link.active, .content form .nav-tabs .nav-item.show .nav-link {
+      background-image: linear-gradient(to right, #CA1D27, #ef131e);
+      color: #fff;
+      border: none;
+      border-radius: 0; }
     .content form .reserve {
       padding: 30px 50px; }
       @media (max-width: 1024px) {
         .content form .reserve {
           padding: 30px 15px; } }
+    .content form .login-div {
+      justify-content: center;
+      padding-top: 70px; }
     .content form label {
       font-size: 16px;
       font-family: 'Poppins-Bold';
@@ -527,5 +657,19 @@ footer {
     footer .copy-right .logo-footer {
       float: right;
       width: 97px; }
+
+@media screen and (max-width: 823px) and (orientation: landscape) {
+  .content .div-video {
+    padding: 10px 0; }
+    .content .div-video .video {
+      margin-top: 10px; }
+    .content .div-video h2::before {
+      margin-bottom: 10px; } }
+@media screen and (max-width: 736px) and (orientation: landscape) {
+  .mobile-reserve .main-div {
+    width: 60%; } }
+@media screen and (max-width: 500px) and (orientation: landscape) {
+  .mobile-reserve .main-div {
+    width: 100%; } }
 
 /*# sourceMappingURL=homepage.css.map */
