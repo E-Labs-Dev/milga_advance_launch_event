@@ -19,11 +19,9 @@ class LoginController extends Controller
 
     public function store(LoginUserRequest $request)
     {
-        $registration = $this->registration->findById($request->phone);
+//        $registration = $this->registration->findByPhone($request->phone);
 
-        Auth::guard('registration')->login($registration);
-
-        return response()->json('done');
+        return response()->json($request->phone);
 
     }
 }
