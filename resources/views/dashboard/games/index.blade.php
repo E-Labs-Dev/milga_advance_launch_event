@@ -19,7 +19,9 @@
                     <th>User Code</th>
                     <th>User Name</th>
                     <th>Game Code</th>
+                    <th>Game Name</th>
                     <th>Score</th>
+                    <th>created_at</th>
 
                 </tr>
                 </thead>
@@ -31,7 +33,9 @@
                     <td>{{$game->user_code}}</td>
                     <td>{{$game->first_name}} {{$game->last_name}}</td>
                     <td>{{$game->code}}</td>
+                    <td>{{$game->name}}</td>
                     <td>{{$game->score}}</td>
+                    <td>{{$game->created_at}}</td>
                 </tr>
                 @endforeach
                 </tbody>
@@ -41,7 +45,9 @@
                     <th>User Code</th>
                     <th>User Name</th>
                     <th>Game Code</th>
+                    <th>Game Name</th>
                     <th>Score</th>
+                    <th>created_at</th>
                 </tr>
                 </tfoot>
             </table>

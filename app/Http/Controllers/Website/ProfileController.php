@@ -10,8 +10,6 @@ class ProfileController extends Controller
 {
     public function index()
     {
-
-      return Auth::guard('registration')->user();
-
+      return 'data user';
     }
 }
