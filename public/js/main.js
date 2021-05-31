@@ -6,10 +6,9 @@ $(function() {
 
     $('#registration_form').on('click',function () {
 
-        const _token = $('input[name="_token"]').val();
         $.ajax({
             headers: {
-                "X-CSRF-TOKEN": _token
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             url: main_url+'registrations/store',
             type: 'POST',
@@ -54,10 +53,9 @@ $(function() {
 
     $('#login_form').on('click',function () {
 
-        const _token = $('input[name="_token"]').val();
         $.ajax({
             headers: {
-                "X-CSRF-TOKEN": _token
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             url: main_url+'login',
             type: 'POST',
