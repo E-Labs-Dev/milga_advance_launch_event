@@ -18,7 +18,9 @@ class ProfileController extends Controller
     public function index($phone)
     {
 
-      return  $this->registration->findByPhone($phone);
+        $this->registration->findByPhone($phone);
+
+        return view('website.profile');
 
     }
 }

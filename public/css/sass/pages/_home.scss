@@ -654,7 +654,527 @@ header {
             }
         }
     }
+    /**** program ****/
+    .program-div {
+        background-color: $mainColor;
+        width: 100%;
+        float: $left;
+        padding: 20px 0;
+        .container {
+            @media #{$mobileScreen} {
+                padding: 0 15px;
+            }
+        }
+        .row {
+            align-items: center;
+        }
+        h4 {
+            color: #fff;
+            font-family: 'Poppins-ExtraBold';
+            text-transform: capitalize;
+            font-size: 35px;
+            @media #{$mobileScreen} {
+                font-size: 20px;
+            }
+
+        }
+        P{
+            color: #fff;
+            opacity: .7;
+            font-size: 17px;
+            @media #{$mobileScreen} {
+                font-size: 15px;
+            }
+        }
+        img {
+            width: 350px;
+            position: relative;
+            bottom: -30px;
+            z-index: 10;
+            float: $right;
+            @media #{$mobileScreen} {
+                width: 200px;
+            }
+        }
+    }
+
+    /****agenda*****/
+.agenda {
+    background-color: #fff;
+    padding: 100px 0;
+    .title-left {
+        font-size: 35px;
+        color: $mainColor;
+        text-transform: capitalize;
+        font-family: 'Poppins-ExtraBold';
+        padding-left: 70px;
+        text-align: $left;
+        @media #{$mobileScreen} {
+            font-size: 20px;
+        }
+        &:before {
+            content:"";
+            width: 70px;
+            border: 2px solid $mainColor;
+            display: table;
+            margin-bottom: 20px;
+            margin-left: -60px;
+            @media #{$mobileScreen} {
+                margin-bottom: 0;
+                margin-left: -85px;
+            }
+        }
+    }
+     form {
+         background-color: #fff;
+         border: none;
+        .nav-tabs {
+            border: 3px solid $mainColor;
+            li {
+                .nav-link {
+                    font-family: 'Poppins-Regular';
+                    text-transform: capitalize;
+                    @media #{$mobileScreen} {
+                       font-size: 12px;
+                    }
+                    span {
+                        font-weight: bold;
+                    }
+                    .month-name {
+                        margin-left: 15px;
+                        font-size: 18px;
+                        font-weight: normal;
+                        @media #{$mobileScreen} {
+                            font-size: 12px;
+                        }
+
+                    }
+                    .day-name {
+                        display: block;
+                        text-transform: capitalize;
+                        font-size: 16px;
+                        font-weight: normal;
+                        opacity: .5;
+                        @media #{$mobileScreen} {
+                            font-size: 12px;
+                        }
+                    }
+                    
+                }
+                &:last-child {
+                    .month-name {
+                        color: #000;
+
+                    }
+                    .day-name {
+                        color: #000;
+                         opacity: 1;
+
+                    }
+                }
+            }
+        }
+        .line-div {
+            background-color: #F7F8FA;
+            padding: 15px 70px;
+            float: $left;
+            width: 100%;
+            margin-bottom: 5px;
+            @media #{$mobileScreen} {
+               padding: 15px 10px;
+            }
+            ul {
+                display: flex;
+                align-items: center;
+                @media #{$smallScreen} {
+                    display: unset;
+                }
+                li {
+                    float: $left;
+                    margin-right: 30px;
+                    font-size: 15px;
+                    @media #{$smallScreen} {
+                        width: 100%;
+                        margin-bottom: 5px;
+                        margin-right: 0;
+                        font-size: 13px;
+                    }
+                    &:first-child {
+                        color: $mainColor;
+                        font-weight: 600;
+                    }
+                   
+                    &:last-child {
+                        color: #000;
+                        font-family: 'Poppins-Bold';
+                        font-size: 16px;
+                        @media #{$smallScreen} {
+                            font-size: 13px;
+                        }
+                        span {
+                            display: block;
+                            color: $mainColor;
+                            font-family: 'Poppins-Regular';
+                            font-size: 14px;
+                            @media #{$smallScreen} {
+                                font-size: 12px;
+                            }
+    
+                            img {
+                                margin-right: 5px;
+                                width: 19px;
+                            }
+                            small {
+                                text-transform: capitalize;
+                                color: #000;
+                                margin-right: 10px;
+                                font-size: 14px;
+                                @media #{$smallScreen} {
+                                    font-size: 12px;
+                                }
+    
+                            }
+                        }
+                    }
+                }
+                .border {
+                    width: 130px;
+                    border: 2px solid  #807E7E;
+                    opacity: .5;
+                }
+            }
+            &:nth-of-type(2),
+            &:nth-of-type(4),
+            &:nth-of-type(7),
+            &:nth-of-type(9)
+             {
+                background-color: #fff;
+            }
+
+            &:nth-of-type(3),
+            &:nth-of-type(5),
+            &:nth-of-type(8) {
+                background-image: linear-gradient(180deg, #EF7032, #EC9B35);
+                ul{
+                    li {
+                        color: #fff;
+                        span {
+                            color: #fff;
+                            small {
+                                color: #fff;
+                            }
+                        }
+                }
+                }
+               
+
+            }
+            &:nth-of-type(6)
+             {
+                background-color: $mainColor;
+                padding: 25px 70px;
+                ul {
+                    li {
+                        color: #fff ;
+                    }
+                }
+               
+            }
+        }
+     }  
 }
+
+/***** speakers *****/
+.speakers {
+    padding: 50px;
+    float: $left;
+    width: 100%;
+    background-color: #F9F9F9;
+    padding: 50px 0;
+    .container {
+        padding: 0 15px;
+    }
+    h4 {
+        font-size: 35px;
+        color: #000;
+        font-family: 'Poppins-ExtraBold';
+        padding-bottom: 20px;
+        @media #{$mobileScreen} {
+            font-size: 20px;
+        }
+        @media #{$smallScreen} {
+            font-size: 15px;
+        }
+
+
+    }
+    .div-box {
+        position: relative;
+        width: 180px;
+        height: 180px;
+        background-color: #fff;
+        border-radius: 50%;
+        margin: 20px auto 0;
+        .image-border {
+            position: absolute;
+            top: -16px;
+            right: -8px;
+            width: 100px;
+        }
+        .main-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+    .text-box {
+        margin: 20px auto 0;
+        text-align: center;
+        h3 {
+            color: #161616;
+            font-weight: 600;
+            font-size: 17px;
+            text-transform: capitalize;
+        }
+        P{
+            font-size: 12px;
+            color: #807E7E;
+        }
+    }
+}
+
+/***** score *****/
+.score {
+    .title-score {
+        font-size: 25px;
+        color: #000;
+        font-family: 'Poppins-Bold';
+        padding: 15px 0;
+        display: flex;
+        align-items: center;
+        span {
+            margin-right: 10px;
+            display: inline-block;
+            margin-top: -2px;
+            img {
+                width: 35px;
+            }
+        }
+    }
+    .padding-score {
+        padding-left: 70px;
+        @media #{$mobileScreen} {
+            padding-left: 0;
+        }
+        .table {
+            thead  {
+                th {
+                    background-color: $mainColor;
+                    color: #fff;
+                    border: none;
+                    font-weight: normal;
+                    font-size: 16px;
+                    text-align: center;
+                    width: 25%;
+                    &:first-child {
+                        width: 15%;
+                    }
+                }
+                
+            }
+            th,td {
+                padding: 10px;
+                vertical-align: middle;
+                border-top: none;
+                text-align: center;
+                @media #{$mobileScreen} {
+                   font-size: 12px;
+                }
+                p {
+                    font-size: 15px;
+                    @media #{$mobileScreen} {
+                        font-size: 12px;
+                    }
+                    span {
+                        width: 50px;
+                        display: inline-block;
+                        @media #{$mobileScreen} {
+                            width: 100%;
+                        }
+                        img {
+                            width: 40px;
+                            @media #{$mobileScreen} {
+                                width: 30px;
+                            }
+                        }
+                    }
+                  
+                }
+            }
+            td {
+                
+                &:nth-child(2) {
+                    text-align: $left;
+                }
+            }
+        } 
+    }
+}
+
+/****** profile *****/
+.profile {
+   padding: 160px 0 70px ;
+   @media #{$mobileScreen} {
+       padding: 50px 0;
+   }
+   .container {
+    @media #{$mobileScreen} {
+        padding:  0 15px;
+    }
+ 
+   }
+   .media   {
+       align-items: center;
+       @media #{$smallScreen} {
+           display: unset;
+       }
+   }
+   .image-round {
+       width: 100px;
+       height: 100px;
+       line-height: 100px;
+       border-radius: 50%;
+       background-color: #fff;
+       box-shadow: 0 2px 3px #ddd;
+       text-align: center;
+       margin-right: 30px;
+       @media #{$smallScreen} {
+        float: $left;
+       width: 70px;
+       height: 70px;
+       line-height: 70px;
+
+
+    }
+       img {
+           width: 50px;
+           @media #{$smallScreen} {
+            width: 30px;
+        }
+       }
+   }
+   .media-body {
+       width: 70%;
+       @media #{$smallScreen} {
+        width: 100%;
+       }
+       h4 {
+           font-size: 30px;
+           font-family: 'Poppins-Bold';
+           @media #{$mobileScreen} {
+            font-size: 14px;
+           }
+       }
+       p {
+           font-size: 17px;
+           color: #000;
+           font-weight: 600;
+           @media #{$mobileScreen} {
+            font-size: 13px;
+           }
+           span {
+               color: $mainColor;
+               font-family: 'Poppins-Bold';
+
+           }
+       }
+   }
+   .gr-div {
+    @media #{$smallScreen} {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+   }
+   .qr {
+       width: 150px;
+       float: $right;
+       @media #{$smallScreen} {
+        width: 150px;
+ }
+   }
+}
+
+/**** games*****/
+.games {
+    background-color: #F7F8FA;
+    .score-div {
+        background-color: #fff;
+        padding: 20px;
+        position: relative;
+        margin-top:80px;
+        text-align: center;
+        .icon {
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            text-align: center;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin: -60px auto 20px ;
+            img {
+                width: 40px;
+            }
+        }
+    }
+    .text-game {
+        h3 {
+            color: #000;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        .bg-level {
+            background-color: #FCD7DA;
+            color: #DF0E19;
+            border-radius: 29px;
+            padding: 10px 15px;
+            font-size: 20px;
+            margin: 15px auto;
+            width: 150px;
+        }
+        .score-p {
+            background-image: linear-gradient(to right, #CA1D27, #ef131e);
+            color: #fff;
+            padding: 25px 0;
+            font-size: 20px;
+            text-transform: capitalize;
+            margin: 20px auto 50px;
+        }
+        h5 {
+            color: $mainColor;
+            font-size: 25px;
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+        p {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            span {
+                margin-right: 10px;
+                img{
+                    width: 40px;
+                }
+            }
+        }
+    }
+}
+}
+
+
+
 /****footer****/
 footer {
     position: relative;
@@ -733,6 +1253,7 @@ footer {
     }
 }
 }
+
 
 @media screen and (max-width:736px) and (orientation:landscape) {
 
