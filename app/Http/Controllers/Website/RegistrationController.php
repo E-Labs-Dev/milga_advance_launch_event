@@ -61,6 +61,6 @@ class RegistrationController extends Controller
 
             return response()->json(['error' => 'Data Not Save .'],409);
         }
-        return response()->json(['success' => 'Thank you For Registration. Please check your email.']);
+        return response()->json($registraion->phone);
     }
 }

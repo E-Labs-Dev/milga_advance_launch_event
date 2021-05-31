@@ -23,7 +23,7 @@ $(function() {
             },
             success: function(data){
 
-                window.location.href = main_url+'/profile'
+                window.location.href = main_url+'/profile'+data
 
             },
             error:function(data){
@@ -66,7 +66,7 @@ $(function() {
             },
             success: function(data){
 
-                    window.location.href = main_url+'/profile'
+                    window.location.href = main_url+'/profile/'+data
 
             },
             error:function(data){
