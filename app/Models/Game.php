@@ -10,6 +10,11 @@ class Game extends Model
     use HasFactory;
     protected $fillable =['user_code','score','code'];
 
+    public function scopeUser($query, $code)
+    {
+        return $query->where('user_code', $code);
+    }
+
     public function getAll($where = []){
 
         return $this->leftJoin('game_references','games.code','=','game_references.code')

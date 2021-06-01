@@ -18,7 +18,7 @@ class LoginController extends Controller
         $this->registration = new Registration();
     }
 
-    public function store(LoginUserRequest $request)
+    public function login(LoginUserRequest $request)
     {
         try {
             $user = $this->registration->findByPhone($request->phone);
