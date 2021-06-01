@@ -71,47 +71,9 @@
                         <h2 class="title-left">Games Score</h2>
                     </div>
                     <div class="col-10 ">
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-6 col-12">
-                                <div class="score-div">
-                                    <div class="icon"><img src="{{asset('images/puzzle.png')}}"></div><!--icon-->
-                                    <div class="text-game">
-                                        <h3>Puzzle Game</h3>
-                                        <h4 class="bg-level">Level 7</h4>
-                                        <p class="score-p">Score : 250</p>
-                                        <hr>
-                                        <h5>Highest Score</h5>
-                                        <p class="last-p"><span><img src="{{asset('images/score1.png')}}"></span>350</p>
-                                    </div><!--text-game-->
-                                </div><!--score-div-->
-                            </div><!--col-lg-4-->
-                            <div class="col-lg-4 col-sm-6 col-12">
-                                <div class="score-div">
-                                    <div class="icon"><img src="{{asset('images/chess-board.png')}}"></div><!--icon-->
-                                    <div class="text-game">
-                                        <h3>Chess Board</h3>
-                                        <h4 class="bg-level">Level 2</h4>
-                                        <p class="score-p">Score : 120</p>
-                                        <hr>
-                                        <h5>Highest Score</h5>
-                                        <p class="last-p"><span><img src="{{asset('images/score2.png')}}"></span>230</p>
-                                    </div><!--text-game-->
-                                </div><!--score-div-->
-                            </div><!--col-lg-4-->
-                            <div class="col-lg-4 col-lg-4 col-sm-6 col-12">
-                                <div class="score-div">
-                                    <div class="icon"><img src="{{asset('images/joystick.png')}}"></div><!--icon-->
-                                    <div class="text-game">
-                                        <h3>Joy Stick</h3>
-                                        <h4 class="bg-level">Level 4</h4>
-                                        <p class="score-p">Score : 94</p>
-                                        <hr>
-                                        <h5>Highest Score</h5>
-                                        <p class="last-p"><span><img src="{{asset('images/score3.png')}}"></span>150</p>
-                                    </div><!--text-game-->
-                                </div><!--score-div-->
-                            </div><!--col-lg-4-->
-                        </div><!--row-->
+                         <br>
+                            <p>Can't wait to play? Stay tuned for a lot of the entertaining games that will be live during the event time.</p>
+
 
                     </div><!--col-10-->
 
