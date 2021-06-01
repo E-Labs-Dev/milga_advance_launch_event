@@ -16,7 +16,6 @@
         "laravelcollective/html": "^6.2",
         "propaganistas/laravel-phone": "^4.3",
         "sendgrid/sendgrid": "~7",
-        "sentry/sentry-laravel": "^2.5",
         "simplesoftwareio/simple-qrcode": "^2.0",
         "socketlabs/email-delivery": "^1.2",
         "twilio/sdk": "^6.11"
