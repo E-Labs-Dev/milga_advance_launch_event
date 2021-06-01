@@ -21,7 +21,7 @@ Route::group(['namespace'=>'Website'],function () {
 
     Route::get('/agenda','AgendaController@index')->name('agenda');
 
-    Route::post('/login','LoginController@store')->name('user.login');
+    Route::post('/login','LoginController@login')->name('user.login');
 
     Route::post('registrations/store','RegistrationController@store')->name('registrations.store');
 
