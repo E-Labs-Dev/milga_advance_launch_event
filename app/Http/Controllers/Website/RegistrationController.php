@@ -33,8 +33,10 @@ class RegistrationController extends Controller
             DB::beginTransaction();
 
             $userCode     = '12'.rand(1000,9999);
-            
+
             $qrcode       = $this->qrCode->create($userCode);
+            setCurrentUser($request->phone);
+            
             $requestData ['qrcode'] = $qrcode;
 
             $requestData  = $request->validated();

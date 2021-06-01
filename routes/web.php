@@ -16,13 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace'=>'Website'],function () {
 
     Route::get('/','HomeController@index')->name('home');
-
-    Route::get('profile','ProfileController@index')->name('profile');
-
-    Route::get('/agenda','AgendaController@index')->name('agenda');
-
     Route::post('/login','LoginController@login')->name('user.login');
-
     Route::post('registrations/store','RegistrationController@store')->name('registrations.store');
 
+    Route::middleware('authorized')->group(function() {
+        Route::get('profile','ProfileController@index')->name('profile');
+        Route::get('/agenda','AgendaController@index')->name('agenda');
+    });
 });
