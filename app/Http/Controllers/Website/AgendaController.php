@@ -19,7 +19,6 @@ class AgendaController extends Controller
     public function index(Request $request)
     {
         $user = getCurrentUser();
-
         $games = $this->game_reference->getWithGameAndUser($user->user_code);
 
         return view('website.agenda',compact('games'));
