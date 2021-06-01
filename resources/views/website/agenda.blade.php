@@ -140,56 +140,7 @@
             <div class="container">
                 <h4>Meet Our Conference Speakers</h4>
                 <div class="row" style="justify-content: center;">
-                    <div class="col-lg-10">
-                        <div class="row">
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="div-box">
-                                    <img class="image-border" src="{{asset('images/image-border.png')}}">
-                                    <img class="main-image" src="{{asset('images/speaker.png')}}">
-                                </div><!--div-box-->
-                                <div class="text-box">
-                                    <h3>Prof. Nada Tarawah, MD</h3>
-                                    <p>President, Middle East and North
-                                        Africa Hematology League</p>
-                                </div><!--text-box-->
-                            </div><!--col-lg-4-->
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="div-box">
-                                    <img class="image-border" src="{{asset('images/image-border.png')}}">
-                                    <img class="main-image" src="{{asset('images/speaker.png')}}">
-                                </div><!--div-box-->
-                                <div class="text-box">
-                                    <h3>Prof. Nada Tarawah, MD</h3>
-                                    <p>President, Middle East and North
-                                        Africa Hematology League</p>
-                                </div><!--text-box-->
-                            </div><!--col-lg-4-->
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="div-box">
-                                    <img class="image-border" src="{{asset('images/image-border.png')}}">
-                                    <img class="main-image" src="{{asset('images/speaker.png')}}">
-                                </div><!--div-box-->
-                                <div class="text-box">
-                                    <h3>Prof. Nada Tarawah, MD</h3>
-                                    <p>President, Middle East and North
-                                        Africa Hematology League</p>
-                                </div><!--text-box-->
-                            </div><!--col-lg-4-->
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="div-box">
-                                    <img class="image-border" src="{{asset('images/image-border.png')}}">
-                                    <img class="main-image" src="{{asset('images/speaker.png')}}">
-                                </div><!--div-box-->
-                                <div class="text-box">
-                                    <h3>Prof. Nada Tarawah, MD</h3>
-                                    <p>President, Middle East and North
-                                        Africa Hematology League</p>
-                                </div><!--text-box-->
-                            </div><!--col-lg-4-->
-                        </div><!--row-->
-                    </div><!--col-lg-10-->
-
-
+                    <p style="text-align:center">Can't wait to play? Stay tuned for a lot of the entertaining games that will be live during the event time.</p>
                 </div>
             </div>
         </div><!--speakers-->
