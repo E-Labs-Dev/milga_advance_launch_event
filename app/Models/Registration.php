@@ -15,7 +15,7 @@ class Registration extends Authenticatable
 
     protected $fillable = ['first_name', 'last_name','email','phone','venue','qrcode','user_code','governorate'];
 
-    protected $appends = ['original_path'];
+    protected $appends = ['original_path', 'full_name'];
 
     public function games(){
         return $this->hasMany(Game::class,'user_code','user_code');
@@ -29,6 +29,13 @@ class Registration extends Authenticatable
     {
         return url('/').'/public/qrcodes/'.$this->qrcode;
     }
+
+    public function getFullNameAttribute()
+    {
+        return "$this->first_name $this->last_name";
+    }
+
+
 
      public function getAll($attend = null){
          $registrations =  $this->query()->select('id','first_name','user_code','last_name','email','phone','governorate','venue','created_at','is_attend','updated_at')->orderBy('id','asc');
