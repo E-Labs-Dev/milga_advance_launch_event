@@ -3,12 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Registration extends Model
+class Registration extends Authenticatable
 {
     use HasFactory;
+
+    protected $guard = 'registration';
 
     protected $table = 'registrations';
 
@@ -27,6 +28,36 @@ class Registration extends Model
     public function getOriginalPathAttribute()
     {
         return url('/').'/public/qrcodes/'.$this->qrcode;
+    }
+
+     public function getAll($attend = null){
+         $registrations =  $this->query()->select('id','first_name','user_code','last_name','email','phone','governorate','venue','created_at','is_attend','updated_at')->orderBy('id','asc');
+        if (isset($attend)){
+            $registrations->where('is_attend',$attend);
+        }
+        return  $registrations->get();
+     }
+
+     public function destroyById($id){
+
+         $registration =  $this->findOrFail($id);
+
+         $registration->delete();
+
+     }
+
+     public function changeStatusById($id){
+         $registration =  $this->findOrFail($id);
+         $registration->is_attend=0;
+         $registration->save();
+     }
+
+     public function findByPhone($phone){
+        return $this->where('phone',$phone)->first();
+     }
+
+    public function findByCode($code){
+        return $this->where('user_code',$code)->first();
     }
 
     public static function boot()

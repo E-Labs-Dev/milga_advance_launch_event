@@ -27,7 +27,7 @@ class GameRequest extends FormRequest
     {
         return [
             'userCode'     =>'required|exists:registrations,user_code',
-            'gameCode'     =>'required',
+            'gameCode'     =>'required|exists:game_references,code',
             'gameScore'    =>'required',
         ];
     }

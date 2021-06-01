@@ -29,7 +29,7 @@
                         <div class="inner">
                             <h3>{{$registrations}}</h3>
 
-                            <p>Total user registration</p>
+                            <p>Total submitter users</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-bag"></i>
@@ -44,12 +44,12 @@
                         <div class="inner">
                             <h3>{{$registrationsAttend}}</h3>
 
-                            <p>Total user scan qr code</p>
+                            <p>Total registered users</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-stats-bars"></i>
                         </div>
-                        <a href="{{route('registrations.index')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{route('registrations.attendees')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -59,7 +59,7 @@
                         <div class="inner">
                             <h3>{{$games}}</h3>
 
-                            <p>Total user play game</p>
+                            <p>Total game users</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-person-add"></i>

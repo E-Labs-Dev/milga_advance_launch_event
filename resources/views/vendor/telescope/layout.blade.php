@@ -218,7 +218,7 @@
     window.Telescope = @json($telescopeScriptVariables);
 	
 	
-	window.Telescope.path = 'brandmark/Milga-Advance-Launch-Event/public/telescope'; // change this part with online 
+	window.Telescope.path = 'milga/advance_launch_event_backend_staging/telescope'; // change this part with online 
 </script>
 
 <script src="{{ asset(mix('app.js', 'vendor/telescope')) }}"></script>

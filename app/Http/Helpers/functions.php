@@ -3,19 +3,38 @@ use Socketlabs\SocketLabsClient;
 use Socketlabs\Message\BulkMessage;
 use Socketlabs\Message\EmailAddress;
 use App\Http\Enums\MailConfig;
+use Twilio\Rest\Client;
 
-function sendMail($qrcode, $email)
+function sendMail($qrcode, $email,$userCode)
 {
 
-    $serverId = 35045;
-    $injectionApiKey = "x5Q8Rdz9ZWq76LfKj43Y";
-    $client = new SocketLabsClient($serverId, $injectionApiKey);
-    $message = new BulkMessage();
-    $message->subject = MailConfig::SUBJECT;
-    $message->htmlBody = file_get_contents('./resources/views/emails/registration.blade.php');
-    $message->from = new EmailAddress(MailConfig::FROM);
-    $recipient1 = $message->addToAddress($email, "Recipient #1");
-    $recipient1->addMergeData("qrcode", $qrcode);
-    $response = $client->send($message);
+        $serverId = 35045;
+        $injectionApiKey = "x5Q8Rdz9ZWq76LfKj43Y";
+        $client = new SocketLabsClient($serverId, $injectionApiKey);
+        $message = new BulkMessage();
+        $message->subject = MailConfig::SUBJECT;
+        $message->htmlBody = file_get_contents(resource_path('/views/emails/registration.blade.php'));
+        $message->from = new EmailAddress(MailConfig::FROM);
+        $recipient1 = $message->addToAddress($email, "Recipient #1");
+        $recipient1->addMergeData("qrcode", $qrcode);
+        $recipient1->addMergeData("userCode", $userCode);
+        $client->send($message);
 
 }
+
+function sendWhatsApp($qrcode, $phone,$userCode)
+{
+    $sid ='AC902dd084452808a10abb690f5de30e60';
+    $token = '52d049fdbaf5d528180620d1d82e669b';
+
+    $twilio = new Client($sid, $token);
+
+    $message = $twilio->messages
+        ->create("whatsapp:".$phone,
+            [
+                "from" => "whatsapp:+12025197412",
+                "body" => "Your $userCode pin code is $qrcode"
+            ]
+        );
+}
+

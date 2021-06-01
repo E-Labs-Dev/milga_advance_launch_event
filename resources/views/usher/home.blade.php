@@ -7,7 +7,7 @@
 
     <title>Milga Advance | Dashboard</title>
 
-    @include('layouts.includes.style')
+    @include('layouts.includes.dashboard.style')
     @include('layouts.includes.messages.style')
 </head>
 
@@ -29,7 +29,7 @@
 </div>
 <!-- ./wrapper -->
 
-@include('layouts.includes.scripts')
+@include('layouts.includes.dashboard.scripts')
 @include('layouts.includes.messages.scripts')
 </body>
 </html>

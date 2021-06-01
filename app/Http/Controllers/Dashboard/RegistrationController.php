@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Enums\AttendStatus;
 use App\Http\Requests\RegistrationAttendRequest;
 use App\Http\Requests\RegistrationRequest;
 use App\Models\Registration;
+use http\Env\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -26,44 +28,23 @@ class RegistrationController extends Controller
      */
     public function index()
     {
-        $registrations = $this->registration->select('id','first_name','user_code','last_name','email','phone','governorate','venue','is_attend','created_at')->orderBy('id','asc')->get();
+        $registrations = $this->registration->getAll();
 
         return  view('dashboard.registrations.index',compact('registrations'));
     }
 
-
     /**
-     * Display the specified resource.
+     * Display a listing of the resource.
      *
-     * @param  string  $userCode
      * @return \Illuminate\Http\Response
      */
-    public function show($userCode)
+    public function attendees()
     {
-        $registration = $this->registration->select('user_code','first_name','last_name','is_attend','email','governorate','phone','venue')
-            ->where('user_code',$userCode)->first();
+        $registrations = $this->registration->getAll( AttendStatus::ATTEND);
 
-        if (!$registration) {
-            return  view('errors.404');
-        }
-
-        return  view('dashboard.registrations.show',compact('registration'));
+        return  view('dashboard.registrations.attendees',compact('registrations'));
     }
 
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function attend(RegistrationAttendRequest $request)
-    {
-
-       $this->registration->where('user_code',$request->userCode)->update(['is_attend'=>true]);
-
-        return redirect()->route('registrations.show',$request->userCode)->with('message','his user has been attended successfully.');
-    }
 
     /**
      * Remove the specified resource from storage.
@@ -73,10 +54,16 @@ class RegistrationController extends Controller
      */
     public function destroy(Request $request)
     {
-        $registration =  $this->registration->findOrFail($request->id);
 
-        $registration->delete();
+        $this->registration->destroyById($request->id);
 
-        return redirect()->route('registrations.index')->with('message','Done data deleted.');
+        return response()->json('done');
+    }
+
+    public function changeStatus (Request $request)
+    {
+        $this->registration->changeStatusById($request->id);
+
+        return response()->json('done');
     }
 }

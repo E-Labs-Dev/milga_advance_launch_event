@@ -1,39 +1,38 @@
 $(function() {
-    $("form[name='registration_form']").validate({
-        rules: {
-            first_name: {
-                required: true,
-                minlength: 3,
-            },
-            last_name: {
-                required: true,
-                minlength: 3,
-            },
-            email: {
-                required: true,
-                email :true,
-            },
-            phone: {
-                required: true,
-            },
-            venue: {
-                required: true
-            },
-            governorate: {
-                required: true
-            },
-        },
-        submitHandler: function(form) {
+    var origin = window.location.href;
 
-            $.ajax({
-                url:form.action,
-                type: form.method,
-                data: $(form).serialize(),
-                success: function(data){
-                    toastr.success(data.success);
-                    location.reload(true);
-                },
-                error:function(data){
+    var main_url;
+
+    if (window.location.href.indexOf("#") > 0) {
+        main_url = (origin.split('#')[0]);
+    }else {
+        main_url = origin;
+    }
+
+
+    $('#registration_form').on('click',function () {
+
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: main_url+'registrations/store',
+            type: 'POST',
+            data: {
+                first_name: $('input[name="first_name"]').val(),
+                last_name: $('input[name="last_name"]').val(),
+                phone: $('input[name="full_phone"]').val(),
+                email: $('input[name="email"]').val(),
+                venue: $('select[name="venue"]').val(),
+                governorate:  $('select[name="governorate"]').val(),
+            },
+            success: function(data){
+
+                window.location.href = main_url+'agenda'
+
+            },
+            error:function(data){
+                if (data){
                     if (data.responseJSON.errors.first_name){
                         toastr.info(data.responseJSON.errors.first_name);
                     }
@@ -53,8 +52,37 @@ $(function() {
                         toastr.info(data.responseJSON.errors.governorate);
                     }
                 }
-            });
-        }
+            }
+        });
+
+    });
+
+    $('#login_form').on('click',function () {
+
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: main_url+'login',
+            type: 'POST',
+            data: {
+                phone: $('input[name="full_phone_login"]').val(),
+            },
+            success: function(data){
+                window.location.href = main_url+'profile'
+            },
+            error:function(data){
+                if (data){
+                    if (data.responseJSON.errors.phone){
+                        toastr.info(data.responseJSON.errors.phone[0])
+                    }else{
+                        toastr.info(data.responseJSON.errors)
+                    }
+                }
+
+            }
+        });
+
     });
 });
 

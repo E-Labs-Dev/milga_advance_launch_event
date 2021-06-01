@@ -8,7 +8,6 @@ use App\Services\qrCodeGenerated;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use App\Models\Registration;
-use Illuminate\Support\Str;
 
 class RegistrationController extends Controller
 {
@@ -33,7 +32,7 @@ class RegistrationController extends Controller
         try {
             DB::beginTransaction();
 
-            $userCode     = 'mlg_'.Str::random(3);
+            $userCode     = '12'.rand(1000,9999);
 
             $qrcode       = $this->qrCode->create($userCode);
 
@@ -45,11 +44,10 @@ class RegistrationController extends Controller
 
             $registraion =  $this->registration->create($requestData);
 
-            sendMail($registraion->original_path,$request->email);
+            sendMail($registraion->original_path,$request->email,$userCode);
 
-            // $data = ['qrcode' => $registraion->original_path];
+            sendWhatsApp($registraion->original_path,$request->phone,$userCode);
 
-            // Mail::to($request->email)->send(new RegistrationMail($data));
 
             DB::commit();
 
@@ -61,6 +59,7 @@ class RegistrationController extends Controller
 
             return response()->json(['error' => 'Data Not Save .'],409);
         }
-        return response()->json(['success' => 'Thank you For Registration. Please check your email.']);
+
+        return response()->json($registraion->phone);
     }
 }
