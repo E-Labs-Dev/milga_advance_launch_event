@@ -140,7 +140,7 @@
             <div class="container">
                 <h4>Meet Our Conference Speakers</h4>
                 <div class="row" style="justify-content: center;">
-                    <p style="text-align:center">Can't wait to play? Stay tuned for a lot of the entertaining games that will be live during the event time.</p>
+                    <p style="text-align:center">The speakers of this event will be announced very soon! </p>
                 </div>
             </div>
         </div><!--speakers-->
