@@ -101,106 +101,28 @@
                                 <div class="tab-pane  active" id="agenda1">
                                     <div class="line-div">
                                         <ul>
-                                            <li>2:30 pm–2:45 pm</li>
+                                            <li></li>
                                             <li class="border"></li>
                                             <li>
-                                                Hematology Services, Yemen
-                                                <span><img src="{{asset('images/microphone.png')}}"><small>by</small>Abdulqader Hebshi (Yemen)</span>
+                                                The agenda of this event will be announced very soon! 
                                             </li>
 
                                         </ul>
                                     </div><!--line-div-->
-                                    <div class="line-div">
-                                        <ul>
-                                            <li>2:30 pm–2:45 pm</li>
-                                            <li class="border"></li>
-                                            <li>
-                                                Hematology Services, Yemen
-                                                <span><img src="{{asset('images/microphone.png')}}"><small>by</small>Abdulqader Hebshi (Yemen)</span>
-                                            </li>
 
-                                        </ul>
-                                    </div><!--line-div-->
-                                    <div class="line-div">
-                                        <ul>
-                                            <li>2:30 pm–2:45 pm</li>
-                                            <li class="border"></li>
-                                            <li>
-                                                Hematology Services, Yemen
-                                                <span><img src="{{asset('images/microphone2.png')}}"><small>by</small>Abdulqader Hebshi (Yemen)</span>
-                                            </li>
-
-                                        </ul>
-                                    </div><!--line-div-->
-                                    <div class="line-div">
-                                        <ul>
-                                            <li>2:30 pm–2:45 pm</li>
-                                            <li class="border"></li>
-                                            <li>
-                                                Hematology Services, Yemen
-                                                <span><img src="{{asset('images/microphone.png')}}"><small>by</small>Abdulqader Hebshi (Yemen)</span>
-                                            </li>
-
-                                        </ul>
-                                    </div><!--line-div-->
-                                    <div class="line-div">
-                                        <ul>
-                                            <li>2:30 pm–2:45 pm</li>
-                                            <li class="border"></li>
-                                            <li>
-                                                Hematology Services, Yemen
-                                                <span><img src="{{asset('images/microphone2.png')}}"><small>by</small>Abdulqader Hebshi (Yemen)</span>
-                                            </li>
-
-                                        </ul>
-                                    </div><!--line-div-->
-                                    <div class="line-div">
-                                        <ul>
-                                            <li>2:30 pm–2:45 pm</li>
-                                            <li class="border"></li>
-                                            <li>
-                                                Break
-                                            </li>
-
-                                        </ul>
-                                    </div><!--line-div-->
-                                    <div class="line-div">
-                                        <ul>
-                                            <li>2:30 pm–2:45 pm</li>
-                                            <li class="border"></li>
-                                            <li>
-                                                Hematology Services, Yemen
-                                                <span><img src="{{asset('images/microphone.png')}}"><small>by</small>Abdulqader Hebshi (Yemen)</span>
-                                            </li>
-
-                                        </ul>
-                                    </div><!--line-div-->
-                                    <div class="line-div">
-                                        <ul>
-                                            <li>2:30 pm–2:45 pm</li>
-                                            <li class="border"></li>
-                                            <li>
-                                                Hematology Services, Yemen
-                                                <span><img src="{{asset('images/microphone2.png')}}"><small>by</small>Abdulqader Hebshi (Yemen)</span>
-                                            </li>
-
-                                        </ul>
-                                    </div><!--line-div-->
-                                    <div class="line-div">
-                                        <ul>
-                                            <li>2:30 pm–2:45 pm</li>
-                                            <li class="border"></li>
-                                            <li>
-                                                Hematology Services, Yemen
-                                                <span><img src="{{asset('images/microphone.png')}}"><small>by</small>Abdulqader Hebshi (Yemen)</span>
-                                            </li>
-
-                                        </ul>
-                                    </div><!--line-div-->
 
                                 </div><!--end tab1-->
                                 <div class="tab-pane container fade" id="agenda2">
-                                    August
+                                     <div class="line-div">
+                                        <ul>
+                                            <li></li>
+                                            <li class="border"></li>
+                                            <li>
+                                                The agenda of this event will be announced very soon! 
+                                            </li>
+
+                                        </ul>
+                                    </div><!--line-div-->
                                 </div><!--end tab2-->
                             </div>
 
