@@ -7,10 +7,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-3 col-6">
-                <img src="{{asset('images/logo.png')}}">
+                <a href="{{route('home')}}"> <img src="{{asset('images/logo.png')}}"> </a>
             </div><!--col-lg-3-->
             <div class="col-lg-3 col-6 mobile">
-                <img src="{{asset('images/logo2.png')}}">
+                <a href="{{route('home')}}">   <img src="{{asset('images/logo2.png')}}"> </a>
             </div><!--col-lg-3-->
 
             <div class="col-lg-6 col-md-6">
@@ -24,7 +24,7 @@
 
             </div><!--col-lg-6-->
             <div class="col-lg-3 col-md-3 web">
-                <img src="{{asset('images/logo2.png')}}">
+                <a href="{{route('home')}}">  <img src="{{asset('images/logo2.png')}}"> </a>
             </div><!--col-lg-3-->
 
         </div><!--row-->
@@ -109,7 +109,7 @@
             <div class="row" style="justify-content: center;">
                 <div class="col-10">
                     <h2>Reserve your Spot</h2>
-                    <form>
+                    <form >
                         @csrf
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
@@ -143,7 +143,7 @@
                                         <label>Mobile Number  <span>*</span> </label>
                                         <input  class="form-control" placeholder="Enter mobile number"  id="phone-registration"  type="tel" required  >
                                         <input type="hidden" name="full_phone" id="full_phone">
-                                        <span id="error-msg" class="hide"></span>
+                                        <span id="error-msg-registration" class="hide"></span>
                                     </div><!--col-12-->
                                     <div class="col-lg-6 col-12">
                                         <label>Choose the Governorate <span>*</span> </label>
