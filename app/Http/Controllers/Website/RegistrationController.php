@@ -35,12 +35,14 @@ class RegistrationController extends Controller
             $userCode     = '12'.rand(1000,9999);
 
             $qrcode       = $this->qrCode->create($userCode);
+
             setCurrentUser($request->phone);
-            
-            $requestData ['qrcode'] = $qrcode;
 
             $requestData  = $request->validated();
+            $requestData['qrcode'] = $qrcode;
+
             $requestData ['user_code']=$userCode;
+
 
             $registraion =  $this->registration->create($requestData);
 
@@ -50,7 +52,7 @@ class RegistrationController extends Controller
             $location = $venue[1];
 
             sendMail($registraion->original_path,$request->email,$userCode, $request->first_name, $eventTime, $location);
-            sendWhatsApp($registraion->original_path,$request->phone,$userCode);
+            //sendWhatsApp($registraion->original_path,$request->phone,$userCode);
             DB::commit();
         } catch (Exception $e) {
             DB::rollBack();
