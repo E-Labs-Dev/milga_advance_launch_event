@@ -18,7 +18,7 @@ function sendMail($qrcode, $email,$userCode, $userName, $eventTime, $location)
         $message = new BulkMessage();
         $message->subject = MailConfig::SUBJECT;
         $message->htmlBody = file_get_contents(resource_path('/views/emails/registration.blade.php'));
-        $message->from = new EmailAddress(MailConfig::FROM);
+        $message->from = new EmailAddress(MailConfig::FROM, MailConfig::NAME);
         $recipient1 = $message->addToAddress($email, "Recipient #1");
         $recipient1->addMergeData("qrcode", $qrcode);
         $recipient1->addMergeData("userCode", $userCode);

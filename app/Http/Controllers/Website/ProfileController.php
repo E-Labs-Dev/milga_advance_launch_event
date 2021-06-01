@@ -7,8 +7,6 @@ use App\Models\Game;
 use App\Models\GameReference;
 use App\Models\Registration;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
 
 class ProfileController extends Controller
 {
