@@ -7,6 +7,7 @@ use App\Http\Requests\LoginUserRequest;
 use App\Models\Registration;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -19,9 +20,16 @@ class LoginController extends Controller
 
     public function store(LoginUserRequest $request)
     {
-//        $registration = $this->registration->findByPhone($request->phone);
-
-        return response()->json($request->phone);
+        try {
+            $user = $this->registration->findByPhone($request->phone);
+            if (!$user) {
+                throw new \Exception("Can't find user", 404);
+            }
+            Session::put('user_phone', $request->phone);
+        } catch (\Exception $e) {
+            return response()->json($e->getMessage(), $e->getCode());
+        }
+        return response()->json($request->phone, 200);
 
     }
 }

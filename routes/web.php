@@ -17,7 +17,7 @@ Route::group(['namespace'=>'Website'],function () {
 
     Route::get('/','HomeController@index')->name('home');
 
-    Route::get('/profile/{phone}','ProfileController@index')->name('profile');
+    Route::get('profile','ProfileController@index')->name('profile');
 
     Route::get('/agenda','AgendaController@index')->name('agenda');
 
