@@ -25,7 +25,7 @@ class ProfileController extends Controller
     public function index(Request $request)
     {
         $phone = Session::get('user_phone');
-        $registration = $this->registration->findByPhone($phone);
+        $registration = getCurrentUser();
 
         if (!$registration){
             return redirect()->route('home');

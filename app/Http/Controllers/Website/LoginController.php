@@ -25,7 +25,7 @@ class LoginController extends Controller
             if (!$user) {
                 throw new \Exception("Can't find user", 404);
             }
-            Session::put('user_phone', $request->phone);
+            setCurrentUser($request->phone);
         } catch (\Exception $e) {
             return response()->json($e->getMessage(), $e->getCode());
         }

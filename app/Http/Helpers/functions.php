@@ -3,6 +3,8 @@ use Socketlabs\SocketLabsClient;
 use Socketlabs\Message\BulkMessage;
 use Socketlabs\Message\EmailAddress;
 use App\Http\Enums\MailConfig;
+use Illuminate\Support\Facades\Session;
+use App\Models\Registration;
 
 function sendMail($qrcode, $email,$userCode)
 {
@@ -19,4 +21,19 @@ function sendMail($qrcode, $email,$userCode)
         $recipient1->addMergeData("userCode", $userCode);
         $client->send($message);
 
+}
+
+
+function setCurrentUser($phone) {
+    Session::put('user_phone', $phone);
+}
+
+function getCurrentUser() {
+    $phone = Session::get('user_phone');
+    $model = new Registration();
+    return $model->findByPhone($phone);
+}
+
+function clearCurrentUser() {
+    Session::forget('user_phone');
 }

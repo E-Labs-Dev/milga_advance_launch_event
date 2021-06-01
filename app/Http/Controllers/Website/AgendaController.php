@@ -16,10 +16,13 @@ class AgendaController extends Controller
         $this->game = new Game();
 
     }
-    public function index()
+    public function index(Request $request)
     {
-
-        $games = $this->game->getAll();
+        $conditions = [];
+        if($request->filled('game_code')) {
+            $conditions['games.code'] = $request->game_code;
+        }
+        $games = $this->game->getAll($conditions);
 
         return view('website.agenda',compact('games'));
 
