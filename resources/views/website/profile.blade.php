@@ -61,11 +61,11 @@
                                 <img src="{{asset('images/man2.png')}}"  >
                             </div>
                             <div class="media-body">
-                                <h4>Hagar ElKamash</h4>
-                                <p><span>Registration ID: </span>12345678</p>
+                                <h4>{{$registration->first_name}} {{$registration->last_name}}</h4>
+                                <p><span>Registration ID: </span>{{$registration->user_code}}</p>
                             </div>
                             <div class="gr-div">
-                                <img class="qr" src="{{asset('images/qr.png')}}">
+                                <img class="qr" src="{{asset($registration->original_path)}}">
                             </div>
 
                         </div>
@@ -78,25 +78,25 @@
                                 <div class="col-lg-6 col-12">
                                     <label>Email</label>
                                     <div class="form-group">
-                                        <input type="text" placeholder="hagara.elkamash@gmail.com" class="form-control">
+                                        <input type="text" value="{{$registration->email}}" disabled class="form-control">
                                     </div><!--form-group-->
                                 </div><!--col-lg-6-->
                                 <div class="col-lg-6 col-12">
-                                    <label>WhatsApp Number</label>
+                                    <label>Phone Number</label>
                                     <div class="form-group">
-                                        <input type="text" placeholder="0123-456-788" class="form-control">
+                                        <input type="text" value="{{$registration->phone}}" disabled class="form-control">
                                     </div><!--form-group-->
                                 </div><!--col-lg-6-->
                                 <div class="col-lg-6 col-12">
                                     <label>The Venue</label>
                                     <div class="form-group">
-                                        <input type="text" placeholder="Cairo Launch event 30.7.2021" class="form-control">
+                                        <input type="text" value="{{$registration->venue}}" disabled class="form-control">
                                     </div><!--form-group-->
                                 </div><!--col-lg-6-->
                                 <div class="col-lg-6 col-12">
                                     <label>Governorate</label>
                                     <div class="form-group">
-                                        <input type="text" placeholder="Sharqia" class="form-control">
+                                        <input type="text" value="{{$registration->governorate}}" disabled class="form-control">
                                     </div><!--form-group-->
                                 </div><!--col-lg-6-->
                             </div><!--row-->

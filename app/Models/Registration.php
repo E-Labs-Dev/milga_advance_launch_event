@@ -54,14 +54,7 @@ class Registration extends Authenticatable
 
      public function findByPhone($phone){
 
-         $registration =$this->where('phone',$phone)->first();
-
-        if (!$registration){
-            return redirect()->route('home');
-        }else{
-            return $registration;
-        }
-
+        return $this->where('phone',$phone)->first();
      }
 
     public static function boot()

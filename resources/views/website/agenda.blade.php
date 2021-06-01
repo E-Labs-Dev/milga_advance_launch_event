@@ -128,7 +128,9 @@
                                     <a class="nav-link" data-toggle="tab" href="#agenda2">
                   <span>
                     6<sup>th</sup>
-{{--                    <span class="month-name">August  </span>--}}
+
+                      <span class="month-name">August  </span>
+
                     <span class="day-name">Day 2</span>
                   </span>
                                     </a>
@@ -324,85 +326,33 @@
                             <tr>
                                 <th >#</th>
                                 <th>Name</th>
-                                <th>Level</th>
+                                <th>Time</th>
                                 <th>Score</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>
-                                    <p><span><img src="{{asset('images/1.png')}}"></span> Ahmed Hassan</p>
-                                </td>
-                                <td>15</td>
-                                <td>215</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>
-                                    <p><span><img src="{{asset('images/2.png')}}"></span> Sara Hassan </p>
-                                </td>
-                                <td>11</td>
-                                <td>205</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>
-                                    <p><span><img src="{{asset('images/3.png')}}"></span>  Amir Kelany</p>
-                                </td>
-                                <td>9</td>
-                                <td>190</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>
-                                    <p><span><img src="{{asset('images/4.png')}}"></span> Salma Dief </p>
-                                </td>
-                                <td>7</td>
-                                <td>183</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>
-                                    <p><span><img src="{{asset('images/5.png')}}"></span> Hoda Abdlaah </p>
-                                </td>
-                                <td>8</td>
-                                <td>175</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>
-                                    <p><span><img src="{{asset('images/6.png')}}"></span> Salah jahen </p>
-                                </td>
-                                <td>6</td>
-                                <td>140</td>
-                            </tr>
+                            @if(count($games) > 1)
+                               @foreach($games as $key => $game)
+                                <tr>
+                                    <td>{{$key + 1}}</td>
+                                    <td>
+                                        <p><span><img src="{{asset('images/man.png')}}"></span>{{$game->first_name}} {{$game->last_name}}</p>
+                                    </td>
+                                    <td>{{$game->created_at}}</td>
+                                    <td>{{$game->score}}</td>
+                                </tr>
+                               @endforeach
+                            @else
+                                <tr>
 
-                            <tr>
-                                <td>7</td>
-                                <td>
-                                    <p><span><img src="{{asset('images/7.png')}}"></span> Sayed Wahba </p>
-                                </td>
-                                <td>5</td>
-                                <td>132</td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>
-                                    <p><span><img src="{{asset('images/8.png')}}"></span> Eman Assy  </p>
-                                </td>
-                                <td>2</td>
-                                <td>98</td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td>
-                                    <p><span><img src="{{asset('images/9.png')}}"></span> Salem Raya </p>
-                                </td>
-                                <td>1</td>
-                                <td>43</td>
-                            </tr>
+                                    <td> no </td>
+                                    <td> one </td>
+                                    <td> play </td>
+                                    <td> yet</td>
 
+                                </tr>
+
+                            @endif
                             </tbody>
                         </table>
 

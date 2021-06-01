@@ -18,9 +18,13 @@ class ProfileController extends Controller
     public function index($phone)
     {
 
-        $this->registration->findByPhone($phone);
+        $registration = $this->registration->findByPhone($phone);
 
-        return view('website.profile');
+        if (!$registration){
+            return redirect()->route('home');
+        }else {
+            return view('website.profile', compact('registration'));
+        }
 
     }
 }
