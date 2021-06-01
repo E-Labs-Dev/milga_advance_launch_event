@@ -53,9 +53,12 @@ class Registration extends Authenticatable
      }
 
      public function findByPhone($phone){
-
         return $this->where('phone',$phone)->first();
      }
+
+    public function findByCode($code){
+        return $this->where('user_code',$code)->first();
+    }
 
     public static function boot()
     {

@@ -69,9 +69,7 @@ $(function() {
                 phone: $('input[name="full_phone_login"]').val(),
             },
             success: function(data){
-
-                    window.location.href = main_url+'agenda'
-
+                window.location.href = main_url+'profile'
             },
             error:function(data){
                 if (data){

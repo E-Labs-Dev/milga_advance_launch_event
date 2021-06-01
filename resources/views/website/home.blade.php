@@ -109,8 +109,7 @@
             <div class="row" style="justify-content: center;">
                 <div class="col-10">
                     <h2>Reserve your Spot</h2>
-                    <form >
-                        @csrf
+                    {{ Form::open() }}
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
                                 <a class="nav-link active" data-toggle="tab" href="#regitration">Registration</a>
@@ -202,7 +201,7 @@
                                 <div class="row reserve login-div" >
                                     <div class="col-lg-6 col-12">
                                         <label>Phone Number </label>
-                                        <input  class="form-control" placeholder="Enter mobile number"   id="phone-login"  type="tel" required >
+                                        <input class="form-control" placeholder="Enter mobile number" id="phone-login"  type="tel" required >
                                         <input type="hidden" name="full_phone_login" id="full_phone_login">
                                         <span id="error_msg_login" class="hide"></span>
                                     </div><!--col-12-->
@@ -214,9 +213,7 @@
                                 </div><!--row-->
                             </div><!--end tab2-->
                         </div>
-
-
-                    </form>
+                    {{ Form::close() }}
                 </div><!--col-10-->
             </div> <!--row-->
         </div><!--container-->
