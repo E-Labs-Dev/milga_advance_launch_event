@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2314521a7b45ac3d26b61e7f016453a",
+    "content-hash": "8f6b8ccfa1726956a3df6026a1403419",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2414,16 +2414,16 @@
         },
         {
             "name": "php-http/discovery",
-            "version": "1.13.0",
+            "version": "1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/discovery.git",
-                "reference": "788f72d64c43dc361e7fcc7464c3d947c64984a7"
+                "reference": "778f722e29250c1fac0bbdef2c122fa5d038c9eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/discovery/zipball/788f72d64c43dc361e7fcc7464c3d947c64984a7",
-                "reference": "788f72d64c43dc361e7fcc7464c3d947c64984a7",
+                "url": "https://api.github.com/repos/php-http/discovery/zipball/778f722e29250c1fac0bbdef2c122fa5d038c9eb",
+                "reference": "778f722e29250c1fac0bbdef2c122fa5d038c9eb",
                 "shasum": ""
             },
             "require": {
@@ -2440,8 +2440,7 @@
                 "puli/composer-plugin": "1.0.0-beta10"
             },
             "suggest": {
-                "php-http/message": "Allow to use Guzzle, Diactoros or Slim Framework factories",
-                "puli/composer-plugin": "Sets up Puli which is recommended for Discovery to work. Check http://docs.php-http.org/en/latest/discovery.html for more details."
+                "php-http/message": "Allow to use Guzzle, Diactoros or Slim Framework factories"
             },
             "type": "library",
             "extra": {
@@ -2477,9 +2476,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-http/discovery/issues",
-                "source": "https://github.com/php-http/discovery/tree/1.13.0"
+                "source": "https://github.com/php-http/discovery/tree/1.14.0"
             },
-            "time": "2020-11-27T14:49:42+00:00"
+            "time": "2021-06-01T14:30:21+00:00"
         },
         {
             "name": "php-http/httplug",
@@ -6685,6 +6684,60 @@
             "time": "2020-07-13T06:12:54+00:00"
         },
         {
+            "name": "twilio/sdk",
+            "version": "6.24.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twilio/twilio-php.git",
+                "reference": "110651d67940617e08557a7bac57edbd27b77d3e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/110651d67940617e08557a7bac57edbd27b77d3e",
+                "reference": "110651d67940617e08557a7bac57edbd27b77d3e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "^6.3 || ^7.0",
+                "phpunit/phpunit": ">=4.5",
+                "theseer/phpdox": "^0.12.0"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "An HTTP client to execute the API requests"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Twilio\\": "src/Twilio/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Twilio API Team",
+                    "email": "api@twilio.com"
+                }
+            ],
+            "description": "A PHP wrapper for Twilio's API",
+            "homepage": "http://github.com/twilio/twilio-php",
+            "keywords": [
+                "api",
+                "sms",
+                "twilio"
+            ],
+            "support": {
+                "issues": "https://github.com/twilio/twilio-php/issues",
+                "source": "https://github.com/twilio/twilio-php/tree/6.24.0"
+            },
+            "time": "2021-05-19T19:41:37+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v5.3.0",
             "source": {
@@ -6900,16 +6953,16 @@
     "packages-dev": [
         {
             "name": "barryvdh/laravel-debugbar",
-            "version": "v3.5.7",
+            "version": "v3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-debugbar.git",
-                "reference": "88fd9cfa144b06b2549e9d487fdaec68265e791e"
+                "reference": "bc99f4c52aec0636ecb3aae4576ce84c5773bae2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/88fd9cfa144b06b2549e9d487fdaec68265e791e",
-                "reference": "88fd9cfa144b06b2549e9d487fdaec68265e791e",
+                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/bc99f4c52aec0636ecb3aae4576ce84c5773bae2",
+                "reference": "bc99f4c52aec0636ecb3aae4576ce84c5773bae2",
                 "shasum": ""
             },
             "require": {
@@ -6969,7 +7022,7 @@
             ],
             "support": {
                 "issues": "https://github.com/barryvdh/laravel-debugbar/issues",
-                "source": "https://github.com/barryvdh/laravel-debugbar/tree/v3.5.7"
+                "source": "https://github.com/barryvdh/laravel-debugbar/tree/v3.6.0"
             },
             "funding": [
                 {
@@ -6977,7 +7030,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-05-13T20:18:35+00:00"
+            "time": "2021-06-01T08:46:17+00:00"
         },
         {
             "name": "doctrine/instantiator",
