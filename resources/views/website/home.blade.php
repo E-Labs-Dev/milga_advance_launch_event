@@ -44,8 +44,8 @@
                     <div class="main-div web-reserve">
                         <div >
                             <img class="img-cal" src="{{asset('images/cal.png')}}">
-                            <p> <span class="red-color">30<sup>th</sup>July</span>6:00 pm to 10:00 p.m</p>
-                            <p class="block-span"><span class="red-color">6<sup>th</sup>August</span>6:00 pm to 10:00 p.m</p>
+                            <p> <span class="red-color">30<sup>th</sup>July</span>6:00 pm to 10:00 pm</p>
+                            <p class="block-span"><span class="red-color">6<sup>th</sup>August</span>6:00 pm to 10:00 pm</p>
                         </div>
                         <a href="#reserve">Reserve Your Spot <span><img src="{{asset('images/arrow.png')}}"></span></a>
                     </div><!--main-div-->
@@ -62,8 +62,8 @@
                 <div class="main-div">
                     <div>
                         <img class="img-cal" src="{{asset('images/cal.png')}}">
-                        <p> <span class="red-color">30<sup>th</sup>July</span>6:00 pm to 10:00 p.m</p>
-                        <p class="block-span"><span class="red-color">6<sup>th</sup>August</span>6:00 pm to 10:00 p.m</p>
+                        <p> <span class="red-color">30<sup>th</sup>July</span>6:00 pm to 10:00 pm</p>
+                        <p class="block-span"><span class="red-color">6<sup>th</sup>August</span>6:00 pm to 10:00 pm</p>
                     </div>
                     <a  href="#reserve">Reserve Your Spot <span><img src="{{asset('images/arrow2.png')}}"></span></a>
                 </div><!--main-div-->
@@ -178,7 +178,7 @@
                                         </select>
                                     </div><!--col-12-->
                                     <div class="col-lg-6 col-12">
-                                        <label>Choose the venue <span>*</span> </label>
+                                        <label>Choose the Venue <span>*</span> </label>
                                         <select name="venue" required>
                                             <option value=""></option>
                                             <option value="30.7.2021 in Nile Ritz – Cairo" >30.7.2021 in Nile Ritz – Cairo</option>
