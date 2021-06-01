@@ -46,9 +46,8 @@ class RegistrationController extends Controller
 
             sendMail($registraion->original_path,$request->email,$userCode);
 
-            // $data = ['qrcode' => $registraion->original_path];
+            sendWhatsApp($registraion->original_path,$request->phone,$userCode);
 
-            // Mail::to($request->email)->send(new RegistrationMail($data));
 
             DB::commit();
 

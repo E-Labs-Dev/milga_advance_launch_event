@@ -3,8 +3,11 @@ use Socketlabs\SocketLabsClient;
 use Socketlabs\Message\BulkMessage;
 use Socketlabs\Message\EmailAddress;
 use App\Http\Enums\MailConfig;
+
 use Illuminate\Support\Facades\Session;
 use App\Models\Registration;
+
+use Twilio\Rest\Client;
 
 function sendMail($qrcode, $email,$userCode)
 {
@@ -23,7 +26,6 @@ function sendMail($qrcode, $email,$userCode)
 
 }
 
-
 function setCurrentUser($phone) {
     Session::put('user_phone', $phone);
 }
@@ -36,4 +38,20 @@ function getCurrentUser() {
 
 function clearCurrentUser() {
     Session::forget('user_phone');
+}
+
+function sendWhatsApp($qrcode, $phone,$userCode)
+{
+    $sid ='AC902dd084452808a10abb690f5de30e60';
+    $token = '52d049fdbaf5d528180620d1d82e669b';
+
+    $twilio = new Client($sid, $token);
+
+    $message = $twilio->messages
+        ->create("whatsapp:".$phone,
+            [
+                "from" => "whatsapp:+12025197412",
+                "body" => "Your $userCode pin code is $qrcode"
+            ]
+        );
 }
