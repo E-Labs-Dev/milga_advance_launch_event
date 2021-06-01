@@ -38,7 +38,7 @@
                 <div class="col-lg-6">
                     <h3>Advanced <span>Solution</span></h3>
                     <p class="text-p">Offering higher efficacy through an innovative medication for
-                        neurophaty Patients</p>
+                        neuropathy patients</p>
                 </div><!--col-lg-6-->
                 <div class="col-lg-6">
                     <div class="main-div web-reserve">
