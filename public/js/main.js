@@ -1,7 +1,13 @@
 $(function() {
     var origin = window.location.href;
 
-    const main_url = (origin.split('/#')[0]);
+    var main_url;
+
+    if (window.location.href.indexOf("#") > 0) {
+        main_url = (origin.split('#')[0]);
+    }else {
+        main_url = origin;
+    }
 
 
     $('#registration_form').on('click',function () {
@@ -22,7 +28,7 @@ $(function() {
             },
             success: function(data){
 
-                window.location.href = main_url+'profile'+data
+                window.location.href = main_url+'agenda'
 
             },
             error:function(data){
@@ -64,7 +70,7 @@ $(function() {
             },
             success: function(data){
 
-                    window.location.href = main_url+'profile/'+data
+                    window.location.href = main_url+'agenda'
 
             },
             error:function(data){

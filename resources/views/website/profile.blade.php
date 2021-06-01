@@ -2,51 +2,8 @@
 @extends('layouts.master_website')
 
 @section('content')
-    <header class="header2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-6">
-                    <img src="{{asset('images/logo2.png')}}">
-                </div><!--col-lg-3-->
-                <div class="col-lg-3 col-6 mobile mobile-head2">
-                    <p><span class="img-user"><img src="{{asset('images/man.png')}}"></span><span class="name-user">Hagar ElKamash</span></p>
-                </div><!--col-lg-3-->
 
-                <div class="col-lg-6 col-md-6">
-                    <nav class="navbar navbar-expand-lg navbar-light ">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Agenda <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " href="#">Speakers’ Biography</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Digital Magazine</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link " href="#">Survey</a>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </nav>
-
-                </div><!--col-lg-6-->
-                <div class="col-lg-3 col-md-3 web">
-                    <p><span class="img-user"><img src="{{asset('images/man.png')}}"></span><span class="name-user">Hagar ElKamash</span></p>
-                </div><!--col-lg-3-->
-
-            </div><!--row-->
-        </div><!--container-->
-    </header>
-
+    @include('layouts.includes.website.header')
 
     <section class="content">
         <div class="registration-div agenda profile" >
