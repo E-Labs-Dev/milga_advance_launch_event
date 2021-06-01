@@ -24,7 +24,6 @@ class ProfileController extends Controller
     }
     public function index(Request $request)
     {
-        $phone = Session::get('user_phone');
         $registration = getCurrentUser();
 
         if (!$registration){
@@ -35,6 +34,12 @@ class ProfileController extends Controller
                 'data' => $this->getGames($registration->code)
             ]);
         }
+    }
+
+    public function logout()
+    {
+        clearCurrentUser();
+        return redirect()->route('home');
     }
 
     private function getGames($registration_code)
