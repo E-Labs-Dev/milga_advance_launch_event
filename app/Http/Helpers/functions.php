@@ -3,6 +3,10 @@ use Socketlabs\SocketLabsClient;
 use Socketlabs\Message\BulkMessage;
 use Socketlabs\Message\EmailAddress;
 use App\Http\Enums\MailConfig;
+
+use Illuminate\Support\Facades\Session;
+use App\Models\Registration;
+
 use Twilio\Rest\Client;
 
 function sendMail($qrcode, $email,$userCode)
@@ -22,6 +26,20 @@ function sendMail($qrcode, $email,$userCode)
 
 }
 
+function setCurrentUser($phone) {
+    Session::put('user_phone', $phone);
+}
+
+function getCurrentUser() {
+    $phone = Session::get('user_phone');
+    $model = new Registration();
+    return $model->findByPhone($phone);
+}
+
+function clearCurrentUser() {
+    Session::forget('user_phone');
+}
+
 function sendWhatsApp($qrcode, $phone,$userCode)
 {
     $sid ='AC902dd084452808a10abb690f5de30e60';
@@ -37,4 +55,3 @@ function sendWhatsApp($qrcode, $phone,$userCode)
             ]
         );
 }
-

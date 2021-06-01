@@ -18,14 +18,14 @@ class LoginController extends Controller
         $this->registration = new Registration();
     }
 
-    public function store(LoginUserRequest $request)
+    public function login(LoginUserRequest $request)
     {
         try {
             $user = $this->registration->findByPhone($request->phone);
             if (!$user) {
                 throw new \Exception("Can't find user", 404);
             }
-            Session::put('user_phone', $request->phone);
+            setCurrentUser($request->phone);
         } catch (\Exception $e) {
             return response()->json($e->getMessage(), $e->getCode());
         }
