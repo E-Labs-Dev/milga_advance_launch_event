@@ -7,16 +7,16 @@ use App\Http\Enums\MailConfig;
 function sendMail($qrcode, $email,$userCode)
 {
 
-    $serverId = 35045;
-    $injectionApiKey = "x5Q8Rdz9ZWq76LfKj43Y";
-    $client = new SocketLabsClient($serverId, $injectionApiKey);
-    $message = new BulkMessage();
-    $message->subject = MailConfig::SUBJECT;
-    $message->htmlBody = file_get_contents('./resources/views/emails/registration.blade.php');
-    $message->from = new EmailAddress(MailConfig::FROM);
-    $recipient1 = $message->addToAddress($email, "Recipient #1");
-    $recipient1->addMergeData("qrcode", $qrcode);
-    $recipient1->addMergeData("userCode", $userCode);
-    $response = $client->send($message);
+        $serverId = 35045;
+        $injectionApiKey = "x5Q8Rdz9ZWq76LfKj43Y";
+        $client = new SocketLabsClient($serverId, $injectionApiKey);
+        $message = new BulkMessage();
+        $message->subject = MailConfig::SUBJECT;
+        $message->htmlBody = file_get_contents(resource_path('/views/emails/registration.blade.php'));
+        $message->from = new EmailAddress(MailConfig::FROM);
+        $recipient1 = $message->addToAddress($email, "Recipient #1");
+        $recipient1->addMergeData("qrcode", $qrcode);
+        $recipient1->addMergeData("userCode", $userCode);
+        $client->send($message);
 
 }

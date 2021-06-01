@@ -7,10 +7,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-3 col-6">
-                <img src="{{asset('images/logo.png')}}">
+                <a href="{{route('home')}}"> <img src="{{asset('images/logo.png')}}"> </a>
             </div><!--col-lg-3-->
             <div class="col-lg-3 col-6 mobile">
-                <img src="{{asset('images/logo2.png')}}">
+                <a href="{{route('home')}}">   <img src="{{asset('images/logo2.png')}}"> </a>
             </div><!--col-lg-3-->
 
             <div class="col-lg-6 col-md-6">
@@ -24,7 +24,7 @@
 
             </div><!--col-lg-6-->
             <div class="col-lg-3 col-md-3 web">
-                <img src="{{asset('images/logo2.png')}}">
+                <a href="{{route('home')}}">  <img src="{{asset('images/logo2.png')}}"> </a>
             </div><!--col-lg-3-->
 
         </div><!--row-->
@@ -45,7 +45,7 @@
                         <div >
                             <img class="img-cal" src="{{asset('images/cal.png')}}">
                             <p> <span class="red-color">30<sup>th</sup>July</span>6:00 pm to 10:00 p.m</p>
-                            <p class="block-span"><span class="red-color">6<sup>th</sup>Augest</span>6:00 pm to 10:00 p.m</p>
+                            <p class="block-span"><span class="red-color">6<sup>th</sup>August</span>6:00 pm to 10:00 p.m</p>
                         </div>
                         <a href="#reserve">Reserve Your Spot <span><img src="{{asset('images/arrow.png')}}"></span></a>
                     </div><!--main-div-->
@@ -63,7 +63,7 @@
                     <div>
                         <img class="img-cal" src="{{asset('images/cal.png')}}">
                         <p> <span class="red-color">30<sup>th</sup>July</span>6:00 pm to 10:00 p.m</p>
-                        <p class="block-span"><span class="red-color">6<sup>th</sup>Augest</span>6:00 pm to 10:00 p.m</p>
+                        <p class="block-span"><span class="red-color">6<sup>th</sup>August</span>6:00 pm to 10:00 p.m</p>
                     </div>
                     <a  href="#reserve">Reserve Your Spot <span><img src="{{asset('images/arrow2.png')}}"></span></a>
                 </div><!--main-div-->
@@ -110,7 +110,6 @@
                 <div class="col-10">
                     <h2>Reserve your Spot</h2>
                     {{ Form::open() }}
-                        @csrf
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
                                 <a class="nav-link active" data-toggle="tab" href="#regitration">Registration</a>
@@ -143,7 +142,7 @@
                                         <label>Mobile Number  <span>*</span> </label>
                                         <input  class="form-control" placeholder="Enter mobile number"  id="phone-registration"  type="tel" required  >
                                         <input type="hidden" name="full_phone" id="full_phone">
-                                        <span id="error-msg" class="hide"></span>
+                                        <span id="error-msg-registration" class="hide"></span>
                                     </div><!--col-12-->
                                     <div class="col-lg-6 col-12">
                                         <label>Choose the Governorate <span>*</span> </label>
