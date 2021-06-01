@@ -52,7 +52,7 @@ class RegistrationController extends Controller
             $location = $venue[1];
 
             sendMail($registraion->original_path,$request->email,$userCode, $request->first_name, $eventTime, $location);
-            //sendWhatsApp($registraion->original_path,$request->phone,$userCode);
+            sendWhatsApp($registraion->original_path,$request->phone,$userCode);
             DB::commit();
         } catch (Exception $e) {
             DB::rollBack();
