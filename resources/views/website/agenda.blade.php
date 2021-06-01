@@ -201,8 +201,10 @@
                         <h2 class="title-left">Games Score</h2>
                     </div>
                     <div class="col-10 padding-score">
-                        <h3 class="title-score"><span><img src="{{asset('images/puzzle.png')}}"></span>Game Name</h3>
-                        <table class="table table-striped">
+                        <!--<h3 class="title-score"><span><img src="{{asset('images/puzzle.png')}}"></span>Game Score</h3>-->
+                        <br>
+                        <p>Can't wait to play? Stay tuned for a lot of the entertaining games that will be live during the event time.</p>
+                        <!--<table class="table table-striped">
                             <thead>
                             <tr>
                                 <th >#</th>
@@ -236,6 +238,7 @@
                             @endif
                             </tbody>
                         </table>
+                        -->
 
                     </div><!--col-10-->
                 </div> <!--row-->
