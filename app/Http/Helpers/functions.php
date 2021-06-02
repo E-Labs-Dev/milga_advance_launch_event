@@ -9,7 +9,7 @@ use App\Models\Registration;
 
 use Twilio\Rest\Client;
 
-function sendMail($qrcode, $email,$userCode, $userName, $eventTime, $location)
+function sendMail($qrcode, $email,$userCode, $userName, $eventTime, $location,$locationMap)
 {
 
         $serverId = 35045;
@@ -25,6 +25,7 @@ function sendMail($qrcode, $email,$userCode, $userName, $eventTime, $location)
         $recipient1->addMergeData("userName", $userName);
         $recipient1->addMergeData("location", $location);
         $recipient1->addMergeData("eventTime", $eventTime);
+        $recipient1->addMergeData("locationMap", $locationMap);
         $client->send($message);
 
 }
