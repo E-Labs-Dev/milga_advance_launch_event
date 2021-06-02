@@ -21,15 +21,15 @@ class LoginController extends Controller
     public function login(LoginUserRequest $request)
     {
         try {
-            $user = $this->registration->findByPhone($request->phone);
+            $user = $this->registration->findByPhone($request->number_phone);
             if (!$user) {
                 throw new \Exception("Can't find user", 404);
             }
-            setCurrentUser($request->phone);
+            setCurrentUser($request->number_phone);
         } catch (\Exception $e) {
             return response()->json($e->getMessage(), $e->getCode());
         }
-        return response()->json($request->phone, 200);
+        return response()->json($request->number_phone, 200);
 
     }
 }

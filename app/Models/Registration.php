@@ -49,6 +49,10 @@ class Registration extends Authenticatable
 
          $registration =  $this->findOrFail($id);
 
+         if ($registration->qrcode && file_exists(public_path('qrcodes/'.$registration->qrcode))) {
+             unlink(public_path('qrcodes/'.$registration->qrcode));
+         }
+
          $registration->delete();
 
      }

@@ -5,7 +5,7 @@
               <a href="{{route('home')}}">  <img src="{{asset('images/logo2.png')}}"></a>
             </div><!--col-lg-3-->
             <div class="col-lg-3 col-6 mobile mobile-head2">
-                <p><span class="img-user"><img src="{{asset('images/man.png')}}"></span><span class="name-user">{{ getCurrentUser()->full_name }}</span></p>
+               <a href="{{route('profile')}}"> <p><span class="img-user"><img src="{{asset('images/man.png')}}"></span><span class="name-user">{{ getCurrentUser()->full_name }}</span></p></a>
             </div><!--col-lg-3-->
 
             <div class="col-lg-6 col-md-6">
@@ -36,7 +36,7 @@
 
             </div><!--col-lg-6-->
             <div class="col-lg-3 col-md-3 web">
-                <p><span class="img-user"><img src="{{asset('images/man.png')}}"></span><span class="name-user">{{ getCurrentUser()->full_name }}</span></p>
+                <a href="{{route('profile')}}"> <p><span class="img-user"><img src="{{asset('images/man.png')}}"></span><span class="name-user">{{ getCurrentUser()->full_name }}</span></p></a>
             </div><!--col-lg-3-->
 
         </div><!--row-->

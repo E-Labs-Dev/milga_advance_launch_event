@@ -24,7 +24,14 @@ class LoginUserRequest extends FormRequest
     public function rules()
     {
         return [
-            'phone'  =>'required|exists:registrations,phone|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|phone:AUTO',
+            'number_phone'  =>'required|exists:registrations,phone|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|phone:AUTO',
         ];
+    }
+
+    public function messages()
+    {
+       return [
+           'number_phone.exists'=>'Phone number not exists.',
+       ];
     }
 }
