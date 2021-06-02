@@ -39,12 +39,12 @@ $(function () {
                 type: form.method,
                 data: $(form).serialize(),
                 success: function (response) {
-
+                    console.log(response)
                     toastr.success('Your Registration Successfully.');
 
-                    setTimeout(function () {
-                        window.location.href = main_url + 'agenda'
-                    }, 1000);
+                    // setTimeout(function () {
+                    //     window.location.href = main_url + 'agenda'
+                    // }, 1000);
 
                 },
                 error: function (data) {

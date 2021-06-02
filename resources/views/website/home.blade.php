@@ -125,8 +125,7 @@
                             {{--regitration section--}}
 
                             <div class="tab-pane container active" id="regitration">
-                                <form action="{{route('registrations.store')}}" method="POST" name="registration_form">
-                                    @csrf
+                                {{ Form::open(['route' => 'registrations.store','method'=>'POST','name'=>'registration_form'])}}
                                 <div class="row reserve" >
 
                                     <div class="col-lg-6 col-12">
@@ -197,13 +196,13 @@
 
 
                                 </div><!--row-->
-                                </form>
+                                {{Form::close()}}
                             </div><!--end tab1-->
 
                             {{--login section--}}
                             <div class="tab-pane container fade" id="login">
-                                <form action="{{route('user.login')}}" method="POST" name="login_form">
-                                    @csrf
+
+                                {{ Form::open(['route' => 'user.login','method'=>'POST','name'=>'login_form'])}}
                                 <div class="row reserve login-div" >
                                     <div class="col-lg-6 col-12">
                                         <label>Phone Number </label>
@@ -217,7 +216,7 @@
                                         </div>
                                     </div><!--col-12-->
                                 </div><!--row-->
-                                </form>
+                                {{Form::close()}}
                             </div><!--end tab2-->
                         </div>
 

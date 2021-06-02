@@ -29,6 +29,7 @@ class RegistrationController extends Controller
      */
     public function store(RegistrationRequest $request)
     {
+
         try {
             DB::beginTransaction();
 
@@ -39,20 +40,27 @@ class RegistrationController extends Controller
             setCurrentUser($request->phone);
 
             $requestData  = $request->validated();
+
             $requestData['qrcode'] = $qrcode;
 
             $requestData ['user_code']=$userCode;
 
-
             $registraion =  $this->registration->create($requestData);
 
-            $venue = explode('in', $request->venue);
+            if (strpos($request->venue, 'Cairo') !== false) {
+                $eventTime    = 'July 30, 2021';
+                $location     = 'The Nile Ritz-Carlton, Cairo';
+                $locationMap  = 'https://maps.app.goo.gl/9MXYY5CqRjHsDEY26';
+            }else{
+                $eventTime    = 'August 6, 2021';
+                $location     = 'Sunrise Alex Avenue Hotel, Alexandria';
+                $locationMap  = 'https://maps.app.goo.gl/6KTDrkL2f1eE34eW6';
+            }
 
-            $eventTime = $venue[0];
-            $location = $venue[1];
+            sendMail($registraion->original_path,$request->email,$userCode, $request->first_name, $eventTime, $location,$locationMap);
 
-            sendMail($registraion->original_path,$request->email,$userCode, $request->first_name, $eventTime, $location);
             sendWhatsApp($registraion->original_path,$request->phone,$userCode);
+
             DB::commit();
         } catch (Exception $e) {
             DB::rollBack();
