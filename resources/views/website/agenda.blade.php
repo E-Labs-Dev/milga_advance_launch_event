@@ -34,11 +34,12 @@
                     <div class="col-10">
                         <div class="video">
                             <div class="first-layer" id="layer1">
-                                <img class="main-layer" src="{{asset('images/image-video.png')}}" >
-                                <div class="overlay"><img src="{{asset('images/play.png')}}" onclick="showVideo()"></div><!--overlay-->
+                                <img class="main-layer" src="{{asset('images/image-video.png')}}">
+                                <div class="overlay"><img src="{{asset('images/play.png')}}" onclick="showVideo()">
+                                </div><!--overlay-->
                             </div><!--first-layer-->
                             <div class="second-layer" style="display: none;" id="layer2">
-                                <video   controls  id="myVideo">
+                                <video controls id="myVideo">
                                     <source src="{{asset('VID-20210308-WA0042.mp4')}}" type="video/mp4">
                                 </video>
 
@@ -64,14 +65,14 @@
                 </div>
             </div>
         </div><!--program-div-->
-        <div class="registration-div agenda"  id="agenda">
+        <div class="registration-div agenda" id="agenda">
             <div class="container">
                 <div class="row" style="justify-content: center;">
                     <div class="col-12">
                         <h2 class="title-left">Our Agenda</h2>
                     </div>
                     <div class="col-10">
-                        <form>
+                        <form class="border-content">
                             <ul class="nav nav-tabs">
                                 <li class="nav-item">
                                     <a class="nav-link active" data-toggle="tab" href="#agenda1">
@@ -104,7 +105,7 @@
                                             <li></li>
                                             <li class="border"></li>
                                             <li>
-                                                The agenda of this event will be announced very soon! 
+                                                The agenda of this event will be announced very soon!
                                             </li>
 
                                         </ul>
@@ -113,12 +114,12 @@
 
                                 </div><!--end tab1-->
                                 <div class="tab-pane container fade" id="agenda2">
-                                     <div class="line-div">
+                                    <div class="line-div">
                                         <ul>
                                             <li></li>
                                             <li class="border"></li>
                                             <li>
-                                                The agenda of this event will be announced very soon! 
+                                                The agenda of this event will be announced very soon!
                                             </li>
 
                                         </ul>
@@ -145,17 +146,18 @@
             </div>
         </div><!--speakers-->
 
-        <div class="registration-div agenda score" id="games" >
+        <div class="registration-div agenda score" id="games">
             <div class="container">
                 <div class="row" style="justify-content: center;">
                     <div class="col-12">
                         <h2 class="title-left">Games Score</h2>
                     </div>
                     <div class="col-10 padding-score">
-                        <!--<h3 class="title-score"><span><img src="{{asset('images/puzzle.png')}}"></span>Game Score</h3>-->
+                    <!--<h3 class="title-score"><span><img src="{{asset('images/puzzle.png')}}"></span>Game Score</h3>-->
                         <br>
-                        <p>Can't wait to play? Stay tuned for a lot of the entertaining games that will be live during the event time.</p>
-                        <!--<table class="table table-striped">
+                        <p>Can't wait to play? Stay tuned for a lot of the entertaining games that will be live during
+                            the event time.</p>
+                    <!--<table class="table table-striped">
                             <thead>
                             <tr>
                                 <th >#</th>
@@ -166,9 +168,9 @@
                             </thead>
                             <tbody>
                             @if(count($games) > 1)
-                               @foreach($games as $key => $game)
-                                <tr>
-                                    <td>{{$key + 1}}</td>
+                        @foreach($games as $key => $game)
+                            <tr>
+                                <td>{{$key + 1}}</td>
                                     <td>
                                         <p><span><img src="{{asset('images/man.png')}}"></span>{{$game->first_name}} {{$game->last_name}}</p>
                                     </td>
@@ -176,20 +178,20 @@
                                     <td>{{$game->score}}</td>
                                 </tr>
                                @endforeach
-                            @else
-                                <tr>
+                    @else
+                        <tr>
 
-                                    <td> no </td>
-                                    <td> one </td>
-                                    <td> play </td>
-                                    <td> yet</td>
+                            <td> no </td>
+                            <td> one </td>
+                            <td> play </td>
+                            <td> yet</td>
 
-                                </tr>
+                        </tr>
 
-                            @endif
-                            </tbody>
-                        </table>
-                        -->
+@endif
+                        </tbody>
+                    </table>
+-->
 
                     </div><!--col-10-->
                 </div> <!--row-->

@@ -109,7 +109,8 @@
             <div class="row" style="justify-content: center;">
                 <div class="col-10">
                     <h2>Reserve your Spot</h2>
-                    {{ Form::open() }}
+
+                    <div class="border-content">
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
                                 <a class="nav-link active" data-toggle="tab" href="#regitration">Registration</a>
@@ -124,7 +125,10 @@
                             {{--regitration section--}}
 
                             <div class="tab-pane container active" id="regitration">
+                                <form action="{{route('registrations.store')}}" method="POST" name="registration_form">
+                                    @csrf
                                 <div class="row reserve" >
+
                                     <div class="col-lg-6 col-12">
                                         <label>First Name <span>*</span></label>
                                         <input type="text" class="form-control" placeholder="Enter first name"  required name="first_name" >
@@ -141,7 +145,7 @@
                                     <div class="col-lg-6 col-12">
                                         <label>Mobile Number  <span>*</span> </label>
                                         <input  class="form-control" placeholder="Enter mobile number"  id="phone-registration"  type="tel" required  >
-                                        <input type="hidden" name="full_phone" id="full_phone">
+                                        <input type="hidden" name="phone" id="full_phone">
                                         <span id="error-msg-registration" class="hide"></span>
                                     </div><!--col-12-->
                                     <div class="col-lg-6 col-12">
@@ -187,33 +191,37 @@
                                     </div><!--col-12-->
                                     <div class=" col-12">
                                         <div class="send">
-                                            <button type="button" id="registration_form">Submit <img src="{{asset('images/arrow.png')}}"></button>
+                                            <button type="submit" id="registration_form">Submit <img src="{{asset('images/arrow.png')}}"></button>
                                         </div>
                                     </div><!--col-12-->
 
 
                                 </div><!--row-->
-
+                                </form>
                             </div><!--end tab1-->
 
                             {{--login section--}}
                             <div class="tab-pane container fade" id="login">
+                                <form action="{{route('user.login')}}" method="POST" name="login_form">
+                                    @csrf
                                 <div class="row reserve login-div" >
                                     <div class="col-lg-6 col-12">
                                         <label>Phone Number </label>
                                         <input class="form-control" placeholder="Enter mobile number" id="phone-login"  type="tel" required >
-                                        <input type="hidden" name="full_phone_login" id="full_phone_login">
+                                        <input type="hidden" name="number_phone" id="full_phone_login">
                                         <span id="error_msg_login" class="hide"></span>
                                     </div><!--col-12-->
                                     <div class=" col-12">
                                         <div class="send">
-                                            <button type="button" id="login_form">login <img src="{{asset('images/arrow.png')}}"></button>
+                                            <button type="submit" id="login_form">login <img src="{{asset('images/arrow.png')}}"></button>
                                         </div>
                                     </div><!--col-12-->
                                 </div><!--row-->
+                                </form>
                             </div><!--end tab2-->
                         </div>
-                    {{ Form::close() }}
+
+                    </div>
                 </div><!--col-10-->
             </div> <!--row-->
         </div><!--container-->

@@ -1,88 +1,114 @@
-$(function() {
+$(function () {
     var origin = window.location.href;
 
     var main_url;
 
     if (window.location.href.indexOf("#") > 0) {
         main_url = (origin.split('#')[0]);
-    }else {
+    } else {
         main_url = origin;
     }
 
-
-    $('#registration_form').on('click',function () {
-
-        $.ajax({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    $("form[name='registration_form']").validate({
+        rules: {
+            first_name: {
+                required: true,
+                minlength: 3,
             },
-            url: main_url+'registrations/store',
-            type: 'POST',
-            data: {
-                first_name: $('input[name="first_name"]').val(),
-                last_name: $('input[name="last_name"]').val(),
-                phone: $('input[name="full_phone"]').val(),
-                email: $('input[name="email"]').val(),
-                venue: $('select[name="venue"]').val(),
-                governorate:  $('select[name="governorate"]').val(),
+            last_name: {
+                required: true,
+                minlength: 3,
             },
-            success: function(data){
-
-                window.location.href = main_url+'agenda'
-
+            email: {
+                required: true,
+                email: true,
             },
-            error:function(data){
-                if (data){
-                    if (data.responseJSON.errors.first_name){
-                        toastr.info(data.responseJSON.errors.first_name);
-                    }
-                    if (data.responseJSON.errors.last_name){
-                        toastr.info(data.responseJSON.errors.last_name);
-                    }
-                    if (data.responseJSON.errors.email){
-                        toastr.info(data.responseJSON.errors.email);
-                    }
-                    if (data.responseJSON.errors.phone){
-                        toastr.info(data.responseJSON.errors.phone);
-                    }
-                    if (data.responseJSON.errors.venue){
-                        toastr.info(data.responseJSON.errors.venue);
-                    }
-                    if (data.responseJSON.errors.governorate){
-                        toastr.info(data.responseJSON.errors.governorate);
+            phone: {
+                required: true,
+            },
+            venue: {
+                required: true
+            },
+            governorate: {
+                required: true
+            },
+        },
+        submitHandler: function (form) {
+            $.ajax({
+                url: form.action,
+                type: form.method,
+                data: $(form).serialize(),
+                success: function (response) {
+
+                    toastr.success('Your Registration Successfully.');
+
+                    setTimeout(function () {
+                        window.location.href = main_url + 'agenda'
+                    }, 1000);
+
+                },
+                error: function (data) {
+                    if (data) {
+                        if (data.responseJSON.errors.first_name) {
+                            toastr.info(data.responseJSON.errors.first_name);
+                        }
+                        if (data.responseJSON.errors.last_name) {
+                            toastr.info(data.responseJSON.errors.last_name);
+                        }
+                        if (data.responseJSON.errors.email) {
+                            toastr.info(data.responseJSON.errors.email);
+                        }
+                        if (data.responseJSON.errors.phone) {
+                            toastr.info(data.responseJSON.errors.phone);
+                        }
+                        if (data.responseJSON.errors.venue) {
+                            toastr.info(data.responseJSON.errors.venue);
+                        }
+                        if (data.responseJSON.errors.governorate) {
+                            toastr.info(data.responseJSON.errors.governorate);
+                        }
+                    } else {
+                        toastr.info('Please try again');
                     }
                 }
-            }
-        });
-
+            });
+        }
     });
 
-    $('#login_form').on('click',function () {
+    $("form[name='login_form']").validate({
+        rules: {
+            phone: {
+                required: true,
+            }
+        },
+        submitHandler: function (form) {
+            $.ajax({
+                url: form.action,
+                type: form.method,
+                data: $(form).serialize(),
+                success: function (response) {
 
-        $.ajax({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-            url: main_url+'login',
-            type: 'POST',
-            data: {
-                phone: $('input[name="full_phone_login"]').val(),
-            },
-            success: function(data){
-                window.location.href = main_url+'profile'
-            },
-            error:function(data){
-                if (data){
-                    if (data.responseJSON.errors.phone){
-                        toastr.info(data.responseJSON.errors.phone[0])
-                    }else{
-                        toastr.info(data.responseJSON.errors)
+                    toastr.success('Your Login Successfully.');
+
+                    setTimeout(function () {
+                        window.location.href = main_url + 'agenda'
+                    }, 1000);
+
+                },
+                error: function (data) {
+                    if (data) {
+                        if (data.responseJSON.errors.number_phone) {
+                            toastr.info(data.responseJSON.errors.number_phone[0])
+                        } else {
+                            toastr.info(data.responseJSON.errors)
+                        }
+                    } else {
+                        toastr.info('Please try again');
                     }
                 }
-
-            }
-        });
-
+            });
+        }
     });
+
 });
 
