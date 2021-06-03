@@ -190,7 +190,7 @@
                                     </div><!--col-12-->
                                     <div class=" col-12">
                                         <div class="send">
-                                            <button type="submit" id="registration_form" disabled >Submit <img src="{{asset('images/arrow.png')}}"></button>
+                                            <button type="submit" id="registration_form">Submit <img src="{{asset('images/arrow.png')}}"></button>
                                         </div>
                                     </div><!--col-12-->
 
@@ -212,7 +212,7 @@
                                     </div><!--col-12-->
                                     <div class=" col-12">
                                         <div class="send">
-                                            <button type="submit" id="login_form" disabled >login <img src="{{asset('images/arrow.png')}}"></button>
+                                            <button type="submit" id="login_form" >login <img src="{{asset('images/arrow.png')}}"></button>
                                         </div>
                                     </div><!--col-12-->
                                 </div><!--row-->
