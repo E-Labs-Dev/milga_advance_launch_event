@@ -75,11 +75,17 @@ select:active, select:focus {
 
 .header2 {
   background-image: linear-gradient(to right, #CA1D27, #ef131e); }
+  @media (max-width: 1024px) {
+    .header2 .main-logo {
+      width: 140px; } }
   .header2 .navbar-light .navbar-nav .nav-link {
     color: #fff;
     padding-left: 15px;
     font-size: 15px;
     text-transform: capitalize; }
+    @media (max-width: 1024px) {
+      .header2 .navbar-light .navbar-nav .nav-link {
+        font-size: 12px; } }
   .header2 .navbar-light .navbar-nav .active > .nav-link,
   .header2 .navbar-light .navbar-nav .nav-link.show,
   .header2 .navbar-light .navbar-nav .nav-link.active {
@@ -88,6 +94,12 @@ select:active, select:focus {
     padding: 0; }
     .header2 .mobile-head2 p {
       font-size: 11px; }
+  @media (max-width: 1024px) {
+    .header2 .web a {
+      font-size: 12px; } }
+  .header2 .web a p {
+    display: flex;
+    align-items: center; }
   .header2 .img-user {
     width: 45px;
     height: 45px;
@@ -110,8 +122,7 @@ select:active, select:focus {
   .header2 .name-user {
     color: #fff;
     text-transform: capitalize;
-    float: left;
-    margin-top: 7px; }
+    float: left; }
 
 .navbar-light .navbar-toggler {
   border: none; }

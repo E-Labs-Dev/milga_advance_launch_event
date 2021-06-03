@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-3 col-6">
-              <a href="{{route('home')}}">  <img src="{{asset('images/logo2.png')}}"></a>
+              <a href="{{route('home')}}">  <img class="main-logo" src="{{asset('images/logo2.png')}}"></a>
             </div><!--col-lg-3-->
             <div class="col-lg-3 col-6 mobile mobile-head2">
                <a href="{{route('profile')}}"> <p><span class="img-user"><img src="{{asset('images/man.png')}}"></span><span class="name-user">{{ getCurrentUser()->full_name }}</span></p></a>
