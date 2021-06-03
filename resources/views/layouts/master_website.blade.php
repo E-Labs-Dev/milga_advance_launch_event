@@ -27,7 +27,7 @@
         <div class="container">
             <div class="text">
                 <img src="{{asset('images/logo2.png')}}">
-                <span>SA2103230903 </span>   <span>Exp: 21/03/2022</span>  <span> APR/2021/RESP/4/I</span>
+                
             </div>
             <hr>
         </div><!--container-->
@@ -36,7 +36,7 @@
     <div class="end-footer">
         <div class="container">
             <div class="copy-right">
-                <p>Copyright © 2021 Eva Cosmetics, Inc. all rights are save.</p>
+                <p>Copyright © 2021 Eva Pharma, Inc. all rights are save.</p>
                 <img class="logo-footer" src="{{asset('images/logo.png')}}">
             </div>
         </div><!--container-->
