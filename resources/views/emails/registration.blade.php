@@ -6,7 +6,7 @@
 <body>
 <h2>Dear Dr. %%userName%%</h2>
 <br>
-<p>Thank you for registering at the Milga AdvanceLaunch Event!</p>
+<p>Thank you for registering at the Milga Advance Launch Event!</p>
 <p>This email is to confirm the receipt of your submitted form.</p>
 
 <h3>The following are all the details you are going to need to attend the event:</h3>
