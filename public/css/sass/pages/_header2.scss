@@ -30,11 +30,6 @@
             font-size: 11px;
         }
     }
-<<<<<<< HEAD
-    .profile-link {
-        float: $left;
-        margin-top: 10px;
-=======
     .web {
         a {
             @media #{$ipadScreen} {
@@ -46,7 +41,6 @@ p {
     align-items: center;
 }
         }
->>>>>>> dalia/dashboardAndWebsiteBugs
     }
     .img-user {
         width: 45px;
