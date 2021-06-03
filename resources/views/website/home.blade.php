@@ -142,7 +142,7 @@
                                         <input type="email" class="form-control" placeholder="Enter email address" required name="email" >
                                     </div><!--col-12-->
                                     <div class="col-lg-6 col-12">
-                                        <label>Mobile Number  <span>*</span> </label>
+                                        <label>whatsApp Number  <span>*</span> </label>
                                         <input  class="form-control" placeholder="Enter mobile number"  id="phone-registration"  type="tel" required  >
                                         <input type="hidden" name="phone" id="full_phone">
                                         <span id="error-msg-registration" class="hide"></span>
@@ -205,14 +205,14 @@
                                 {{ Form::open(['route' => 'user.login','method'=>'POST','name'=>'login_form'])}}
                                 <div class="row reserve login-div" >
                                     <div class="col-lg-6 col-12">
-                                        <label>Phone Number </label>
+                                        <label>whatsApp Number </label>
                                         <input class="form-control" placeholder="Enter mobile number" id="phone-login"  type="tel" required >
                                         <input type="hidden" name="number_phone" id="full_phone_login">
                                         <span id="error_msg_login" class="hide"></span>
                                     </div><!--col-12-->
                                     <div class=" col-12">
                                         <div class="send">
-                                            <button type="submit" id="login_form">login <img src="{{asset('images/arrow.png')}}"></button>
+                                            <button type="submit" id="login_form" >login <img src="{{asset('images/arrow.png')}}"></button>
                                         </div>
                                     </div><!--col-12-->
                                 </div><!--row-->

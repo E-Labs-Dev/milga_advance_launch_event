@@ -85,6 +85,9 @@ select:active, select:focus {
     padding: 0; }
     .header2 .mobile-head2 p {
       font-size: 11px; }
+  .header2 .profile-link {
+    float: left;
+    margin-top: 10px; }
   .header2 .img-user {
     width: 45px;
     height: 45px;
@@ -187,7 +190,7 @@ header {
         @media (max-width: 823px) {
           header .counter li h3 {
             font-size: 15px; } }
-        @media (max-width: 400px) {
+        @media (max-width: 411px) {
           header .counter li h3 {
             font-size: 13px; } }
         @media (max-width: 280px) {
@@ -245,7 +248,7 @@ header {
       @media (max-width: 823px) {
         .banner .overlay h3 {
           font-size: 30px; } }
-      @media (max-width: 400px) {
+      @media (max-width: 411px) {
         .banner .overlay h3 {
           font-size: 20px; } }
       .banner .overlay h3 span {
@@ -258,7 +261,7 @@ header {
       @media (min-width: 1700px) {
         .banner .overlay .text-p {
           font-size: 20px; } }
-      @media (max-width: 400px) {
+      @media (max-width: 411px) {
         .banner .overlay .text-p {
           font-size: 12px; } }
 
@@ -287,7 +290,7 @@ header {
         font-size: 13px;
         padding: 30px 5px;
         height: unset; } }
-    @media (max-width: 400px) {
+    @media (max-width: 411px) {
       .main-div div {
         font-size: 11px; } }
     .main-div div .img-cal {
@@ -312,7 +315,12 @@ header {
       width: 80px; }
       @media (max-width: 1024px) {
         .main-div div .red-color {
-          width: 65px; } }
+          width: 60px; } }
+    .main-div div .dates-span {
+      display: inline-block;
+      margin-left: 6px; }
+    .main-div div .dates-span2 {
+      margin-left: 2px; }
     .main-div div .block-span {
       display: block;
       margin-left: 5px; }
@@ -336,7 +344,7 @@ header {
         font-size: 13px;
         padding: 32px 5px;
         height: unset; } }
-    @media (max-width: 400px) {
+    @media (max-width: 411px) {
       .main-div a {
         font-size: 11px; } }
     .main-div a span {
@@ -377,22 +385,28 @@ header {
         margin-right: 0; }
         @media (max-width: 823px) {
           .mobile-reserve .main-div div .img-cal {
-            margin-top: 0; } }
+            margin-top: 0;
+            margin-right: 5px; } }
         @media (max-width: 766px) {
           .mobile-reserve .main-div div .img-cal {
-            margin-top: 5px; } }
+            margin-top: 5px;
+            margin-right: 5px; } }
         @media (max-width: 375px) {
           .mobile-reserve .main-div div .img-cal {
             margin-top: 0; } }
       .mobile-reserve .main-div div p {
         font-size: 11px;
-        float: unset; }
+        float: unset;
+        text-align: left; }
         @media (max-width: 823px) {
           .mobile-reserve .main-div div p {
-            font-size: 9px; } }
+            font-size: 9px;
+            text-align: left; } }
         @media (max-width: 766px) {
           .mobile-reserve .main-div div p {
-            font-size: 11px; } }
+            font-size: 10px;
+            text-align: left;
+            margin-left: 6px; } }
         @media (max-width: 375px) {
           .mobile-reserve .main-div div p {
             font-size: 9px; } }
@@ -406,16 +420,19 @@ header {
         width: 65px; }
         @media (max-width: 823px) {
           .mobile-reserve .main-div div .red-color {
-            width: 60px; } }
-        @media (max-width: 766px) {
+            width: 50px; } }
+        @media (max-width: 411px) {
           .mobile-reserve .main-div div .red-color {
             width: 60px; } }
         @media (max-width: 375px) {
           .mobile-reserve .main-div div .red-color {
-            width: 60px; } }
+            width: 50px; } }
         @media (max-width: 320px) {
           .mobile-reserve .main-div div .red-color {
-            width: 45px; } }
+            width: 43px; } }
+        @media (max-width: 280px) {
+          .mobile-reserve .main-div div .red-color {
+            width: 39px; } }
     .mobile-reserve .main-div a {
       float: right;
       width: 40%;
@@ -538,10 +555,11 @@ header {
     width: 100%;
     padding: 130px 0;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    padding-bottom: 200px; }
     @media (max-width: 823px) {
       .content .registration-div {
-        padding: 50px 0; } }
+        padding: 50px 0 100px; } }
     .content .registration-div .image-regist {
       position: absolute;
       left: 0;
@@ -645,6 +663,9 @@ header {
         .content .border-content .form-control {
           height: 60px;
           font-size: 18px; } }
+      @media (max-width: 375px) {
+        .content .border-content .form-control {
+          font-size: 10px; } }
       .content .border-content .form-control::placeholder {
         color: #b5adad; }
       .content .border-content .form-control:active, .content .border-content .form-control:focus {
@@ -664,6 +685,9 @@ header {
         .content .border-content select {
           height: 60px;
           font-size: 18px; } }
+      @media (max-width: 375px) {
+        .content .border-content select {
+          font-size: 10px; } }
     .content .border-content .send {
       width: 100%;
       text-align: center;
@@ -811,6 +835,10 @@ header {
             float: left;
             margin-right: 30px;
             font-size: 15px; }
+            @media (max-width: 823px) {
+              .content .agenda form .line-div ul li {
+                margin-right: 10px;
+                font-size: 13px; } }
             @media (max-width: 766px) {
               .content .agenda form .line-div ul li {
                 width: 100%;
@@ -865,6 +893,9 @@ header {
           padding: 25px 70px; }
           .content .agenda form .line-div:nth-of-type(6) ul li {
             color: #fff; }
+          @media (max-width: 823px) {
+            .content .agenda form .line-div:nth-of-type(6) {
+              padding: 15px 10px; } }
   .content .speakers {
     padding: 50px;
     float: left;
@@ -911,60 +942,65 @@ header {
       .content .speakers .text-box P {
         font-size: 12px;
         color: #807E7E; }
-  .content .score .title-score {
-    font-size: 25px;
-    color: #000;
-    font-family: 'Poppins-Bold';
-    padding: 15px 0;
-    display: flex;
-    align-items: center; }
-    .content .score .title-score span {
-      margin-right: 10px;
-      display: inline-block;
-      margin-top: -2px; }
-      .content .score .title-score span img {
-        width: 35px; }
-  .content .score .padding-score {
-    padding-left: 70px; }
+  .content .score {
+    padding-bottom: 200px; }
     @media (max-width: 823px) {
-      .content .score .padding-score {
-        padding-left: 0; } }
-    .content .score .padding-score .table thead th {
-      background-color: #DF0E19;
-      color: #fff;
-      border: none;
-      font-weight: normal;
-      font-size: 16px;
-      text-align: center;
-      width: 25%; }
-      .content .score .padding-score .table thead th:first-child {
-        width: 15%; }
-    .content .score .padding-score .table th, .content .score .padding-score .table td {
-      padding: 10px;
-      vertical-align: middle;
-      border-top: none;
-      text-align: center; }
+      .content .score {
+        padding-bottom: 100px; } }
+    .content .score .title-score {
+      font-size: 25px;
+      color: #000;
+      font-family: 'Poppins-Bold';
+      padding: 15px 0;
+      display: flex;
+      align-items: center; }
+      .content .score .title-score span {
+        margin-right: 10px;
+        display: inline-block;
+        margin-top: -2px; }
+        .content .score .title-score span img {
+          width: 35px; }
+    .content .score .padding-score {
+      padding-left: 70px; }
       @media (max-width: 823px) {
-        .content .score .padding-score .table th, .content .score .padding-score .table td {
-          font-size: 12px; } }
-      .content .score .padding-score .table th p, .content .score .padding-score .table td p {
-        font-size: 15px; }
+        .content .score .padding-score {
+          padding-left: 0; } }
+      .content .score .padding-score .table thead th {
+        background-color: #DF0E19;
+        color: #fff;
+        border: none;
+        font-weight: normal;
+        font-size: 16px;
+        text-align: center;
+        width: 25%; }
+        .content .score .padding-score .table thead th:first-child {
+          width: 15%; }
+      .content .score .padding-score .table th, .content .score .padding-score .table td {
+        padding: 10px;
+        vertical-align: middle;
+        border-top: none;
+        text-align: center; }
         @media (max-width: 823px) {
-          .content .score .padding-score .table th p, .content .score .padding-score .table td p {
+          .content .score .padding-score .table th, .content .score .padding-score .table td {
             font-size: 12px; } }
-        .content .score .padding-score .table th p span, .content .score .padding-score .table td p span {
-          width: 50px;
-          display: inline-block; }
+        .content .score .padding-score .table th p, .content .score .padding-score .table td p {
+          font-size: 15px; }
           @media (max-width: 823px) {
-            .content .score .padding-score .table th p span, .content .score .padding-score .table td p span {
-              width: 100%; } }
-          .content .score .padding-score .table th p span img, .content .score .padding-score .table td p span img {
-            width: 40px; }
+            .content .score .padding-score .table th p, .content .score .padding-score .table td p {
+              font-size: 12px; } }
+          .content .score .padding-score .table th p span, .content .score .padding-score .table td p span {
+            width: 50px;
+            display: inline-block; }
             @media (max-width: 823px) {
-              .content .score .padding-score .table th p span img, .content .score .padding-score .table td p span img {
-                width: 30px; } }
-    .content .score .padding-score .table td:nth-child(2) {
-      text-align: left; }
+              .content .score .padding-score .table th p span, .content .score .padding-score .table td p span {
+                width: 100%; } }
+            .content .score .padding-score .table th p span img, .content .score .padding-score .table td p span img {
+              width: 40px; }
+              @media (max-width: 823px) {
+                .content .score .padding-score .table th p span img, .content .score .padding-score .table td p span img {
+                  width: 30px; } }
+      .content .score .padding-score .table td:nth-child(2) {
+        text-align: left; }
   .content .profile {
     padding: 160px 0 70px; }
     @media (max-width: 823px) {
@@ -1031,7 +1067,11 @@ header {
         .content .profile .qr {
           width: 150px; } }
   .content .games {
-    background-color: #F7F8FA; }
+    background-color: #F7F8FA;
+    padding-bottom: 200px; }
+    @media (max-width: 823px) {
+      .content .games {
+        padding-bottom: 100px; } }
     .content .games .score-div {
       background-color: #fff;
       padding: 20px;
@@ -1088,11 +1128,7 @@ footer {
   float: left;
   width: 100%;
   background-color: #DF0E19;
-  padding: 50px 0 20px;
-  margin-top: 200px; }
-  @media (max-width: 766px) {
-    footer {
-      margin-top: 100px; } }
+  padding: 50px 0 20px; }
   footer .img-footer {
     position: absolute;
     top: -152px;
@@ -1113,7 +1149,7 @@ footer {
     footer .top-footer .text span {
       margin-left: 15px;
       font-size: 12px; }
-      @media (max-width: 400px) {
+      @media (max-width: 411px) {
         footer .top-footer .text span {
           font-size: 11px; } }
       @media (max-width: 320px) {
@@ -1133,6 +1169,20 @@ footer {
       width: 97px; }
 
 @media screen and (max-width: 823px) and (orientation: landscape) {
+  .mobile-reserve .main-div {
+    width: 100%; }
+
+  .mobile-reserve .main-div div p {
+    float: unset;
+    font-size: 8px; }
+
+  .mobile-reserve .main-div div .img-cal {
+    margin-right: 5px;
+    margin-top: 0; }
+
+  .mobile-reserve .main-div div .red-color {
+    width: 50px; }
+
   .content .div-video {
     padding: 10px 0; }
     .content .div-video .video {
@@ -1142,8 +1192,14 @@ footer {
 @media screen and (max-width: 736px) and (orientation: landscape) {
   .mobile-reserve .main-div {
     width: 60%; } }
-@media screen and (max-width: 500px) and (orientation: landscape) {
+@media screen and (max-width: 731px) and (orientation: landscape) {
   .mobile-reserve .main-div {
-    width: 100%; } }
+    width: 60%; }
+
+  .mobile-reserve .main-div div .red-color {
+    width: 45px; } }
+@media screen and (max-width: 568px) and (orientation: landscape) {
+  .mobile-reserve .main-div div .img-cal {
+    margin-top: 0; } }
 
 /*# sourceMappingURL=homepage.css.map */

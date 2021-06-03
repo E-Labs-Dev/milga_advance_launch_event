@@ -223,8 +223,15 @@ header {
             display: inline-block;
             width: 80px;
             @media #{$ipadScreen} {
-                width: 65px;
+                width: 60px;
             }
+        }
+        .dates-span {
+            display: inline-block;
+            margin-left: 6px;
+        }
+        .dates-span2{
+            margin-left: 2px;
         }
         .block-span {
             display: block;
@@ -302,9 +309,11 @@ header {
                 margin-right: 0;
                 @media #{$mobileScreen} {
                     margin-top: 0;
+                    margin-right: 5px;
                 }
                 @media #{$smallScreen} {
                     margin-top: 5px;
+                    margin-right: 5px;
                 }
                 @media #{$smScreen} {
                     margin-top: 0;
@@ -314,11 +323,15 @@ header {
             p {
                 font-size: 11px;
                 float: unset;
+                text-align: $left;
                 @media #{$mobileScreen} {
                     font-size: 9px;
+                    text-align: left;
                 }
                 @media #{$smallScreen} {
-                    font-size: 11px;
+                    font-size: 10px;
+                    text-align: $left;
+                    margin-left: 6px;
                 }
 
 
@@ -335,19 +348,23 @@ header {
             }
             .red-color {
                 width: 65px;
-                @media #{$mobileScreen} {
-                    width: 60px;
-                }
-                @media #{$smallScreen} {
-                    width: 60px;
-                }
+               
 
-                @media #{$smScreen} {
+                @media #{$mobileScreen} {
+                    width: 50px;
+                }
+                @media #{$extrasmallScreen} {
                     width: 60px;
+                }
+                @media #{$smScreen} {
+                    width: 50px;
                 }
                 @media #{$sScreen} {
-                    width: 45px;
+                    width: 43px;
 
+                }
+                @media #{$xScreen} {
+                    width: 39px;
                 }
 
             }
@@ -494,8 +511,9 @@ header {
         padding: 130px 0;
         position: relative;
         overflow: hidden;
+        padding-bottom: 200px;
         @media #{$mobileScreen}{
-            padding: 50px 0;
+            padding: 50px 0 100px ;
         }
         .image-regist {
             position: absolute;
@@ -619,6 +637,9 @@ header {
                 height: 60px;
                 font-size: 18px;
             }
+            @media #{$smScreen} {
+                font-size: 10px;
+            }
 
             &::placeholder {
                 color: #b5adad;
@@ -642,6 +663,9 @@ header {
             @media #{$largScreen} {
                 height: 60px;
                 font-size: 18px;
+            }
+            @media #{$smScreen} {
+                font-size: 10px;
             }
         }
         .send {
@@ -826,6 +850,11 @@ header {
                     float: $left;
                     margin-right: 30px;
                     font-size: 15px;
+                    @media #{$mobileScreen} {
+                        margin-right: 10px;
+                        font-size: 13px;
+
+                     }
                     @media #{$smallScreen} {
                         width: 100%;
                         margin-bottom: 5px;
@@ -911,7 +940,10 @@ header {
                         color: #fff ;
                     }
                 }
-               
+                @media #{$mobileScreen} {
+                    padding: 15px 10px;
+                 }
+     
             }
         }
      }  
@@ -978,6 +1010,10 @@ header {
 
 /***** score *****/
 .score {
+    padding-bottom: 200px;
+    @media #{$mobileScreen} {
+        padding-bottom: 100px;
+    }
     .title-score {
         font-size: 25px;
         color: #000;
@@ -1142,6 +1178,11 @@ header {
 /**** games*****/
 .games {
     background-color: #F7F8FA;
+    padding-bottom: 200px;
+    @media #{$mobileScreen} {
+        padding-bottom: 100px;
+    }
+
     .score-div {
         background-color: #fff;
         padding: 20px;
@@ -1215,10 +1256,6 @@ footer {
     width: 100%;
     background-color: $mainColor;
     padding: 50px 0 20px;
-    margin-top: 200px;
-     @media #{$smallScreen}{
-         margin-top: 100px;
-     }
     .img-footer {
         position: absolute;
         top: -152px;
@@ -1273,6 +1310,20 @@ footer {
 }
 
 @media screen and (max-width:823px) and (orientation:landscape) {
+    .mobile-reserve .main-div {
+        width:100%;
+    }
+    .mobile-reserve .main-div div p {
+        float: unset;
+        font-size: 8px;
+    }
+    .mobile-reserve .main-div div .img-cal {
+        margin-right: 5px;
+        margin-top: 0;
+    }
+    .mobile-reserve .main-div div .red-color {
+        width: 50px;
+    }
 
 .content .div-video {
     padding: 10px 0;
@@ -1295,10 +1346,16 @@ footer {
     width: 60%;
 }
 }
-@media screen and (max-width:500px) and (orientation:landscape) {
-
-
+@media screen and (max-width:731px) and (orientation:landscape) {
     .mobile-reserve .main-div {
-        width: 100%;
+        width:60%;
     }
+    .mobile-reserve .main-div div .red-color {
+        width: 45px;
     }
+}
+@media screen and (max-width:568px) and (orientation:landscape) {
+    .mobile-reserve .main-div div .img-cal {
+        margin-top: 0;
+    }
+}
