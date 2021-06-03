@@ -174,7 +174,7 @@
                         <tr>
                             <td class="bg_dark email-section">
                                 <div class="heading-section heading-section-white">
-{{--                                    <p style="padding-left: 20px;color: #000;font-size: 16px; padding-bottom: 16px; ">Topic of the mail: <b style="font-weight: bold;"> Milga Advance Launch Event</b></p>--}}
+                                    <p style="padding-left: 20px;color: #000;font-size: 16px; padding-bottom: 16px; ">Topic of the mail: <b style="font-weight: bold;"> Milga Advance Launch Event</b></p>
                                     <h3  style="padding-left: 20px; color: #000; font-size: 16px; font-weight: normal;padding-bottom: 16px; ">Dear Dr.  %%userName%%</h3>
                                     <p style="padding-left: 20px;color: #000;font-size: 16px; padding-bottom: 16px; ">Thank you for registering at the Milga Advance Launch Event!</p>
                                     <p style="padding-left: 20px;color: #000;font-size: 16px; padding-bottom: 16px; ">
