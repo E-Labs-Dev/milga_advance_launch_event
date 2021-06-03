@@ -1,5 +1,10 @@
 .header2 {
     background-image: linear-gradient(to right, #CA1D27, #ef131e);
+    .main-logo {
+        @media #{$ipadScreen} {
+            width: 140px;
+        }
+    }
     .navbar-light {
         .navbar-nav {
             .nav-link {
@@ -7,6 +12,9 @@
                 padding-left: 15px;
                 font-size: 15px;
                 text-transform: capitalize;
+                @media #{$ipadScreen} {
+                    font-size: 12px;
+                }
             }
              .active > .nav-link, 
             .nav-link.show, 
@@ -22,9 +30,23 @@
             font-size: 11px;
         }
     }
+<<<<<<< HEAD
     .profile-link {
         float: $left;
         margin-top: 10px;
+=======
+    .web {
+        a {
+            @media #{$ipadScreen} {
+                font-size: 12px;
+
+            }
+p {
+    display: flex;
+    align-items: center;
+}
+        }
+>>>>>>> dalia/dashboardAndWebsiteBugs
     }
     .img-user {
         width: 45px;
@@ -51,7 +73,6 @@
         color: #fff;
         text-transform: capitalize;
         float: $left;
-        margin-top: 7px;
         }
 }
 

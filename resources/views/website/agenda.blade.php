@@ -73,12 +73,12 @@
                     </div>
                     <div class="col-10">
                         <form class="border-content">
-                            <ul class="nav nav-tabs">
+                   <!--          <ul class="nav nav-tabs">
                                 <li class="nav-item">
                                     <a class="nav-link active" data-toggle="tab" href="#agenda1">
                   <span>
                     30<sup>th</sup>
-                    <span class="month-name">July  </span>
+                    <span class="month-name">July فثث  </span>
                     <span class="day-name">Day 1</span>
                   </span>
 
@@ -95,7 +95,7 @@
                   </span>
                                     </a>
                                 </li>
-                            </ul>
+                            </ul> -->
 
                             <!-- Tab panes -->
                             <div class="tab-content">
