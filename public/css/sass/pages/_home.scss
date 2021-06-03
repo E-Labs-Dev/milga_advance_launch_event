@@ -722,7 +722,7 @@ header {
         img {
             width: 350px;
             position: relative;
-            bottom: -30px;
+            bottom: -52px;
             z-index: 10;
             float: $right;
             @media #{$mobileScreen} {
@@ -859,7 +859,7 @@ header {
                             }
                             small {
                                 text-transform: capitalize;
-                                color: #000;
+                                color: #807E7E;
                                 margin-right: 10px;
                                 font-size: 14px;
                                 @media #{$smallScreen} {
@@ -1295,6 +1295,17 @@ footer {
     width: 60%;
 }
 }
+@media screen and (max-width:640px) and (orientation:landscape) {
+
+
+    .mobile-reserve .main-div {
+        width: 70%;
+    }
+    .mobile-reserve .main-div div p {
+        font-size: 10px;
+    }
+    }
+    
 @media screen and (max-width:500px) and (orientation:landscape) {
 
 

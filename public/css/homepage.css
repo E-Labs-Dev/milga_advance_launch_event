@@ -70,6 +70,9 @@ select:active, select:focus {
   font-size: 13px !important;
   color: #f00; }
 
+.card-footer button {
+  border-color: #DF0E19 !important; }
+
 .header2 {
   background-image: linear-gradient(to right, #CA1D27, #ef131e); }
   .header2 .navbar-light .navbar-nav .nav-link {
@@ -728,7 +731,7 @@ header {
     .content .program-div img {
       width: 350px;
       position: relative;
-      bottom: -30px;
+      bottom: -52px;
       z-index: 10;
       float: right; }
       @media (max-width: 823px) {
@@ -840,7 +843,7 @@ header {
                   width: 19px; }
                 .content .agenda form .line-div ul li:last-child span small {
                   text-transform: capitalize;
-                  color: #000;
+                  color: #807E7E;
                   margin-right: 10px;
                   font-size: 14px; }
                   @media (max-width: 766px) {
@@ -1142,6 +1145,12 @@ footer {
 @media screen and (max-width: 736px) and (orientation: landscape) {
   .mobile-reserve .main-div {
     width: 60%; } }
+@media screen and (max-width: 640px) and (orientation: landscape) {
+  .mobile-reserve .main-div {
+    width: 70%; }
+
+  .mobile-reserve .main-div div p {
+    font-size: 10px; } }
 @media screen and (max-width: 500px) and (orientation: landscape) {
   .mobile-reserve .main-div {
     width: 100%; } }
