@@ -27,7 +27,7 @@
         <div class="container">
             <div class="text">
                 <img src="{{asset('images/logo2.png')}}">
-               change 
+                
             </div>
             <hr>
         </div><!--container-->

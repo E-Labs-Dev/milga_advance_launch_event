@@ -40,7 +40,7 @@ $(function () {
                 data: $(form).serialize(),
                 success: function (response) {
                     console.log(response)
-                    toastr.success('Your Registration Successfully.');
+                    toastr.success('Your registration has been successfully completed.');
 
                     setTimeout(function () {
                         window.location.href = main_url + 'agenda'
@@ -88,7 +88,7 @@ $(function () {
                 data: $(form).serialize(),
                 success: function (response) {
 
-                    toastr.success('Your Login Successfully.');
+                    toastr.success('You are successfully logged in.');
 
                     setTimeout(function () {
                         window.location.href = main_url + 'agenda'
