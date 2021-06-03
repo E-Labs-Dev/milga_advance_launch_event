@@ -46,6 +46,11 @@ html {
 .iti {
   width: 100% !important; }
 
+.content .border-content .iti input,
+.content .border-content .iti input[type=text],
+.content .border-content .iti input[type=tel] {
+  margin-bottom: 10px !important; }
+
 .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag,
 .iti--allow-dropdown .iti__flag-container .iti__selected-flag,
 .iti--allow-dropdown .iti__flag-container:active .iti__selected-flag,
@@ -56,6 +61,14 @@ html {
 select:active, select:focus {
   border: 1px solid #ced4da !important;
   outline: none; }
+
+.iti__selected-flag {
+  height: 45px !important; }
+
+.error {
+  font-family: 'Poppins-Regular' !important;
+  font-size: 13px !important;
+  color: #f00; }
 
 .header2 {
   background-image: linear-gradient(to right, #CA1D27, #ef131e); }
@@ -616,7 +629,8 @@ header {
     .content .border-content label {
       font-size: 16px;
       font-family: 'Poppins-Bold';
-      width: 100%; }
+      width: 100%;
+      margin-top: 5px; }
       @media (min-width: 1700px) {
         .content .border-content label {
           font-size: 18px; } }
@@ -625,8 +639,8 @@ header {
     .content .border-content .form-control {
       height: 45px;
       border-radius: 3px;
-      margin-bottom: 15px;
-      font-size: 14px; }
+      font-size: 14px;
+      margin-bottom: 10px; }
       @media (min-width: 1700px) {
         .content .border-content .form-control {
           height: 60px;
@@ -639,7 +653,7 @@ header {
     .content .border-content select {
       height: 45px;
       border-radius: 3px;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       width: 100%;
       color: #b5adad;
       border: 1px solid #ced4da;

@@ -69,6 +69,11 @@ html {
 .iti {
     width: 100% !important;
 }
+.content .border-content  .iti input, 
+.content .border-content  .iti input[type=text], 
+.content .border-content .iti input[type=tel] {
+    margin-bottom: 10px !important;
+}
 .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag,
 .iti--allow-dropdown .iti__flag-container .iti__selected-flag,
 .iti--allow-dropdown .iti__flag-container:active .iti__selected-flag,
@@ -86,4 +91,13 @@ select {
        border: 1px solid #ced4da !important;
        outline: none;
     }
+}
+
+.iti__selected-flag {
+    height: 45px !important;
+}
+.error {
+    font-family: 'Poppins-Regular' !important;
+    font-size: 13px !important;
+    color: #f00;
 }
