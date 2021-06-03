@@ -34,4 +34,10 @@ class RegistrationRequest extends FormRequest
             'governorate'  =>'required',
         ];
     }
+    public function messages()
+    {
+        return [
+            'phone.required'=>'Please enter a valid mobile number',
+        ];
+    }
 }

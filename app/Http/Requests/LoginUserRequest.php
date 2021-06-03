@@ -31,6 +31,7 @@ class LoginUserRequest extends FormRequest
     public function messages()
     {
        return [
+           'number_phone.required'=>'Please enter a valid mobile number',
            'number_phone.exists'=>'Phone number not exists.',
        ];
     }
