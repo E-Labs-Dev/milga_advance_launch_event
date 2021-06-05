@@ -29,7 +29,7 @@
                         <div class="inner">
                             <h3>{{$registrations}}</h3>
 
-                            <p>Total submit Drs</p>
+                            <p>Total submitted Drs</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-bag"></i>
