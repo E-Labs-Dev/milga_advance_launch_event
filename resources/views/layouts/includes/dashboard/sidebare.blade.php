@@ -36,7 +36,7 @@
                     <a href="{{route('registrations.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
-                            Drs registrations
+                            Drs submitted
                         </p>
                     </a>
                 </li>
@@ -45,7 +45,7 @@
                     <a href="{{route('registrations.attendees')}}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
-                            Drs attendees
+                            Drs registered
                         </p>
                     </a>
                 </li>
