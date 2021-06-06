@@ -4,6 +4,14 @@
         @media #{$ipadScreen} {
             width: 140px;
         }
+        @media #{$xScreen} {
+            width: 95px;
+        }
+
+    }
+    .profile-link {
+        float: $left;
+        width: max-content;
     }
     .navbar-light {
         .navbar-nav {
@@ -26,11 +34,21 @@
     } 
     .mobile-head2 {
         padding: 0;
+        @media #{$smallScreen} {
+            display: flex;
+            align-items: center;
+    
+        }
         p {
             font-size: 11px;
         }
     }
     .web {
+        display: flex;
+        align-items: center;
+        @media #{$smallScreen} {
+            display: none;
+        }
         a {
             @media #{$ipadScreen} {
                 font-size: 12px;
@@ -67,6 +85,11 @@ p {
         color: #fff;
         text-transform: capitalize;
         float: $left;
+        margin-top: 10px;
+        @media #{$mobileScreen} {
+            padding-top: 0;
+            margin-top: 7px;
+        }
         }
 }
 

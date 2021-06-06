@@ -10,6 +10,7 @@ $(function () {
     var input = document.querySelector("#phone-registration"),
         errorMsg = document.querySelector("#error-msg-registration");
 
+
     var errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid phone number"];
 
     var iti = window.intlTelInput(input, {

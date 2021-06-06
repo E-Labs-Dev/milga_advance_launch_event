@@ -99,8 +99,15 @@ select {
 .error {
     font-family: 'Poppins-Regular' !important;
     font-size: 13px !important;
-    color: #f00;
 }
 .card-footer button {
     border-color: $mainColor !important;
+}
+.btn-primary {
+  border-color: transparent !important;
+}
+
+
+.content .border-content .last_name-error {
+    color: #f00 !important;
 }

@@ -5,7 +5,14 @@
               <a href="{{route('home')}}">  <img class="main-logo" src="{{asset('images/logo2.png')}}"></a>
             </div><!--col-lg-3-->
             <div class="col-lg-3 col-6 mobile mobile-head2">
-               <a href="{{route('profile')}}"  class="profile-link"> <p><span class="img-user"><img src="{{asset('images/man.png')}}"></span><span class="name-user">{{ getCurrentUser()->full_name }}</span></p></a>
+                <p class="profile-link">  
+                <a href="{{route('profile')}}">
+                <span class="img-user"><img src="{{asset('images/man.png')}}"></span>
+                </a>
+                <a href="{{route('profile')}}" >
+                <span class="name-user">{{ getCurrentUser()->full_name }}</span>
+                </a>
+                </p>
             </div><!--col-lg-3-->
 
             <div class="col-lg-6 col-md-6">
@@ -15,19 +22,19 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
+                        <ul class="navbar-nav mr-auto" id="ulnav">
                             <li class="nav-item active">
-                                <a class="nav-link" href="<?php echo url('/').'/agenda/#agenda' ?>">Agenda <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" onclick="hideDiv()" href="<?php echo url('/').'/agenda/#agenda' ?>">Agenda <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="<?php echo url('/').'/agenda/#speakers' ?>">Speakers’ Biography</a>
+                                <a class="nav-link "  onclick="hideDiv2()" href="<?php echo url('/').'/agenda/#speakers' ?>">Speakers’ Biography</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo url('/').'/agenda/#games' ?>">Digital Magazine</a>
+                                <a class="nav-link" onclick="hideDiv3()" href="<?php echo url('/').'/agenda/#games' ?>">Digital Magazine</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link " href="#">Survey</a>
+                                <a class="nav-link " onclick="hideDiv4()" href="#">Survey</a>
                             </li>
                         </ul>
 
@@ -36,7 +43,15 @@
 
             </div><!--col-lg-6-->
             <div class="col-lg-3 col-md-3 web">
-                <a href="{{route('profile')}}"  class="profile-link"> <p><span class="img-user"><img src="{{asset('images/man.png')}}"></span><span class="name-user">{{ getCurrentUser()->full_name }}</span></p></a>
+
+                 <p class="profile-link">  
+                <a href="{{route('profile')}}">
+                <span class="img-user"><img src="{{asset('images/man.png')}}"></span>
+                </a>
+                <a href="{{route('profile')}}" >
+                <span class="name-user">{{ getCurrentUser()->full_name }}</span>
+                </a>
+                </p>
             </div><!--col-lg-3-->
 
         </div><!--row-->

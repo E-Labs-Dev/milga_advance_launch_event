@@ -208,13 +208,14 @@ header {
             @media #{$xScreen} {
                 width: 11px;
             }
+
         }
         p {
             font-size: 13px;
             float: $left;
             @media #{$ipadScreen} {
                 float: unset;
-                font-size: 12px;
+                font-size: 11px;
             }
         }
         .red-color {
@@ -228,10 +229,13 @@ header {
         }
         .dates-span {
             display: inline-block;
-            margin-left: 6px;
+            margin-left: 10px;
         }
         .dates-span2{
             margin-left: 2px;
+            @media #{$ipadScreen} {
+                margin-left: 5px;
+            }
         }
         .block-span {
             display: block;
@@ -318,7 +322,9 @@ header {
                 @media #{$smScreen} {
                     margin-top: 0;
                 }
-              
+                @media #{$xScreen} {
+                    margin-top: 3px;
+                } 
             }
             p {
                 font-size: 11px;
@@ -351,8 +357,12 @@ header {
                
 
                 @media #{$mobileScreen} {
+                    width: 55px;
+                }
+                @media #{$smallScreen} {
                     width: 50px;
                 }
+
                 @media #{$extrasmallScreen} {
                     width: 60px;
                 }
@@ -620,6 +630,7 @@ header {
             font-family: 'Poppins-Bold';
              width: 100%;
              margin-top: 5px;
+             text-transform: capitalize;
              @media #{$largScreen} {
                 font-size: 18px;
             }
@@ -1073,7 +1084,9 @@ header {
                         img {
                             width: 40px;
                             @media #{$mobileScreen} {
-                                width: 30px;
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
                             }
                         }
                     }
@@ -1104,6 +1117,8 @@ header {
    }
    .media   {
        align-items: center;
+       float: $left;
+       width: 100%;
        @media #{$smallScreen} {
            display: unset;
        }
@@ -1231,6 +1246,9 @@ header {
             font-size: 25px;
             text-transform: capitalize;
             font-weight: bold;
+            @media #{$smallScreen}{
+                font-size: 16px;
+            }
         }
         p {
             font-size: 30px;
@@ -1336,6 +1354,18 @@ footer {
         }
     }
 }
+.content .profile .media-body {
+    width: 50%;
+    float: $left;
+}
+.content .profile .gr-div {
+    width: 20%;
+    float: $right;
+    display: unset;
+}
+.content .profile .media {
+    display: flex;
+}
 }
 
 
@@ -1354,6 +1384,12 @@ footer {
     }
     .mobile-reserve .main-div div p {
         font-size: 10px;
+    }
+    .mobile-reserve .main-div div .red-color {
+        width: 55px;
+    }
+    .mobile-reserve .main-div div .img-cal {
+        margin-top: 3px;
     }
     }
     

@@ -78,7 +78,7 @@
                                     <a class="nav-link active" data-toggle="tab" href="#agenda1">
                   <span>
                     30<sup>th</sup>
-                    <span class="month-name">July فثث  </span>
+                    <span class="month-name">July   </span>
                     <span class="day-name">Day 1</span>
                   </span>
 

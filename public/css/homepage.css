@@ -67,17 +67,28 @@ select:active, select:focus {
 
 .error {
   font-family: 'Poppins-Regular' !important;
-  font-size: 13px !important;
-  color: #f00; }
+  font-size: 13px !important; }
 
 .card-footer button {
   border-color: #DF0E19 !important; }
+
+.btn-primary {
+  border-color: transparent !important; }
+
+.content .border-content .last_name-error {
+  color: #f00 !important; }
 
 .header2 {
   background-image: linear-gradient(to right, #CA1D27, #ef131e); }
   @media (max-width: 1024px) {
     .header2 .main-logo {
       width: 140px; } }
+  @media (max-width: 280px) {
+    .header2 .main-logo {
+      width: 95px; } }
+  .header2 .profile-link {
+    float: left;
+    width: max-content; }
   .header2 .navbar-light .navbar-nav .nav-link {
     color: #fff;
     padding-left: 15px;
@@ -92,14 +103,24 @@ select:active, select:focus {
     color: #fff; }
   .header2 .mobile-head2 {
     padding: 0; }
+    @media (max-width: 766px) {
+      .header2 .mobile-head2 {
+        display: flex;
+        align-items: center; } }
     .header2 .mobile-head2 p {
       font-size: 11px; }
-  @media (max-width: 1024px) {
-    .header2 .web a {
-      font-size: 12px; } }
-  .header2 .web a p {
+  .header2 .web {
     display: flex;
     align-items: center; }
+    @media (max-width: 766px) {
+      .header2 .web {
+        display: none; } }
+    @media (max-width: 1024px) {
+      .header2 .web a {
+        font-size: 12px; } }
+    .header2 .web a p {
+      display: flex;
+      align-items: center; }
   .header2 .img-user {
     width: 45px;
     height: 45px;
@@ -122,7 +143,12 @@ select:active, select:focus {
   .header2 .name-user {
     color: #fff;
     text-transform: capitalize;
-    float: left; }
+    float: left;
+    margin-top: 10px; }
+    @media (max-width: 823px) {
+      .header2 .name-user {
+        padding-top: 0;
+        margin-top: 7px; } }
 
 .navbar-light .navbar-toggler {
   border: none; }
@@ -318,7 +344,7 @@ header {
       @media (max-width: 1024px) {
         .main-div div p {
           float: unset;
-          font-size: 12px; } }
+          font-size: 11px; } }
     .main-div div .red-color {
       color: #DF0E19;
       text-transform: capitalize;
@@ -329,9 +355,12 @@ header {
           width: 60px; } }
     .main-div div .dates-span {
       display: inline-block;
-      margin-left: 6px; }
+      margin-left: 10px; }
     .main-div div .dates-span2 {
       margin-left: 2px; }
+      @media (max-width: 1024px) {
+        .main-div div .dates-span2 {
+          margin-left: 5px; } }
     .main-div div .block-span {
       display: block;
       margin-left: 5px; }
@@ -405,6 +434,9 @@ header {
         @media (max-width: 375px) {
           .mobile-reserve .main-div div .img-cal {
             margin-top: 0; } }
+        @media (max-width: 280px) {
+          .mobile-reserve .main-div div .img-cal {
+            margin-top: 3px; } }
       .mobile-reserve .main-div div p {
         font-size: 11px;
         float: unset;
@@ -430,6 +462,9 @@ header {
       .mobile-reserve .main-div div .red-color {
         width: 65px; }
         @media (max-width: 823px) {
+          .mobile-reserve .main-div div .red-color {
+            width: 55px; } }
+        @media (max-width: 766px) {
           .mobile-reserve .main-div div .red-color {
             width: 50px; } }
         @media (max-width: 411px) {
@@ -659,7 +694,8 @@ header {
       font-size: 16px;
       font-family: 'Poppins-Bold';
       width: 100%;
-      margin-top: 5px; }
+      margin-top: 5px;
+      text-transform: capitalize; }
       @media (min-width: 1700px) {
         .content .border-content label {
           font-size: 18px; } }
@@ -1009,7 +1045,9 @@ header {
               width: 40px; }
               @media (max-width: 823px) {
                 .content .score .padding-score .table th p span img, .content .score .padding-score .table td p span img {
-                  width: 30px; } }
+                  width: 25px;
+                  height: 25px;
+                  border-radius: 50%; } }
       .content .score .padding-score .table td:nth-child(2) {
         text-align: left; }
   .content .profile {
@@ -1021,7 +1059,9 @@ header {
       .content .profile .container {
         padding: 0 15px; } }
     .content .profile .media {
-      align-items: center; }
+      align-items: center;
+      float: left;
+      width: 100%; }
       @media (max-width: 766px) {
         .content .profile .media {
           display: unset; } }
@@ -1124,6 +1164,9 @@ header {
       font-size: 25px;
       text-transform: capitalize;
       font-weight: bold; }
+      @media (max-width: 766px) {
+        .content .games .text-game h5 {
+          font-size: 16px; } }
     .content .games .text-game p {
       font-size: 30px;
       font-weight: bold;
@@ -1199,7 +1242,19 @@ footer {
     .content .div-video .video {
       margin-top: 10px; }
     .content .div-video h2::before {
-      margin-bottom: 10px; } }
+      margin-bottom: 10px; }
+
+  .content .profile .media-body {
+    width: 50%;
+    float: left; }
+
+  .content .profile .gr-div {
+    width: 20%;
+    float: right;
+    display: unset; }
+
+  .content .profile .media {
+    display: flex; } }
 @media screen and (max-width: 736px) and (orientation: landscape) {
   .mobile-reserve .main-div {
     width: 60%; } }
@@ -1208,7 +1263,13 @@ footer {
     width: 70%; }
 
   .mobile-reserve .main-div div p {
-    font-size: 10px; } }
+    font-size: 10px; }
+
+  .mobile-reserve .main-div div .red-color {
+    width: 55px; }
+
+  .mobile-reserve .main-div div .img-cal {
+    margin-top: 3px; } }
 @media screen and (max-width: 500px) and (orientation: landscape) {
   .mobile-reserve .main-div {
     width: 60%; }

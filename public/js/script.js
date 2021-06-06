@@ -11,6 +11,28 @@
      } 
      
 
+     function hideDiv() {
+        var element = document.getElementById("navbarSupportedContent");
+        element.classList.toggle("show");
+      
+     }
+     function hideDiv2() {
+        var element = document.getElementById("navbarSupportedContent");
+        element.classList.toggle("show");
+      
+     }
+     function hideDiv3() {
+        var element = document.getElementById("navbarSupportedContent");
+        element.classList.toggle("show");
+      
+     }
+     function hideDiv4() {
+        var element = document.getElementById("navbarSupportedContent");
+        element.classList.toggle("show");
+      
+     }
+
+
      // The data/time we want to countdown to
     var countDownDate = new Date("july 30, 2021 18:00").getTime();
 

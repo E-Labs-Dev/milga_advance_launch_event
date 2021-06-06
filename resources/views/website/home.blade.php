@@ -44,8 +44,8 @@
                     <div class="main-div web-reserve">
                         <div >
                             <img class="img-cal" src="{{asset('images/cal.png')}}">
-                            <p> <span class="red-color">30<sup>th</sup>July</span>6:00 pm to 10:00 pm</p>
-                            <p class="block-span"><span class="red-color">6<sup>th</sup>August</span>6:00 pm to 10:00 pm</p>
+                            <p> <span class="red-color">30<sup>th</sup>July</span ><span class="dates-span">6:00 pm to 10:00 p.m</span></p>
+                            <p class="block-span"><span class="red-color dates-span2">6<sup>th</sup>August</span> <span >6:00 pm to 10:00 p.m</span></p>
                         </div>
                         <a href="#reserve">Reserve Your Spot <span><img src="{{asset('images/arrow.png')}}"></span></a>
                     </div><!--main-div-->
@@ -128,26 +128,26 @@
                                 {{ Form::open(['route' => 'registrations.store','method'=>'POST','name'=>'registration_form'])}}
                                 <div class="row reserve" >
 
-                                    <div class="col-lg-6 col-12">
+                                    <div class="col-lg-6 col-12 div-field">
                                         <label>First Name <span>*</span></label>
                                         <input type="text" class="form-control" placeholder="Enter first name"  required name="first_name" >
                                     </div><!--col-12-->
-                                    <div class="col-lg-6 col-12">
+                                    <div class="col-lg-6 col-12 div-field">
                                         <label>Last Name <span>*</span> </label>
                                         <input type="text" class="form-control" placeholder="Enter last name" required name="last_name" >
                                     </div><!--col-12-->
 
-                                    <div class="col-lg-6 col-12">
+                                    <div class="col-lg-6 col-12 div-field">
                                         <label>Email <span>*</span> </label>
                                         <input type="email" class="form-control" placeholder="Enter email address" required name="email" >
                                     </div><!--col-12-->
-                                    <div class="col-lg-6 col-12">
+                                    <div class="col-lg-6 col-12 div-field">
                                         <label>whatsApp Number  <span>*</span> </label>
                                         <input  class="form-control" placeholder="Enter mobile number"  id="phone-registration"  type="tel" required  >
                                         <input type="hidden" name="phone" id="full_phone">
                                         <span id="error-msg-registration" class="hide"></span>
                                     </div><!--col-12-->
-                                    <div class="col-lg-6 col-12">
+                                    <div class="col-lg-6 col-12 div-field">
                                         <label>Choose the Governorate <span>*</span> </label>
                                         <select name="governorate" required>
                                             <option value=""></option>
@@ -180,7 +180,7 @@
                                             <option value="Luxor">Luxor</option>
                                         </select>
                                     </div><!--col-12-->
-                                    <div class="col-lg-6 col-12">
+                                    <div class="col-lg-6 col-12 div-field">
                                         <label>Choose the Venue <span>*</span> </label>
                                         <select name="venue" required>
                                             <option value=""></option>
