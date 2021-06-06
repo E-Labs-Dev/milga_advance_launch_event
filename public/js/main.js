@@ -34,6 +34,8 @@ $(function () {
             },
         },
         submitHandler: function (form) {
+            $('#registration_form').attr('disabled','disabled')
+
             $.ajax({
                 url: form.action,
                 type: form.method,
@@ -48,6 +50,9 @@ $(function () {
 
                 },
                 error: function (data) {
+
+                    $('#registration_form').removeAttr('disabled');
+
                     if (data) {
                         if (data.responseJSON.errors.first_name) {
                             toastr.info(data.responseJSON.errors.first_name);
@@ -82,6 +87,7 @@ $(function () {
             }
         },
         submitHandler: function (form) {
+            $('#login_form').attr('disabled','disabled')
             $.ajax({
                 url: form.action,
                 type: form.method,
@@ -96,6 +102,7 @@ $(function () {
 
                 },
                 error: function (data) {
+                    $('#login_form').removeAttr('disabled');
                     if (data) {
                         if (data.responseJSON.errors.number_phone) {
                             toastr.info(data.responseJSON.errors.number_phone[0])
