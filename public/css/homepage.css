@@ -106,7 +106,8 @@ select:active, select:focus {
     @media (max-width: 766px) {
       .header2 .mobile-head2 {
         display: flex;
-        align-items: center; } }
+        align-items: center;
+        justify-content: center; } }
     .header2 .mobile-head2 p {
       font-size: 11px; }
   .header2 .web {
@@ -710,6 +711,9 @@ header {
         .content .border-content .form-control {
           height: 60px;
           font-size: 18px; } }
+      @media (max-width: 766px) {
+        .content .border-content .form-control {
+          font-size: 12px; } }
       @media (max-width: 375px) {
         .content .border-content .form-control {
           font-size: 10px; } }
@@ -1057,7 +1061,7 @@ header {
         padding: 50px 0; } }
     @media (max-width: 823px) {
       .content .profile .container {
-        padding: 0 15px; } }
+        padding: 0; } }
     .content .profile .media {
       align-items: center;
       float: left;
@@ -1079,7 +1083,8 @@ header {
           float: left;
           width: 70px;
           height: 70px;
-          line-height: 70px; } }
+          line-height: 70px;
+          margin-top: -10px; } }
       .content .profile .image-round img {
         width: 50px; }
         @media (max-width: 766px) {
@@ -1221,6 +1226,10 @@ footer {
     footer .copy-right .logo-footer {
       float: right;
       width: 97px; }
+
+@media (max-width: 766px) {
+  .form-control {
+    font-size: 12px; } }
 
 @media screen and (max-width: 823px) and (orientation: landscape) {
   .mobile-reserve .main-div {

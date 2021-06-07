@@ -648,6 +648,9 @@ header {
                 height: 60px;
                 font-size: 18px;
             }
+            @media #{$smallScreen} {
+                font-size: 12px;
+            }
             @media #{$smScreen} {
                 font-size: 10px;
             }
@@ -1111,7 +1114,7 @@ header {
    }
    .container {
     @media #{$mobileScreen} {
-        padding:  0 15px;
+        padding:  0;
     }
  
    }
@@ -1137,6 +1140,7 @@ header {
        width: 70px;
        height: 70px;
        line-height: 70px;
+       margin-top: -10px;
 
 
     }
@@ -1324,6 +1328,12 @@ footer {
             float: $right;
             width: 97px;
         }
+    }
+}
+
+.form-control {
+    @media #{$smallScreen} {
+        font-size: 12px;
     }
 }
 
