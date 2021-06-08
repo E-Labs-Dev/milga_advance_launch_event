@@ -36,7 +36,7 @@
                     <a href="{{route('registrations.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
-                            Drs submitted
+                            Submitted Drs.
                         </p>
                     </a>
                 </li>
@@ -45,7 +45,7 @@
                     <a href="{{route('registrations.attendees')}}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
-                            Drs registered
+                            Registered Drs.
                         </p>
                     </a>
                 </li>
@@ -54,7 +54,7 @@
                     <a href="{{route('games.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
-                            games scores
+                            Game Scores
                         </p>
                     </a>
                 </li>
