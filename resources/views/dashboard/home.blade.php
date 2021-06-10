@@ -59,7 +59,7 @@
                         <div class="inner">
                             <h3>{{$games}}</h3>
 
-                            <p>Game scores</p>
+                            <p>Game Scores</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
