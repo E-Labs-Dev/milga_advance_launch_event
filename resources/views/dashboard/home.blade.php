@@ -29,7 +29,7 @@
                         <div class="inner">
                             <h3>{{$registrations}}</h3>
 
-                            <p>Total Submitted Drs.</p>
+                            <p>Submitted Drs.</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-bag"></i>
@@ -44,7 +44,7 @@
                         <div class="inner">
                             <h3>{{$registrationsAttend}}</h3>
 
-                            <p>Total Registered Drs.</p>
+                            <p>Registered Drs.</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-stats-bars"></i>
@@ -59,7 +59,7 @@
                         <div class="inner">
                             <h3>{{$games}}</h3>
 
-                            <p>Game Scores</p>
+                            <p>Game scores</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-person-add"></i>

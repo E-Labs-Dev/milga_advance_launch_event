@@ -2,10 +2,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-3 col-6">
-              <a href="{{route('home')}}">  <img class="main-logo" src="{{asset('images/logo2.png')}}"></a>
+              <a href="<?php echo url('/').'/agenda' ?>">  <img class="main-logo" src="{{asset('images/logo2.png')}}"></a>
             </div><!--col-lg-3-->
             <div class="col-lg-3 col-6 mobile mobile-head2">
-                <p class="profile-link">  
+                <p class="profile-link">
                 <a href="{{route('profile')}}">
                 <span class="img-user"><img src="{{asset('images/man.png')}}"></span>
                 </a>
@@ -44,7 +44,7 @@
             </div><!--col-lg-6-->
             <div class="col-lg-3 col-md-3 web">
 
-                 <p class="profile-link">  
+                 <p class="profile-link">
                 <a href="{{route('profile')}}">
                 <span class="img-user"><img src="{{asset('images/man.png')}}"></span>
                 </a>

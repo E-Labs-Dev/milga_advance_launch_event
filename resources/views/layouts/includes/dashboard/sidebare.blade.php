@@ -54,7 +54,7 @@
                     <a href="{{route('games.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
-                            Game Scores
+                            Game scores
                         </p>
                     </a>
                 </li>
