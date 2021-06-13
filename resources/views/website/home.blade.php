@@ -1,6 +1,18 @@
 
 @extends('layouts.master_website')
-
+@section('style')
+    <style>
+        label[class=error] {
+            color: red;
+        }
+        #error-msg-registration{
+            color: red;
+        }
+        #error_msg_login{
+             color: red;
+        }
+    </style>
+@endsection
 @section('content')
 
 <header>

@@ -13,7 +13,7 @@
 
     @include('layouts.includes.website.style')
     @include('layouts.includes.messages.style')
-
+    @yield('style')
 
 </head>
 
@@ -27,7 +27,7 @@
         <div class="container">
             <div class="text">
                 <img src="{{asset('images/logo2.png')}}">
-                
+
             </div>
             <hr>
         </div><!--container-->
