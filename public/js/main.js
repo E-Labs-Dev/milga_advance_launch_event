@@ -37,6 +37,9 @@ $(function () {
             $('#registration_form').attr('disabled','disabled')
 
             $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
                 url: form.action,
                 type: form.method,
                 data: $(form).serialize(),
