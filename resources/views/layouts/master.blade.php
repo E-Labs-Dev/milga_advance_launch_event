@@ -9,6 +9,11 @@
 
     @include('layouts.includes.dashboard.style')
     @include('layouts.includes.messages.style')
+    <style>
+        .swal-footer{
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
