@@ -18,14 +18,35 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
     <link rel="icon" type="image" href="{{asset('images/fav-icon.png')}}">
+    @include('layouts.includes.website.style')
 
-@include('layouts.includes.messages.style')
+    @include('layouts.includes.messages.style')
     <!-- overlayScrollbars -->
     <title>Milga</title>
 </head>
 <body>
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-6">
+                <img src="{{asset('images/logo.png')}}">
+            </div><!--col-lg-3-->
+            <div class="col-lg-3 col-6 mobile">
+                <img src="{{asset('images/logo2.png')}}">
+            </div><!--col-lg-3-->
+
+            <div class="col-lg-6 col-md-6">
+
+            </div><!--col-lg-6-->
+            <div class="col-lg-3 col-md-3 web">
+                <img src="{{asset('images/logo2.png')}}">
+            </div><!--col-lg-3-->
+
+        </div><!--row-->
+    </div><!--container-->
+</header>
 <!-- Main content -->
-<section class="content">
+<section class="content" style="    margin-top: 166px;">
     <div class="container-fluid">
         <div class="row justify-content-center">
             <!-- left column -->

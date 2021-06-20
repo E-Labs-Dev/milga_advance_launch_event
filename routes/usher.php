@@ -16,5 +16,7 @@ Route::group(['namespace'=>'Usher'],function () {
 
         Route::post('registrations/attend', 'RegistrationController@attend')->name('registrations.attend');
 
+        Route::post('registrations/search', 'SearchController@index')->name('registrations.search');
+
     });
 });
