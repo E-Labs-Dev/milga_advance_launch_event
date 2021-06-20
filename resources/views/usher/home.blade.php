@@ -59,7 +59,7 @@
                 <!-- general form elements -->
                 <div class="card card-primary">
                     <div class="card-header" style="background-color: #df0e19;">
-                        <h3 class="card-title">Search About Doctor Information</h3>
+                        <h3 class="card-title">Search for Doctor Information</h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
@@ -67,9 +67,9 @@
                         @csrf
                         <div class="card-body">
                             <div class="form-group col-12" style="float: left;">
-                                <label for="code_doctor">Code Doctor</label>
+                                <label for="code_doctor">Doctor Code</label>
                                 <input type="text" class="form-control" id="code_doctor" name="code_doctor"
-                                       placeholder="Enter Code Doctor" value="" required>
+                                       placeholder="Enter Doctor Code" value="" required>
                             </div>
                         </div>
                         <!-- /.card-body -->

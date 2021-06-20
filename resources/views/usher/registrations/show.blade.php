@@ -46,8 +46,13 @@
     </div><!--container-->
 </header>
 <!-- Main content -->
+
 <section class="content" style="    margin-top: 166px;">
+
     <div class="container-fluid">
+        <div style="margin: 9px 25%;">
+            <a href="{{route('usher.home')}}" class="btn-info" style="padding: 11px;">Go Back</a>
+        </div>
         <div class="row justify-content-center">
             <!-- left column -->
             <div class="col-md-6" style="margin-top: 16px;">
@@ -56,7 +61,6 @@
                     <div class="card-header" style="background-color: #df0e19;">
                         <h3 class="card-title">User Information</h3>
                     </div>
-
                     <!-- /.card-header -->
                     <!-- form start -->
                     <form method="POST" action="{{route('registrations.attend')}}" style="    background-color: #f8f9fa;">
@@ -79,16 +83,16 @@
 
                             </div>
                             <div class="form-group col-12" style="float: left;">
-                                <label for="phone" class="col-12">Phone</label>
+                                <label for="phone" class="col-12" style="padding: 0;">Phone</label>
                                 <input type="tel" class="form-control col-12"  name="phone"  value="{{$registration->phone}}" disabled>
                             </div>
 
                             <div class="form-group col-12" style="float: left;">
-                                <label for="governorate" class="col-12">Governorate</label>
+                                <label for="governorate" class="col-12" style="padding: 0;">Governorate</label>
                                 <input type="text" class="form-control col-12" name="governorate" id="governorate" value="{{$registration->governorate}}" disabled>
                             </div>
                             <div class="form-group col-12" style="float: left;">
-                                <label for="venue" class="col-12">Venue</label>
+                                <label for="venue" class="col-12" style="padding: 0;">Venue</label>
                                 <input type="text" class="form-control col-12" name="venue" id="venue" value="{{$registration->venue}}" disabled>
                             </div>
 

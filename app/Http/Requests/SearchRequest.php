@@ -28,7 +28,13 @@ class SearchRequest extends FormRequest
             'code_doctor'  =>'required|exists:registrations,user_code',
         ];
     }
-
+    public function messages()
+    {
+        return [
+            'code_doctor.required'=>'This code is invalid.',
+            'code_doctor.exists'=>'This code is invalid.',
+        ];
+    }
     protected function failedValidation(Validator $validator)
     {
         if( $validator->fails() ) {
