@@ -22,6 +22,8 @@ Route::group(['namespace'=>'Website'],function () {
     Route::middleware('authorized')->group(function() {
         Route::get('profile','ProfileController@index')->name('profile');
         Route::get('/agenda','AgendaController@index')->name('agenda');
+        Route::get('/survey','SurveyController@index')->name('survey');
+        Route::post('/survey','SurveyController@store')->name('survey.store');
         Route::get('/logout','ProfileController@logout')->name('user.logout');
     });
 });
