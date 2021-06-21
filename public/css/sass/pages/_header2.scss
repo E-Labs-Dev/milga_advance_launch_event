@@ -1,18 +1,5 @@
 .header2 {
     background-image: linear-gradient(to right, #CA1D27, #ef131e);
-    .main-logo {
-        @media #{$ipadScreen} {
-            width: 140px;
-        }
-        @media #{$xScreen} {
-            width: 95px;
-        }
-
-    }
-    .profile-link {
-        float: $left;
-        width: max-content;
-    }
     .navbar-light {
         .navbar-nav {
             .nav-link {
@@ -20,9 +7,6 @@
                 padding-left: 15px;
                 font-size: 15px;
                 text-transform: capitalize;
-                @media #{$ipadScreen} {
-                    font-size: 12px;
-                }
             }
              .active > .nav-link, 
             .nav-link.show, 
@@ -34,32 +18,13 @@
     } 
     .mobile-head2 {
         padding: 0;
-        @media #{$smallScreen} {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-    
-        }
         p {
             font-size: 11px;
         }
     }
-    .web {
-        display: flex;
-        align-items: center;
-        @media #{$smallScreen} {
-            display: none;
-        }
-        a {
-            @media #{$ipadScreen} {
-                font-size: 12px;
-
-            }
-p {
-    display: flex;
-    align-items: center;
-}
-        }
+    .profile-link {
+        float: $left;
+        margin-top: 10px;
     }
     .img-user {
         width: 45px;
@@ -86,11 +51,7 @@ p {
         color: #fff;
         text-transform: capitalize;
         float: $left;
-        margin-top: 10px;
-        @media #{$mobileScreen} {
-            padding-top: 0;
-            margin-top: 7px;
-        }
+        margin-top: 7px;
         }
 }
 
