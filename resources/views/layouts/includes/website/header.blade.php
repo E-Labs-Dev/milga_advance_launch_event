@@ -34,7 +34,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link " onclick="hideDiv4()" href="{{route('survey')}}">Survey</a>
+                                <a class="nav-link " onclick="hideDiv4()" href="#">Survey</a>
                             </li>
                         </ul>
 
