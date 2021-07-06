@@ -27,7 +27,7 @@ class Registration extends Authenticatable
 
     public function getOriginalPathAttribute()
     {
-        return url('/').'/public/qrcodes/'.$this->qrcode;
+        return url('/').'/qrcodes/'.$this->qrcode;
     }
 
     public function getFullNameAttribute()

@@ -196,8 +196,8 @@
                                         <label>Choose the Venue <span>*</span> </label>
                                         <select name="venue" required>
                                             <option value=""></option>
-                                            <option value="30.7.2021 in Nile Ritz – Cairo" >30.7.2021 in Nile Ritz – Cairo</option>
-                                            <option value="6.8.2021 in Sunrise – Alex">6.8.2021 in Sunrise – Alex</option>
+                                            <option value="Cairo" >30.7.2021 in Nile Ritz – Cairo</option>
+                                            <option value="Alex">6.8.2021 in Sunrise – Alex</option>
                                         </select>
                                     </div><!--col-12-->
                                     <div class=" col-12">
