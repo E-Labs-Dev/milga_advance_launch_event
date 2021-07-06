@@ -880,6 +880,8 @@ header {
           padding: 25px 70px; }
           .content .agenda form .line-div:nth-of-type(6) ul li {
             color: #fff; }
+            .content .agenda form .line-div:nth-of-type(6) ul li span {
+              color: #fff; }
           @media (max-width: 823px) {
             .content .agenda form .line-div:nth-of-type(6) {
               padding: 15px 10px; } }
@@ -1373,3 +1375,17 @@ footer {
     margin-top: 0; } }
 
 /*# sourceMappingURL=homepage.css.map */
+
+.speaker-main-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.speaker-title{
+  font-size: 15px;
+  font-family: 'Poppins-ExtraBold';
+  margin: 15px 0px;
+}
