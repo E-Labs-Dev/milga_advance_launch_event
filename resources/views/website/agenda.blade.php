@@ -85,13 +85,163 @@
         <div class="registration-div agenda" id="agenda">
             <div class="container">
                 <div class="row" style="justify-content: center;">
-                    <div class="col-12">
+                    <div class="col-12 mb-4">
                         <h2 class="title-left">Our Agenda</h2>
                     </div>
 
 
                     @if (getCurrentUser()->venue == 'Cairo')
-                        <div class="col-10">
+
+                        <div class="col-12 col-lg-2">
+                            <div class="event-day-div">
+                                <span class="day-name">Day 1</span>
+                                <span class="red-span">30<sup>th</sup></span>
+                                <span class="month-name">July </span>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-10">
+                            <form class="border-content">
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane  active" id="agenda1">
+                                        <div class="line-div">
+                                            <ul>
+                                                <li>5:30 pm</li>
+                                                <li class="border"></li>
+                                                <li>
+                                                    Registration
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="line-div">
+                                            <ul>
+                                                <li>6:30 pm </li>
+                                                <li class="border"></li>
+                                                <li>
+                                                    We are EVA Pharma (EVA Pharma Vision & mission)
+                                                    <span>
+                                                        <img class="main-layer"
+                                                            src="{{ asset('images/microphone.png') }}">
+                                                        By <span class="span-red">Dr. Riad Armanious,</span> EVA Pharma CEO
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="line-div">
+                                            <ul>
+                                                <li>7:00 pm</li>
+                                                <li class="border"></li>
+                                                <li>
+                                                    Hyperglycemic damage & diabetic Complications
+                                                    <span>
+                                                        <img class="main-layer"
+                                                            src="{{ asset('images/microphone.png') }}">
+                                                        By <span class="span-red">Professor Khaled El Hadidy</span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="line-div">
+                                            <ul>
+                                                <li>7:30 pm</li>
+                                                <li class="border"></li>
+                                                <li>
+                                                    Role of Benfotiamine in diabetic complications.
+                                                    <span>
+                                                        <img class="main-layer"
+                                                            src="{{ asset('images/microphone.png') }}">
+                                                        By <span class="span-red">Professor Peter Kempler</span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="line-div">
+                                            <ul>
+                                                <li>8:00 pm</li>
+                                                <li class="border"></li>
+                                                <li>
+                                                    Coffee Break
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="line-div">
+                                            <ul>
+                                                <li>8:30 pm</li>
+                                                <li class="border"></li>
+                                                <li>
+                                                    Announcement of the first clinical trial results comparing Oral
+                                                    Benfotiamine Vs IM Thiamine
+                                                    <span>
+                                                        <img class="main-layer"
+                                                            src="{{ asset('images/microphone.png') }}">
+                                                        By <span class="span-red">Abanoub Effat,</span> Clinical trial
+                                                        author
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="line-div">
+                                            <ul>
+                                                <li>9:00 pm</li>
+                                                <li class="border"></li>
+                                                <li>
+                                                    Milga Advance .. The Advanced Solution
+                                                    <span>
+                                                        <img class="main-layer"
+                                                            src="{{ asset('images/microphone.png') }}">
+                                                        By <span class="span-red">Kirollos Magdy,</span> Product Manager
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="line-div">
+                                            <ul>
+                                                <li>9:30 pm</li>
+                                                <li class="border"></li>
+                                                <li>
+                                                    Dinner
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!--line-div-->
+
+
+                                    </div>
+                                    <!--end tab1-->
+
+                                    <!--end tab2-->
+                                </div>
+
+
+                            </form>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        {{-- <div class="col-10">
                             <form class="border-content">
                                 <ul class="nav nav-tabs">
                                     <li class="nav-item li-2">
@@ -101,7 +251,6 @@
                                                 <span class="month-name">July </span>
                                                 <span class="day-name">Day 1</span>
                                             </span>
-
                                         </a>
                                     </li>
                                 </ul>
@@ -230,9 +379,45 @@
 
 
                             </form>
-                        </div>
+                        </div> --}}
                     @else
-                        <div class="col-10">
+
+
+                    <div class="col-12 col-lg-2">
+                        <div class="event-day-div">
+                            <span class="day-name">Day 2</span>
+                            <span class="red-span">6<sup>th</sup></span>
+                            <span class="month-name">August </span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-10">
+                        <form class="border-content">
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane  active" id="agenda1">
+                                    <div class="line-div no-data-background">
+                                        <ul>
+                                            {{-- <li>5:30 pm</li> --}}
+                                            {{-- <li class="border"></li> --}}
+                                            <li>
+                                                The agenda of this event will be announced very soon!
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--line-div-->
+
+
+                                </div>
+                                <!--end tab1-->
+
+                                <!--end tab2-->
+                            </div>
+
+
+                        </form>
+                    </div>
+                        {{-- <div class="col-10">
                             <form class="border-content">
                                 <ul class="nav nav-tabs">
 
@@ -268,7 +453,7 @@
 
 
                             </form>
-                        </div>
+                        </div> --}}
                     @endif
 
                     <!--col-10-->
@@ -287,9 +472,9 @@
                 <h4>Meet Our Conference Speakers</h4>
                 @if (getCurrentUser()->venue == 'Cairo')
 
-                    <div class="row">
+                    <div class="row speakers-row">
                         {{-- @foreach (range(1, 5) as $y) --}}
-                        {{-- <div class="col-12 col-md-4 col-lg-3 col-xl speaker-main-div">
+                        {{-- <div class="col-12 col-md-4 col-lg-3 col-xl-4 speaker-main-div">
                             <img src="{{ asset("images/speakers/{$y}.png") }}">
                             <p class="speaker-title">Prof. Sara Tarawah, {{ $y }}</p>
                             <p class="speaker-desc">
@@ -300,11 +485,13 @@
 
 
 
-                        <div class="col-12 col-md-4 col-lg-3 col-xl speaker-main-div">
+                        <div class="col-12 col-md-4 col-lg-3 col-xl-4 speaker-main-div">
                             <img src="{{ asset('images/speakers/1.png') }}">
                             <p class="speaker-title">Prof. Peter Kempler</p>
                             <p class="speaker-desc">
-                                President of the Hungarian Diabetes Association
+                                <b>
+                                    President of the Hungarian Diabetes Association
+                                </b>
                                 <br>
                                 President Elect of the Central European Diabetes Association
                                 <br>
@@ -312,30 +499,31 @@
                             </p>
                         </div>
 
-                        <div class="col-12 col-md-4 col-lg-3 col-xl speaker-main-div">
+                        <div class="col-12 col-md-4 col-lg-3 col-xl-4 speaker-main-div">
                             <img src="{{ asset('images/speakers/2.png') }}">
                             <p class="speaker-title">Prof. Hisham El Hefnawy</p>
                             <p class="speaker-desc">
-                                Professor of Diabetes & Endocrinology
+                                <b>
+                                    Professor of Diabetes & Endocrinology
+                                </b>
                                 <br>
                                 Ex Dean of National Diabetes Institute & Head of National NCDs Committee
-                                <br>
                                 <br>
                                 Principle investigator of many Intentional multicentric researches about diabetes & it's
                                 complications
                             </p>
                         </div>
 
-                        <div class="col-12 col-md-4 col-lg-3 col-xl speaker-main-div">
+                        <div class="col-12 col-md-4 col-lg-3 col-xl-4 speaker-main-div">
                             <img src="{{ asset('images/speakers/3.png') }}">
                             <p class="speaker-title">Prof. Ibrahim El Ebrashy</p>
                             <p class="speaker-desc">
-                                Professor of Internal Medicine, Cairo University
-                                <br>
+                                <b>
+                                    Professor of Internal Medicine, Cairo University
+                                </b>
                                 <br>
                                 Head of Diabetes & Endocrinology Center, Kasr El Aini Hospitals, Internal Medicine
                                 Department
-                                <br>
                                 <br>
                                 Member of the National Diabetes Committee MOH & Member of the Medical Editorial Board of
                                 LANCET
@@ -343,24 +531,26 @@
                             </p>
                         </div>
 
-                        <div class="col-12 col-md-4 col-lg-3 col-xl speaker-main-div">
+                        <div class="col-12 col-md-4 col-lg-3 col-xl-4 speaker-main-div">
                             <img src="{{ asset('images/speakers/4.png') }}">
                             <p class="speaker-title">Prof. Khaled El Hadidy</p>
                             <p class="speaker-desc">
-                                Professor of Internal Medicine & Diabetes
-                                <br>
+                                <b>
+                                    Professor of Internal Medicine & Diabetes
+                                </b>
                                 <br>
                                 Member of the National Diabetes Committee & Head of Diabetes & Endocrinology Unit, Benisweif
                                 university
                             </p>
                         </div>
 
-                        <div class="col-12 col-md-4 col-lg-3 col-xl speaker-main-div">
+                        <div class="col-12 col-md-4 col-lg-3 col-xl-4 speaker-main-div">
                             <img src="{{ asset('images/speakers/5.png') }}">
                             <p class="speaker-title">Prof. Fawzy El Mesallamy</p>
                             <p class="speaker-desc">
-                                Professor of Diabetes & Endocrinology - Zagazig University
-                                <br>
+                                <b>
+                                    Professor of Diabetes & Endocrinology - Zagazig University
+                                </b>
                                 <br>
                                 Member of ADA & EASD
                             </p>
@@ -393,40 +583,40 @@
                         <p>Can't wait to play? Stay tuned for a lot of the entertaining games that will be live during
                             the event time.</p>
                         <!--<table class="table table-striped">
-                                                                                <thead>
-                                                                                <tr>
-                                                                                    <th >#</th>
-                                                                                    <th>Name</th>
-                                                                                    <th>Time</th>
-                                                                                    <th>Score</th>
-                                                                                </tr>
-                                                                                </thead>
-                                                                                <tbody>
-                                                                                @if (count($games) > 1)
-                                                                            @foreach ($games as $key => $game)
-                                                                                <tr>
-                                                                                    <td>{{ $key + 1 }}</td>
-                                                                                        <td>
-                                                                                            <p><span><img src="{{ asset('images/man.png') }}"></span>{{ $game->first_name }} {{ $game->last_name }}</p>
-                                                                                        </td>
-                                                                                        <td>{{ $game->created_at }}</td>
-                                                                                        <td>{{ $game->score }}</td>
-                                                                                    </tr>
-                                                                                   @endforeach
+                                                                                                        <thead>
+                                                                                                        <tr>
+                                                                                                            <th >#</th>
+                                                                                                            <th>Name</th>
+                                                                                                            <th>Time</th>
+                                                                                                            <th>Score</th>
+                                                                                                        </tr>
+                                                                                                        </thead>
+                                                                                                        <tbody>
+                                                                                                        @if (count($games) > 1)
+                                                                                                    @foreach ($games as $key => $game)
+                                                                                                        <tr>
+                                                                                                            <td>{{ $key + 1 }}</td>
+                                                                                                                <td>
+                                                                                                                    <p><span><img src="{{ asset('images/man.png') }}"></span>{{ $game->first_name }} {{ $game->last_name }}</p>
+                                                                                                                </td>
+                                                                                                                <td>{{ $game->created_at }}</td>
+                                                                                                                <td>{{ $game->score }}</td>
+                                                                                                            </tr>
+                                                                                                           @endforeach
                     @else
-                                                                            <tr>
+                                                                                                    <tr>
 
-                                                                                <td> no </td>
-                                                                                <td> one </td>
-                                                                                <td> play </td>
-                                                                                <td> yet</td>
+                                                                                                        <td> no </td>
+                                                                                                        <td> one </td>
+                                                                                                        <td> play </td>
+                                                                                                        <td> yet</td>
 
-                                                                            </tr>
+                                                                                                    </tr>
 
-                                                    @endif
-                                                                            </tbody>
-                                                                        </table>
-                                                    -->
+                                                                            @endif
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                            -->
 
                     </div>
                     <!--col-10-->
