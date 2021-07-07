@@ -604,6 +604,10 @@ header {
         width: 50%;
         height: 100%;
         margin-bottom: 0; }
+
+        .content .border-content .nav-tabs .li-2 {
+          width: 100%;
+ }
         .content .border-content .nav-tabs li .nav-link {
           height: 100%;
           font-size: 20px;
@@ -799,9 +803,9 @@ header {
               .content .agenda form .nav-tabs li .nav-link .day-name {
                 font-size: 12px; } }
         .content .agenda form .nav-tabs li:last-child .month-name {
-          color: #000; }
+          color: #fff; }
         .content .agenda form .nav-tabs li:last-child .day-name {
-          color: #000;
+          color: #fff;
           opacity: 1; }
       .content .agenda form .line-div {
         background-color: #F7F8FA;
