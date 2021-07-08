@@ -230,17 +230,6 @@
                         </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
                         {{-- <div class="col-10">
                             <form class="border-content">
                                 <ul class="nav nav-tabs">
@@ -382,41 +371,143 @@
                         </div> --}}
                     @else
 
-
-                    <div class="col-12 col-lg-2">
-                        <div class="event-day-div">
-                            <span class="day-name">Day 2</span>
-                            <span class="red-span">6<sup>th</sup></span>
-                            <span class="month-name">August </span>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-10">
-                        <form class="border-content">
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div class="tab-pane  active" id="agenda1">
-                                    <div class="line-div no-data-background">
-                                        <ul>
-                                            {{-- <li>5:30 pm</li> --}}
-                                            {{-- <li class="border"></li> --}}
-                                            <li>
-                                                The agenda of this event will be announced very soon!
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!--line-div-->
-
-
-                                </div>
-                                <!--end tab1-->
-
-                                <!--end tab2-->
+                        <div class="col-12 col-lg-2">
+                            <div class="event-day-div">
+                                <span class="day-name">Day 6</span>
+                                <span class="red-span">6<sup>th</sup></span>
+                                <span class="month-name">August </span>
                             </div>
+                        </div>
+
+                        <div class="col-12 col-lg-10">
+                            <form class="border-content">
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane  active" id="agenda1">
+                                        <div class="line-div">
+                                            <ul>
+                                                <li>6:00 pm</li>
+                                                <li class="border"></li>
+                                                <li>
+                                                    Registration
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="line-div">
+                                            <ul>
+                                                <li>7:00 pm </li>
+                                                <li class="border"></li>
+                                                <li>
+                                                    We are EVA Pharma (EVA Pharma Vision & mission)
+                                                    <span>
+                                                        <img class="main-layer"
+                                                            src="{{ asset('images/microphone.png') }}">
+                                                        By <span class="span-red">Dr. Abram Wagih,</span> Medical &
+                                                        marketing manager
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
 
 
-                        </form>
-                    </div>
+                                        <div class="line-div">
+                                            <ul>
+                                                <li>7:30 pm</li>
+                                                <li class="border"></li>
+                                                <li>
+                                                    Hyperglycemic damage & Role of Benfotiamine in diabetic complications.
+                                                    <span>
+                                                        <img class="main-layer"
+                                                            src="{{ asset('images/microphone.png') }}">
+                                                        By <span class="span-red">Professor Magdy Helmy Megalaa</span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="line-div d-none">
+                                            <ul>
+                                                <li>7:30 pm</li>
+                                                <li class="border"></li>
+                                                <li>
+                                                    Role of Benfotiamine in diabetic complications.
+                                                    <span>
+                                                        <img class="main-layer"
+                                                            src="{{ asset('images/microphone.png') }}">
+                                                        By <span class="span-red">Professor Peter Kempler</span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="line-div">
+                                            <ul>
+                                                <li>8:00 pm</li>
+                                                <li class="border"></li>
+                                                <li>
+                                                    Coffee Break
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="line-div">
+                                            <ul>
+                                                <li>8:30 pm</li>
+                                                <li class="border"></li>
+                                                <li>
+                                                    Announcement of the first clinical trial results comparing Oral
+                                                    Benfotiamine Vs IM Thiamine
+                                                    <span>
+                                                        <img class="main-layer"
+                                                            src="{{ asset('images/microphone.png') }}">
+                                                        By <span class="span-red">Abanoub Effat,</span> Clinical trial
+                                                        author
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="line-div">
+                                            <ul>
+                                                <li>9:00 pm</li>
+                                                <li class="border"></li>
+                                                <li>
+                                                    Milga Advance .. The Advanced Solution
+                                                    <span>
+                                                        <img class="main-layer"
+                                                            src="{{ asset('images/microphone.png') }}">
+                                                        By <span class="span-red">Kirollos Magdy,</span> Product Manager
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="line-div">
+                                            <ul>
+                                                <li>9:30 pm</li>
+                                                <li class="border"></li>
+                                                <li>
+                                                    Dinner
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!--line-div-->
+
+
+                                    </div>
+                                    <!--end tab1-->
+
+                                    <!--end tab2-->
+                                </div>
+
+
+                            </form>
+                        </div>
                         {{-- <div class="col-10">
                             <form class="border-content">
                                 <ul class="nav nav-tabs">
@@ -473,18 +564,6 @@
                 @if (getCurrentUser()->venue == 'Cairo')
 
                     <div class="row speakers-row">
-                        {{-- @foreach (range(1, 5) as $y) --}}
-                        {{-- <div class="col-12 col-md-4 col-lg-3 col-xl-4 speaker-main-div">
-                            <img src="{{ asset("images/speakers/{$y}.png") }}">
-                            <p class="speaker-title">Prof. Sara Tarawah, {{ $y }}</p>
-                            <p class="speaker-desc">
-                                President, Middle East and North
-                                Africa Hematology League
-                            </p>
-                        </div> --}}
-
-
-
                         <div class="col-12 col-md-4 col-lg-3 col-xl-4 speaker-main-div">
                             <img src="{{ asset('images/speakers/1.png') }}">
                             <p class="speaker-title">Prof. Peter Kempler</p>
@@ -562,8 +641,63 @@
 
                     </div>
                 @else
-                    <div class="row" style="justify-content: center;">
-                        <p style="text-align:center">The speakers of this event will be announced very soon! </p>
+                    <div class="row speakers-row">
+                        <div class="col-12 col-md-4 col-lg-3 col-xl-4 speaker-main-div">
+                            <img src="{{ asset('images/speakers-alex/1.png') }}">
+                            <p class="speaker-title">Fahmy Amara</p>
+                            <p class="speaker-desc">
+                                <b>
+                                    Professor of Endocrinology & Diabetology
+                                </b>
+                                <br>
+                                President of the EAEDA
+                            </p>
+                        </div>
+
+                        <div class="col-12 col-md-4 col-lg-3 col-xl-4 speaker-main-div">
+                            <img src="{{ asset('images/speakers-alex/2.png') }}">
+                            <p class="speaker-title">Mohamed Fahmy Amara</p>
+                            <p class="speaker-desc">
+                                <b>
+                                    Lecture of Diabetes & Internal Medicine, Fayoum university
+                                </b>
+                                <br>
+                                Fellow of Limb preservation center( CLEAR), Chicago, Illinois
+                                <br>
+                                Fellow of Cleveland clinic, Ohio
+                            </p>
+                        </div>
+
+                        <div class="col-12 col-md-4 col-lg-3 col-xl-4 speaker-main-div">
+                            <img src="{{ asset('images/speakers-alex/3.png') }}">
+                            <p class="speaker-title">Magdy Helmy Megallaa</p>
+                            <p class="speaker-desc">
+                                <b>
+                                    Professor of Diabetes and Metabolism, Alexandria University, Egypt
+                                </b>
+                                <br>
+                                Honorary Lecturer of Diabetes Medicine, Cardiff University, UK
+                            </p>
+                        </div>
+
+                        <div class="col-12 col-md-4 col-lg-3 col-xl-4 speaker-main-div">
+                            <img src="{{ asset('images/speakers-alex/4.png') }}">
+                            <p class="speaker-title">Samir Helmy ASSAAD – KHALIL </p>
+                            <p class="speaker-desc">
+                                <b>
+                                    Professor of Internal Medicine, Unit of Diabetology, Lipidology & Metabolism, Faculty of
+                                    Medicine, Alexandria University, Egypt.
+                                </b>
+                                <br>
+                                Editor-in-Chief of the Journal of the Egyptian Association of Endocrinology, Diabetes &
+                                Metabolism.
+                            </p>
+                        </div>
+
+
+
+                        {{-- @endforeach --}}
+
                     </div>
 
                 @endif
@@ -583,40 +717,40 @@
                         <p>Can't wait to play? Stay tuned for a lot of the entertaining games that will be live during
                             the event time.</p>
                         <!--<table class="table table-striped">
-                                                                                                        <thead>
-                                                                                                        <tr>
-                                                                                                            <th >#</th>
-                                                                                                            <th>Name</th>
-                                                                                                            <th>Time</th>
-                                                                                                            <th>Score</th>
-                                                                                                        </tr>
-                                                                                                        </thead>
-                                                                                                        <tbody>
-                                                                                                        @if (count($games) > 1)
-                                                                                                    @foreach ($games as $key => $game)
-                                                                                                        <tr>
-                                                                                                            <td>{{ $key + 1 }}</td>
-                                                                                                                <td>
-                                                                                                                    <p><span><img src="{{ asset('images/man.png') }}"></span>{{ $game->first_name }} {{ $game->last_name }}</p>
-                                                                                                                </td>
-                                                                                                                <td>{{ $game->created_at }}</td>
-                                                                                                                <td>{{ $game->score }}</td>
-                                                                                                            </tr>
-                                                                                                           @endforeach
+                                                                                                                            <thead>
+                                                                                                                            <tr>
+                                                                                                                                <th >#</th>
+                                                                                                                                <th>Name</th>
+                                                                                                                                <th>Time</th>
+                                                                                                                                <th>Score</th>
+                                                                                                                            </tr>
+                                                                                                                            </thead>
+                                                                                                                            <tbody>
+                                                                                                                            @if (count($games) > 1)
+                                                                                                                        @foreach ($games as $key => $game)
+                                                                                                                            <tr>
+                                                                                                                                <td>{{ $key + 1 }}</td>
+                                                                                                                                    <td>
+                                                                                                                                        <p><span><img src="{{ asset('images/man.png') }}"></span>{{ $game->first_name }} {{ $game->last_name }}</p>
+                                                                                                                                    </td>
+                                                                                                                                    <td>{{ $game->created_at }}</td>
+                                                                                                                                    <td>{{ $game->score }}</td>
+                                                                                                                                </tr>
+                                                                                                                               @endforeach
                     @else
-                                                                                                    <tr>
+                                                                                                                        <tr>
 
-                                                                                                        <td> no </td>
-                                                                                                        <td> one </td>
-                                                                                                        <td> play </td>
-                                                                                                        <td> yet</td>
+                                                                                                                            <td> no </td>
+                                                                                                                            <td> one </td>
+                                                                                                                            <td> play </td>
+                                                                                                                            <td> yet</td>
 
-                                                                                                    </tr>
+                                                                                                                        </tr>
 
-                                                                            @endif
-                                                                                                    </tbody>
-                                                                                                </table>
-                                                                            -->
+                                                                                                @endif
+                                                                                                                        </tbody>
+                                                                                                                    </table>
+                                                                                                -->
 
                     </div>
                     <!--col-10-->
