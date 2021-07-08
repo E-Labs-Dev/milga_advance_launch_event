@@ -94,7 +94,7 @@
 
                         <div class="col-12 col-lg-2">
                             <div class="event-day-div">
-                                <span class="day-name">Day 1</span>
+                                {{-- <span class="day-name">Day 1</span> --}}
                                 <span class="red-span">30<sup>th</sup></span>
                                 <span class="month-name">July </span>
                             </div>
@@ -183,7 +183,7 @@
                                                     <span>
                                                         <img class="main-layer"
                                                             src="{{ asset('images/microphone.png') }}">
-                                                        By <span class="span-red">Abanoub Effat,</span> Clinical trial
+                                                        By <span class="span-red">Dr. Abanoub Effat,</span> Clinical trial
                                                         author
                                                     </span>
                                                 </li>
@@ -200,7 +200,7 @@
                                                     <span>
                                                         <img class="main-layer"
                                                             src="{{ asset('images/microphone.png') }}">
-                                                        By <span class="span-red">Kirollos Magdy,</span> Product Manager
+                                                        By <span class="span-red">Dr. Kirollos Magdy,</span> Product Manager
                                                     </span>
                                                 </li>
                                             </ul>
@@ -373,7 +373,7 @@
 
                         <div class="col-12 col-lg-2">
                             <div class="event-day-div">
-                                <span class="day-name">Day 6</span>
+                                {{-- <span class="day-name">Day 6</span> --}}
                                 <span class="red-span">6<sup>th</sup></span>
                                 <span class="month-name">August </span>
                             </div>
@@ -463,7 +463,7 @@
                                                     <span>
                                                         <img class="main-layer"
                                                             src="{{ asset('images/microphone.png') }}">
-                                                        By <span class="span-red">Abanoub Effat,</span> Clinical trial
+                                                        By <span class="span-red">Dr. Abanoub Effat,</span> Clinical trial
                                                         author
                                                     </span>
                                                 </li>
@@ -480,7 +480,7 @@
                                                     <span>
                                                         <img class="main-layer"
                                                             src="{{ asset('images/microphone.png') }}">
-                                                        By <span class="span-red">Kirollos Magdy,</span> Product Manager
+                                                        By <span class="span-red">Dr. Kirollos Magdy,</span> Product Manager
                                                     </span>
                                                 </li>
                                             </ul>
