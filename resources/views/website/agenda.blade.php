@@ -90,7 +90,7 @@
                     </div>
 
 
-                    @if (getCurrentUser()->venue == 'Cairo')
+                    @if (getCurrentUser()->venue == 'Cairo' || getCurrentUser()->venue == '30.7.2021 in Nile Ritz – Cairo')
 
                         <div class="col-12 col-lg-2">
                             <div class="event-day-div">
@@ -561,7 +561,7 @@
         <div class="speakers" id="speakers">
             <div class="container">
                 <h4>Meet Our Conference Speakers</h4>
-                @if (getCurrentUser()->venue == 'Cairo')
+                @if (getCurrentUser()->venue == 'Cairo' || getCurrentUser()->venue == '30.7.2021 in Nile Ritz – Cairo')
 
                     <div class="row speakers-row">
                         <div class="col-12 col-md-4 col-lg-3 col-xl-4 speaker-main-div">
@@ -717,40 +717,40 @@
                         <p>Can't wait to play? Stay tuned for a lot of the entertaining games that will be live during
                             the event time.</p>
                         <!--<table class="table table-striped">
-                                                                                                                            <thead>
-                                                                                                                            <tr>
-                                                                                                                                <th >#</th>
-                                                                                                                                <th>Name</th>
-                                                                                                                                <th>Time</th>
-                                                                                                                                <th>Score</th>
-                                                                                                                            </tr>
-                                                                                                                            </thead>
-                                                                                                                            <tbody>
-                                                                                                                            @if (count($games) > 1)
-                                                                                                                        @foreach ($games as $key => $game)
-                                                                                                                            <tr>
-                                                                                                                                <td>{{ $key + 1 }}</td>
-                                                                                                                                    <td>
-                                                                                                                                        <p><span><img src="{{ asset('images/man.png') }}"></span>{{ $game->first_name }} {{ $game->last_name }}</p>
-                                                                                                                                    </td>
-                                                                                                                                    <td>{{ $game->created_at }}</td>
-                                                                                                                                    <td>{{ $game->score }}</td>
+                                                                                                                                <thead>
+                                                                                                                                <tr>
+                                                                                                                                    <th >#</th>
+                                                                                                                                    <th>Name</th>
+                                                                                                                                    <th>Time</th>
+                                                                                                                                    <th>Score</th>
                                                                                                                                 </tr>
-                                                                                                                               @endforeach
+                                                                                                                                </thead>
+                                                                                                                                <tbody>
+                                                                                                                                @if (count($games) > 1)
+                                                                                                                            @foreach ($games as $key => $game)
+                                                                                                                                <tr>
+                                                                                                                                    <td>{{ $key + 1 }}</td>
+                                                                                                                                        <td>
+                                                                                                                                            <p><span><img src="{{ asset('images/man.png') }}"></span>{{ $game->first_name }} {{ $game->last_name }}</p>
+                                                                                                                                        </td>
+                                                                                                                                        <td>{{ $game->created_at }}</td>
+                                                                                                                                        <td>{{ $game->score }}</td>
+                                                                                                                                    </tr>
+                                                                                                                                   @endforeach
                     @else
-                                                                                                                        <tr>
+                                                                                                                            <tr>
 
-                                                                                                                            <td> no </td>
-                                                                                                                            <td> one </td>
-                                                                                                                            <td> play </td>
-                                                                                                                            <td> yet</td>
+                                                                                                                                <td> no </td>
+                                                                                                                                <td> one </td>
+                                                                                                                                <td> play </td>
+                                                                                                                                <td> yet</td>
 
-                                                                                                                        </tr>
+                                                                                                                            </tr>
 
-                                                                                                @endif
-                                                                                                                        </tbody>
-                                                                                                                    </table>
-                                                                                                -->
+                                                                                                    @endif
+                                                                                                                            </tbody>
+                                                                                                                        </table>
+                                                                                                    -->
 
                     </div>
                     <!--col-10-->
