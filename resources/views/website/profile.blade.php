@@ -56,6 +56,13 @@
                                         <input type="text" value="{{$registration->governorate}}" disabled class="form-control">
                                     </div><!--form-group-->
                                 </div><!--col-lg-6-->
+
+                                <div class="col-lg-6 col-12">
+                                    <label>Medical Representative</label>
+                                    <div class="form-group">
+                                        <input type="text" value="{{$registration->medical_representative}}" disabled class="form-control">
+                                    </div><!--form-group-->
+                                </div>
                             </div><!--row-->
                         </form>
                     </div><!--col-10-->

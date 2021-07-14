@@ -25,7 +25,7 @@ class RegistrationController extends Controller
      */
     public function show($userCode)
     {
-        $registration = $this->registration->select('user_code','first_name','last_name','is_attend','email','governorate','phone','venue')
+        $registration = $this->registration->select('user_code','first_name','last_name','is_attend','email','governorate','phone','venue','medical_representative')
             ->where('user_code',$userCode)->first();
 
         if (!$registration) {

@@ -13,7 +13,7 @@ class Registration extends Authenticatable
 
     protected $table = 'registrations';
 
-    protected $fillable = ['first_name', 'last_name','email','phone','venue','qrcode','user_code','governorate'];
+    protected $fillable = ['first_name', 'last_name','email','phone','venue','qrcode','user_code','governorate','medical_representative'];
 
     protected $appends = ['original_path', 'full_name'];
 
@@ -38,7 +38,7 @@ class Registration extends Authenticatable
 
 
      public function getAll($attend = null){
-         $registrations =  $this->query()->select('id','first_name','user_code','last_name','email','phone','governorate','venue','created_at','is_attend','updated_at')->orderBy('id','asc');
+         $registrations =  $this->query()->select('id','first_name','user_code','last_name','email','phone','governorate','venue','created_at','is_attend','updated_at','medical_representative')->orderBy('id','asc');
         if (isset($attend)){
             $registrations->where('is_attend',$attend);
         }

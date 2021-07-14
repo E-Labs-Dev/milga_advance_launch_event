@@ -96,6 +96,11 @@
                                 <input type="text" class="form-control col-12" name="venue" id="venue" value="{{$registration->venue}}" disabled>
                             </div>
 
+                            <div class="form-group col-12" style="float: left;">
+                                <label for="medical_representative" class="col-12" style="padding: 0;">Medical representative</label>
+                                <input type="text" class="form-control col-12" name="medical_representative" id="medical_representative" value="{{$registration->medical_representative}}" disabled>
+                            </div>
+
                         </div>
 
                         @if ($registration->is_attend == 0)

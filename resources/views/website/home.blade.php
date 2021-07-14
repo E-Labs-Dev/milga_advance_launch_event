@@ -200,6 +200,123 @@
                                             <option value="Alex">6.8.2021 in Sunrise – Alex</option>
                                         </select>
                                     </div><!--col-12-->
+
+                                    <div class="col-lg-6 col-12 div-field">
+                                        <label>Medical Representative <span>*</span> </label>
+                                        <select name="medical_representative" required>
+                                            <option value=""></option>
+                                            <option value="Abanoub Gergis Nader">Abanoub Gergis Nader</option>
+                                            <option value="Abanoub Magdy Ibrahim">Abanoub Magdy Ibrahim</option>
+                                            <option value="Abanoub Melad">Abanoub Melad</option>
+                                            <option value="Abanoub Nashaat">Abanoub Nashaat</option>
+                                            <option value="AHMED ELNAGGAR">AHMED ELNAGGAR</option>
+                                            <option value="Ahmed Hussien">Ahmed Hussien</option>
+                                            <option value="Ahmed khaled Ali">Ahmed khaled Ali</option>
+                                            <option value="Ahmed Mohamed Amin Keshta">Ahmed Mohamed Amin Keshta</option>
+                                            <option value="Ahmed mohamed Hosafy">Ahmed mohamed Hosafy</option>
+                                            <option value="Ahmed Shawaf">Ahmed Shawaf</option>
+                                            <option value="Ahmed Sobhy Mohamed">Ahmed Sobhy Mohamed</option>
+                                            <option value="Akram Ishaak">Akram Ishaak</option>
+                                            <option value="Amal negm">Amal negm</option>
+                                            <option value="Amr Saad Shehab">Amr Saad Shehab</option>
+                                            <option value="Amr Sayed">Amr Sayed</option>
+                                            <option value="Andew Samier Mikhail">Andew Samier Mikhail</option>
+                                            <option value="Andrew Magdy Ragheb Botrous">Andrew Magdy Ragheb Botrous
+                                            </option>
+                                            <option value="Antoine Medhat">Antoine Medhat</option>
+                                            <option value="Antonios Nabil">Antonios Nabil</option>
+                                            <option value="Asmaa Nabil">Asmaa Nabil</option>
+                                            <option value="Aya Abo Al Yazed">Aya Abo Al Yazed</option>
+                                            <option value="Ayman Samir Gad">Ayman Samir Gad</option>
+                                            <option value="Baher Benyamin">Baher Benyamin</option>
+                                            <option value="Beshoy Botros">Beshoy Botros</option>
+                                            <option value="Beshoy Osama">Beshoy Osama</option>
+                                            <option value="Bishoy Magdy">Bishoy Magdy</option>
+                                            <option value="Clara Akram Gamal">Clara Akram Gamal</option>
+                                            <option value="Dr. Ahmed Helal">Dr. Ahmed Helal</option>
+                                            <option value="Dr. Hadeer Ahmed">Dr. Hadeer Ahmed</option>
+                                            <option value="Dr. Mary Farouk">Dr. Mary Farouk</option>
+                                            <option value="Dr. Wafaa Abdelwahab">Dr. Wafaa Abdelwahab</option>
+                                            <option value="Fadi Ngaui">Fadi Ngaui</option>
+                                            <option value="Fady Fekry">Fady Fekry</option>
+                                            <option value="Fady Khairy">Fady Khairy</option>
+                                            <option value="Fatma Hamdy">Fatma Hamdy</option>
+                                            <option value="Gamal Abd ELNasser">Gamal Abd ELNasser</option>
+                                            <option value="Gamal Deif">Gamal Deif</option>
+                                            <option value="Hamdy Elkharashi">Hamdy Elkharashi</option>
+                                            <option value="Kerolos George">Kerolos George</option>
+                                            <option value="khaled mamdouh zakaria">khaled mamdouh zakaria</option>
+                                            <option value="Khaled Naguib">Khaled Naguib</option>
+                                            <option value="Kirollos Sleem Sedarous">Kirollos Sleem Sedarous</option>
+                                            <option value="Madlen Ayad">Madlen Ayad</option>
+                                            <option value="Maged Saad">Maged Saad</option>
+                                            <option value="Mahmoud Hassan">Mahmoud Hassan</option>
+                                            <option value="Mamdouh Mories">Mamdouh Mories</option>
+                                            <option value="Marco Nagy Ibrahim">Marco Nagy Ibrahim</option>
+                                            <option value="Mariam Ibrahim Nessim">Mariam Ibrahim Nessim</option>
+                                            <option value="Mariana Samir">Mariana Samir</option>
+                                            <option value="Marianne Mansour Gad">Marianne Mansour Gad</option>
+                                            <option value="Marina George">Marina George</option>
+                                            <option value="Marina Ibrahim">Marina Ibrahim</option>
+                                            <option value="Mario Maged">Mario Maged</option>
+                                            <option value="Mario Mehany">Mario Mehany</option>
+                                            <option value="Mario Mehany Fares">Mario Mehany Fares</option>
+                                            <option value="Mark Kamal Moussa">Mark Kamal Moussa</option>
+                                            <option value="Mark Shawky Botros">Mark Shawky Botros</option>
+                                            <option value="Mary Loqa">Mary Loqa</option>
+                                            <option value="Mary Magdy kamel">Mary Magdy kamel</option>
+                                            <option value="Mena Fekry Foad">Mena Fekry Foad</option>
+                                            <option value="Michael Adel Assad">Michael Adel Assad</option>
+                                            <option value="Michael Adly">Michael Adly</option>
+                                            <option value="Michael George">Michael George</option>
+                                            <option value="Michael Talaat">Michael Talaat</option>
+                                            <option value="Michael Tharwat">Michael Tharwat</option>
+                                            <option value="Mina Adel Rassmy">Mina Adel Rassmy</option>
+                                            <option value="Mina Hany Hanna Nessim">Mina Hany Hanna Nessim</option>
+                                            <option value="Mina Magdy Rezk">Mina Magdy Rezk</option>
+                                            <option value="Mina Makram Moawad">Mina Makram Moawad</option>
+                                            <option value="Mina Raouf">Mina Raouf</option>
+                                            <option value="Mina Sedra">Mina Sedra</option>
+                                            <option value="Miry William Gouda">Miry William Gouda</option>
+                                            <option value="Mohamed Abd ELAziz">Mohamed Abd ELAziz</option>
+                                            <option value="Mohamed Elzgheby">Mohamed Elzgheby</option>
+                                            <option value="Mohamed Hossam">Mohamed Hossam</option>
+                                            <option value="Mohamed Magdy Alshiaty">Mohamed Magdy Alshiaty</option>
+                                            <option value="Mohamed Salah">Mohamed Salah</option>
+                                            <option value="Mohamed Tarek Elfarahaty">Mohamed Tarek Elfarahaty</option>
+                                            <option value="Mohammed Sarhan">Mohammed Sarhan</option>
+                                            <option value="Mostafa Ahmed AbdelAziz">Mostafa Ahmed AbdelAziz</option>
+                                            <option value="Muhannad AlBestawy">Muhannad AlBestawy</option>
+                                            <option value="Nabih El-temamy">Nabih El-temamy</option>
+                                            <option value="Nada Abdou Khalil">Nada Abdou Khalil</option>
+                                            <option value="Nada Elsharidey">Nada Elsharidey</option>
+                                            <option value="Nada Hossam">Nada Hossam</option>
+                                            <option value="Nancy Shoukry">Nancy Shoukry</option>
+                                            <option value="Nanis Munir">Nanis Munir</option>
+                                            <option value="Omar Ahmed Serag El-Din">Omar Ahmed Serag El-Din</option>
+                                            <option value="Paula Girgis Abskharoun Beskales">Paula Girgis Abskharoun
+                                                Beskales</option>
+                                            <option value="Peter Gamal">Peter Gamal</option>
+                                            <option value="Peter Louis">Peter Louis</option>
+                                            <option value="Philip Salah Nageh">Philip Salah Nageh</option>
+                                            <option value="Saher Ashraf">Saher Ashraf</option>
+                                            <option value="Salma Refat">Salma Refat</option>
+                                            <option value="Samar Shehata">Samar Shehata</option>
+                                            <option value="Samer Abdalla Mohamed Ali Yassien">Samer Abdalla Mohamed Ali
+                                                Yassien</option>
+                                            <option value="Samuel Nady Tetos">Samuel Nady Tetos</option>
+                                            <option value="Sara El Zokm">Sara El Zokm</option>
+                                            <option value="Sarah Gerges">Sarah Gerges</option>
+                                            <option value="Sarah Safwat">Sarah Safwat</option>
+                                            <option value="Shady Englizy">Shady Englizy</option>
+                                            <option value="Sherif Emad khalil">Sherif Emad khalil</option>
+                                            <option value="Yasser El Feky  ">Yasser El Feky </option>
+                                            <option value="Yasser Elhofy">Yasser Elhofy</option>
+                                            <option value="Youhana Zakaria">Youhana Zakaria</option>
+                                            <option value="Youssef locus">Youssef locus</option>
+                                        </select>
+                                    </div>
+
                                     <div class=" col-12">
                                         <div class="send">
                                             <button type="submit" id="registration_form">Submit <img src="{{asset('images/arrow.png')}}"></button>

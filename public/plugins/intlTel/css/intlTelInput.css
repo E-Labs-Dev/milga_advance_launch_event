@@ -929,7 +929,7 @@
 }
 .iti__flag.iti__np {
   background-color: transparent; }
-label#name-error, label#password-error, label#inputAddress-error, label#lat-error, label#long-error, label#gender-error, label#governorates-error, label#city-error, label#territory-error, label#area-error, label#phone-error, label#email-error, label#company_phone-error, span#error-msg, label#address-error {
+label#name-error, label#password-error, label#inputAddress-error, label#lat-error, label#long-error, label#gender-error, label#governorates-error, label#medical_representative-error, label#city-error, label#territory-error, label#area-error, label#phone-error, label#email-error, label#company_phone-error, span#error-msg, label#address-error {
     color :red !important;
   }
   .form-group.col-md-12, .form-group.col-md-12, .form-group.col-md-4{

@@ -32,6 +32,9 @@ $(function () {
             governorate: {
                 required: true
             },
+            medical_representative: {
+                required: true
+            },
         },
         submitHandler: function (form) {
             $('#registration_form').attr('disabled','disabled')
@@ -74,6 +77,9 @@ $(function () {
                         }
                         if (data.responseJSON.errors.governorate) {
                             toastr.info(data.responseJSON.errors.governorate);
+                        }
+                        if (data.responseJSON.errors.medical_representative) {
+                            toastr.info(data.responseJSON.errors.medical_representative);
                         }
                     } else {
                         toastr.info('Please try again');
