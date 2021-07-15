@@ -714,9 +714,9 @@
                     <div class="col-10 padding-score">
                         <!--<h3 class="title-score"><span><img src="{{ asset('images/puzzle.png') }}"></span>Game Score</h3>-->
                         <br>
-                        <p>Can't wait to play? Stay tuned for a lot of the entertaining games that will be live during
-                            the event time.</p>
-                        <!--<table class="table table-striped">
+                        {{-- <p>Can't wait to play? Stay tuned for a lot of the entertaining games that will be live during
+                            the event time.</p> --}}
+                        <table class="table table-striped">
                                                                                                                                 <thead>
                                                                                                                                 <tr>
                                                                                                                                     <th >#</th>
@@ -731,7 +731,7 @@
                                                                                                                                 <tr>
                                                                                                                                     <td>{{ $key + 1 }}</td>
                                                                                                                                         <td>
-                                                                                                                                            <p><span><img src="{{ asset('images/man.png') }}"></span>{{ $game->first_name }} {{ $game->last_name }}</p>
+                                                                                                                                            <p><span><img src="{{ asset('images/man.png') }}"></span>{{ $game->name }}</p>
                                                                                                                                         </td>
                                                                                                                                         <td>{{ $game->created_at }}</td>
                                                                                                                                         <td>{{ $game->score }}</td>
@@ -740,8 +740,8 @@
                     @else
                                                                                                                             <tr>
 
-                                                                                                                                <td> no </td>
-                                                                                                                                <td> one </td>
+                                                                                                                                <td> you </td>
+                                                                                                                                <td> do not </td>
                                                                                                                                 <td> play </td>
                                                                                                                                 <td> yet</td>
 
@@ -750,7 +750,7 @@
                                                                                                     @endif
                                                                                                                             </tbody>
                                                                                                                         </table>
-                                                                                                    -->
+                                                                                                    
 
                     </div>
                     <!--col-10-->
