@@ -30,7 +30,7 @@
                                 <a class="nav-link "  onclick="hideDiv2()" href="<?php echo url('/').'/agenda/#speakers' ?>">Speakers & Chairmen</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" onclick="hideDiv3()" href="<?php echo url('/').'/agenda/#games' ?>">Digital Magazine</a>
+                                <a class="nav-link" onclick="hideDiv3()" href="<?php echo url('/').'/agenda/#games' ?>">Game Scores</a>
                             </li>
 
                             <li class="nav-item">
