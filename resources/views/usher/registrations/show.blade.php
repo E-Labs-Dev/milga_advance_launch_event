@@ -31,7 +31,7 @@
         @media print {
             @page {
                 size: 105mm 148mm !important;
-                margin: 0mm !important;
+                margin: 0px 5vw !important;
             }
 
             header,
@@ -81,10 +81,15 @@
             align-items: center;
             flex-direction: column;
 
-            font-size: 40px;
+            font-size: 30px;
+            font-weight: bold;
             color: #305b80;
             font-family: sans-serif;
-            margin-top: -80px;
+            margin-top: -70px;
+        }
+
+        .information-div {
+            padding: 0px 5vw;
         }
 
     </style>
@@ -125,9 +130,9 @@
         <!--container-->
     </header>
 
-    <div class="main-page-content">
-        <div>
-            <p>Dr. {{ $registration->first_name }} {{ $registration->last_name }}</p>
+    <div class="main-page-content" id="main-page-content">
+        <div class="information-div">
+            <p id="dr_name">Dr. {{ $registration->first_name }} {{ $registration->last_name }}</p>
             <p class="mt-4">ID: {{ $registration->user_code }}</p>
         </div>
 
@@ -231,8 +236,26 @@
             <!-- /.row -->
         </div><!-- /.container-fluid -->
 
- 
+
     </section>
+
+    <script>
+        const dr_name = document.getElementById('dr_name').innerText;
+
+        if (dr_name.length > 15) {
+            const main_page_content = document.getElementById("main-page-content");
+            main_page_content.style.fontSize = "25px";
+
+            if (dr_name.length > 20) {
+                main_page_content.style.fontSize = "23px";
+            }
+
+            if (dr_name.length > 25) {
+                main_page_content.style.fontSize = "20px";
+            }
+        }
+    </script>
+
     <!-- /.content -->
     @include('layouts.includes.messages.scripts')
 </body>
