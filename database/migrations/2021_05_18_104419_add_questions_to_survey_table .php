@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSurveysTable extends Migration
+class AddQuestionsToSurveyTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,7 @@ class CreateSurveysTable extends Migration
      */
     public function up()
     {
-        Schema::create('surveys', function (Blueprint $table) {
-            $table->id();
-            $table->text('question_1')->nullable();
-            $table->text('question_2')->nullable();
-            $table->string('question_3')->nullable();
-            $table->string('question_4')->nullable();
-            $table->text('question_5')->nullable();
-            $table->string('question_6')->nullable();
+        Schema::table('surveys', function (Blueprint $table) {
             $table->string('question_7')->nullable();
             $table->string('question_8')->nullable();
             $table->string('question_9')->nullable();
@@ -29,8 +22,6 @@ class CreateSurveysTable extends Migration
             $table->string('question_12')->nullable();
             $table->string('question_13')->nullable();
             $table->string('question_14')->nullable();
-            $table->foreignId('registration_id')->constrained('registrations')->onDelete('cascade');;
-            $table->timestamps();
         });
     }
 
@@ -41,6 +32,8 @@ class CreateSurveysTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('surveys');
+        Schema::table('surveys', function (Blueprint $table) {
+            $table->dropColumn(['question_7', 'question_8', 'question_9', 'question_10', 'question_11', 'question_12', 'question_13', 'question_14']);
+        });
     }
 }

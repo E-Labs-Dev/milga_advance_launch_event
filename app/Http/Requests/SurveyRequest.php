@@ -30,6 +30,14 @@ class SurveyRequest extends FormRequest
             'question_4'  =>'required|max:500',
             'question_5'  =>'required|max:500',
             'question_6'  =>'required|max:500',
+            'question_7'  =>'required|max:500',
+            'question_8'  =>'required|max:500',
+            'question_9'  =>'required|max:500',
+            'question_10'  =>'required|max:500',
+            'question_11'  =>'required|max:500',
+            'question_12'  =>'required|max:500',
+            'question_13'  =>'required|max:500',
+            'question_14'  =>'required|max:500',
         ];
     }
 
