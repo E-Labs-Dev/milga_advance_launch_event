@@ -46,6 +46,14 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'usher' => [
+            'driver' => 'session',
+            'provider' => 'ushers',
+        ],
+        'registration' => [
+            'driver' => 'session',
+            'provider' => 'registrations',
+        ],
     ],
 
     /*
@@ -70,7 +78,15 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
+        'ushers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Usher::class,
+        ],
 
+        'registrations' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Registration::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
@@ -95,6 +111,18 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'ushers' => [
+            'provider' => 'ushers',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'registrations' => [
+            'provider' => 'registrations',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

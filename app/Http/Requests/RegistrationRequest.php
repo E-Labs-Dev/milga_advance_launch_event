@@ -29,16 +29,16 @@ class RegistrationRequest extends FormRequest
             'first_name'   =>'required|string|max:190',
             'last_name'    =>'required|string|max:190',
             'email'        =>'required|email|unique:registrations,email|max:190',
-            'phone'        =>'required|unique:registrations,phone|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
-            'specialty_id' =>'required|exists:specialties,id',
-            'venue_id'     =>'required|exists:venues,id',
+            'phone'        =>'required|unique:registrations,phone|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|phone:AUTO',
+            'venue'        =>'required',
+            'governorate'  =>'required',
+            'medical_representative'  =>'required',
         ];
     }
-
-    protected function failedValidation(Validator $validator)
+    public function messages()
     {
-        if( $validator->fails() ) {
-            return redirect()->route('home')->with('info',$validator->errors()->first())->withInput();
-        }
+        return [
+            'phone.required'=>'Please enter a valid mobile number',
+        ];
     }
 }

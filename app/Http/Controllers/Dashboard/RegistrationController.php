@@ -3,9 +3,14 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Enums\AttendStatus;
+use App\Http\Requests\RegistrationAttendRequest;
 use App\Http\Requests\RegistrationRequest;
 use App\Models\Registration;
+use http\Env\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class RegistrationController extends Controller
 {
@@ -13,6 +18,7 @@ class RegistrationController extends Controller
     public function __construct()
     {
         $this->registration = new Registration();
+        $this->middleware('auth');
     }
 
     /**
@@ -22,67 +28,23 @@ class RegistrationController extends Controller
      */
     public function index()
     {
-        $registrations = Registration::leftJoin('specialties','registrations.specialty_id','=','specialties.id')
-            ->leftJoin('venues','registrations.venue_id','=','venues.id')->select('registrations.id','registrations.first_name',
-                'registrations.last_name','registrations.email','registrations.phone','specialties.name as specialty','venues.name as venue','registrations.created_at')->get();
+        $registrations = $this->registration->getAll();
 
         return  view('dashboard.registrations.index',compact('registrations'));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function attendees()
     {
-        //
+        $registrations = $this->registration->getAll( AttendStatus::ATTEND);
+
+        return  view('dashboard.registrations.attendees',compact('registrations'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(RegistrationRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
 
     /**
      * Remove the specified resource from storage.
@@ -90,8 +52,18 @@ class RegistrationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+
+        $this->registration->destroyById($request->id);
+
+        return response()->json('done');
+    }
+
+    public function changeStatus (Request $request)
+    {
+        $this->registration->changeStatusById($request->id);
+
+        return response()->json('done');
     }
 }

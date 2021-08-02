@@ -9,11 +9,15 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "haruncpi/laravel-user-activity": "^1.0",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
-        "sendgrid/sendgrid": "~7",
-        "simplesoftwareio/simple-qrcode": "^2.0"
+        "laravelcollective/html": "^6.2",
+        "propaganistas/laravel-phone": "^4.3",
+        "simplesoftwareio/simple-qrcode": "^2.0",
+        "socketlabs/email-delivery": "^1.2",
+        "twilio/sdk": "^6.11"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",

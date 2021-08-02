@@ -11,9 +11,9 @@ class qrCodeGenerated
 
         $qrcode = Str::random(10).'.png';
 
-        $url    = route('registrations.show')."/$userCode";
+        $url    = route('registrations.show',$userCode);
 
-        QrCode::size(500)->format('png')->generate($url, public_path('qrcodes/'.$qrcode));
+        QrCode::size(1000)->format('png')->generate($url, public_path('qrcodes/'.$qrcode));
 
         return $qrcode;
     }

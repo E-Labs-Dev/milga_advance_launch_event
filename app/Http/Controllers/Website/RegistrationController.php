@@ -4,13 +4,11 @@ namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegistrationRequest;
-use App\Mail\RegistrationMail;
 use App\Services\qrCodeGenerated;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Mail;
 use App\Models\Registration;
-use Illuminate\Support\Str;
 
 class RegistrationController extends Controller
 {
@@ -31,37 +29,44 @@ class RegistrationController extends Controller
      */
     public function store(RegistrationRequest $request)
     {
-        /*todo call here qr code service class*/
+
         try {
             DB::beginTransaction();
 
-            $userCode     = 'mlg_'.Str::random(3);
+            $userCode     = '12'.rand(1000,9999);
 
             $qrcode       = $this->qrCode->create($userCode);
 
+            setCurrentUser($request->phone);
+
             $requestData  = $request->validated();
 
-            $requestData ['qrcode']=$qrcode;
+            $requestData['qrcode'] = $qrcode;
 
             $requestData ['user_code']=$userCode;
 
             $registraion =  $this->registration->create($requestData);
 
-            $data = ['qrcode' => $registraion->original_path];
+            if (strpos($request->venue, 'Cairo') !== false) {
+                $eventTime    = 'July 30, 2021';
+                $location     = 'The Nile Ritz-Carlton, Cairo';
+                $locationMap  = 'https://maps.app.goo.gl/9MXYY5CqRjHsDEY26';
+            }else{
+                $eventTime    = 'August 6, 2021';
+                $location     = 'Sunrise Alex Avenue Hotel, Alexandria';
+                $locationMap  = 'https://maps.app.goo.gl/6KTDrkL2f1eE34eW6';
+            }
 
-            Mail::to($request->email)->send(new RegistrationMail($data));
+            sendMail($registraion->original_path,$request->email,$userCode, $request->first_name, $eventTime, $location,$locationMap);
+
+            sendWhatsApp($registraion->original_path,$request->phone,$userCode);
 
             DB::commit();
-
-        } catch (\Exception $e) {
-
+        } catch (Exception $e) {
             DB::rollBack();
-
             Log::error($e->getMessage());
-
-            return redirect()->route('home')->with('error','Data Not Save')->withInput();
+            return response()->json(['error' => 'Data Not Save .'],409);
         }
-
-        return redirect()->route('home')->with('message','Thank you for registration,Please Check your email.');
+        return response()->json($registraion->phone);
     }
 }

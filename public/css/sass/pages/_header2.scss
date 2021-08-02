@@ -1,0 +1,60 @@
+.header2 {
+    background-image: linear-gradient(to right, #CA1D27, #ef131e);
+    .navbar-light {
+        .navbar-nav {
+            .nav-link {
+                color: #fff;
+                padding-left: 15px;
+                font-size: 15px;
+                text-transform: capitalize;
+            }
+             .active > .nav-link, 
+            .nav-link.show, 
+             .nav-link.active {
+                color: #fff;
+    
+             }
+        } 
+    } 
+    .mobile-head2 {
+        padding: 0;
+        p {
+            font-size: 11px;
+        }
+    }
+    .profile-link {
+        float: $left;
+        margin-top: 10px;
+    }
+    .img-user {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        border-radius: 50%;
+        text-align: center;
+        background-color: #fff;
+        margin-right: 7px;
+        float: $left;
+        @media #{$mobileScreen} {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+        }
+        img {
+            width: 20px;
+            @media #{$mobileScreen} {
+                width: 15px;
+            }
+        }
+    }
+    .name-user {
+        color: #fff;
+        text-transform: capitalize;
+        float: $left;
+        margin-top: 7px;
+        }
+}
+
+.navbar-light .navbar-toggler {
+    border: none;
+}

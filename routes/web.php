@@ -13,19 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes(['register' => false]);
-
 Route::group(['namespace'=>'Website'],function () {
 
     Route::get('/','HomeController@index')->name('home');
-
+    Route::post('/login','LoginController@login')->name('user.login');
     Route::post('registrations/store','RegistrationController@store')->name('registrations.store');
 
-    Route::post('{userCode}/show','RegistrationController@show')->name('registrations.show');
-
-});
-
-Route::group(['prefix' => 'admin','namespace'=>'Dashboard'],function () {
-    Route::get('home', 'HomeController@index')->name('dashboard.home');
-    Route::get('registrations/index','RegistrationController@index')->name('registrations.index');
+    Route::middleware('authorized')->group(function() {
+        Route::get('profile','ProfileController@index')->name('profile');
+        Route::get('/agenda','AgendaController@index')->name('agenda');
+        Route::get('/survey','SurveyController@index')->name('survey');
+        Route::post('/survey','SurveyController@store')->name('survey.store');
+        Route::get('/logout','ProfileController@logout')->name('user.logout');
+    });
 });
