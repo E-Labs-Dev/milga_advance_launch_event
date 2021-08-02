@@ -205,6 +205,7 @@
                                         <label>Medical Representative <span>*</span> </label>
                                         <select name="medical_representative" required>
                                             <option value=""></option>
+                                            <option value="PR Team">PR Team</option>
                                             <option value="Abanoub Gergis Nader">Abanoub Gergis Nader</option>
                                             <option value="Abanoub Magdy Ibrahim">Abanoub Magdy Ibrahim</option>
                                             <option value="Abanoub Melad">Abanoub Melad</option>

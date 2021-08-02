@@ -32,13 +32,13 @@
                             <li class="nav-item">
                                 <a class="nav-link" onclick="hideDiv3()" href="<?php echo url('/').'/agenda/#games' ?>">Game Scores</a>
                             </li>
-                            @if (getCurrentUser()->is_attend == '1' )
+                            {{-- @if (getCurrentUser()->is_attend == '1' ) --}}
 
                             <li class="nav-item">
                                 <a class="nav-link " href="{{route('survey')}}">Survey</a>
                             </li>
 
-                            @endif
+                            {{-- @endif --}}
 
                         </ul>
 
