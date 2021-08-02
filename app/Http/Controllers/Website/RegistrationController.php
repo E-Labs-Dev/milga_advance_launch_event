@@ -59,7 +59,7 @@ class RegistrationController extends Controller
 
             sendMail($registraion->original_path,$request->email,$userCode, $request->first_name, $eventTime, $location,$locationMap);
 
-            sendWhatsApp($registraion->original_path,$request->phone,$userCode);
+            //sendWhatsApp($registraion->original_path,$request->phone,$userCode);
 
             DB::commit();
         } catch (Exception $e) {
