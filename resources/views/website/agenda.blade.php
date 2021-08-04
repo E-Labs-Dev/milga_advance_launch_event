@@ -386,7 +386,7 @@
                                     <div class="tab-pane  active" id="agenda1">
                                         <div class="line-div">
                                             <ul>
-                                                <li>6:00 pm</li>
+                                                <li>5:00 pm</li>
                                                 <li class="border"></li>
                                                 <li>
                                                     Registration
