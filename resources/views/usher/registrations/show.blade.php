@@ -97,6 +97,12 @@
     <script>
         function print_page() {
             window.print();
+
+            let button = document.getElementById('submit-button-id');
+
+            if (button.innerText == 0) {
+                button.click();
+            }
         }
     </script>
 
@@ -219,13 +225,15 @@
 
                             </div>
 
-                            @if ($registration->is_attend == 0)
-                                <!-- /.card-body -->
-                                <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary"
-                                        style="background-color: #df0e19;">Attend</button>
-                                </div>
-                            @endif
+                            {{-- @if ($registration->is_attend == 0) --}}
+                            <!-- /.card-body -->
+                            <div class="card-footer d-none">
+                                <button type="submit" class="btn btn-primary" style="background-color: #df0e19;"
+                                    id="submit-button-id">
+                                    {{ $registration->is_attend }}
+                                </button>
+                            </div>
+                            {{-- @endif --}}
 
                         </form>
                     </div>
