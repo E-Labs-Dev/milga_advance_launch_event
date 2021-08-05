@@ -19,6 +19,7 @@ Route::group(['namespace'=>'Dashboard'],function () {
         Route::post('registrations/change-status', 'RegistrationController@changeStatus')->name('registrations.changeStatus');
 
         Route::get('games/index', 'GameController@index')->name('games.index');
+        Route::get('surveys/index', 'SurveyController@index')->name('surveys.index');
 
     });
 
