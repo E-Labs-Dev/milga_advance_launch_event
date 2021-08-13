@@ -132,7 +132,7 @@
 
                     </div>
                     <ul class="progress-steps">
-                        <li>
+                        <li class="d-none">
                             <div class="step">
                                 <div class="text">
                                     <h3>On a scale from 1 to 10, To what extent do you believe in the role of Benfotiamine
@@ -199,8 +199,7 @@
                                 </div>
                                 <!--text-->
                             </div>
-                            <!--step-->
-
+                            <input name="question_11" class="custom-control-input" value="'removed'">
                         </li>
 
 
@@ -373,7 +372,7 @@
                                                 id="customRadio4_question_14" value="4">
                                             <label class="custom-control-label" for="customRadio4_question_14">4</label>
                                         </div>
-                                        
+
 
                                         <div class="custom-control custom-radio">
                                             <input type="radio" name="question_14" class="custom-control-input"
