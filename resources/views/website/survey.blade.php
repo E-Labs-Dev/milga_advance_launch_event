@@ -41,9 +41,9 @@
                         <div class="done col-12 col-lg-6">
                             <div class="step">
                                 <div class="text">
-                                    <h3>Emai</h3>
+                                    <h3>Email</h3>
                                     <div class="content-step">
-                                        <input name="question_3" placeholder="Enter Emai">
+                                        <input name="question_3" placeholder="Enter Email">
                                     </div>
                                 </div>
                             </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Models\Game;
 use App\Models\Registration;
+use App\Models\Survey;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -28,8 +29,9 @@ class HomeController extends Controller
     {
         $registrations        = Registration::count();
         $games                = Game::count();
+        $surveys                = Survey::count();
         $registrationsAttend  = Registration::where('is_attend',1)->count();
 
-        return view('dashboard.home',compact('registrations','registrationsAttend','games'));
+        return view('dashboard.home',compact('registrations','registrationsAttend','games', 'surveys'));
     }
 }
