@@ -225,15 +225,15 @@
 
                             </div>
 
-                            {{-- @if ($registration->is_attend == 0) --}}
+                             @if ($registration->is_attend == 0)
                             <!-- /.card-body -->
-                            <div class="card-footer d-none">
+                            <div class="card-footer">
                                 <button type="submit" class="btn btn-primary" style="background-color: #df0e19;"
                                     id="submit-button-id">
-                                    {{ $registration->is_attend }}
+                                    Attended
                                 </button>
                             </div>
-                            {{-- @endif --}}
+                             @endif
 
                         </form>
                     </div>
